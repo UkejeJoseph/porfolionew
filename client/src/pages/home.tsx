@@ -37,10 +37,10 @@ export default function Home() {
         </div>
         
         <p className="text-lg text-muted-foreground mb-12 leading-relaxed" data-testid="about-description">
-          I am a Full-Stack Developer skilled in JavaScript, React.js, Next.js, Node.js, and Express. 
-          I have experience working with databases such as MongoDB, Firebase, and PostgreSQL. 
-          Additionally, I specialize in building scalable and user-focused applications with Tailwind CSS, 
-          creating efficient and reusable solutions.
+          Motivated and adaptable Full-Stack Developer with experience in building scalable web applications. 
+          Strong front-end development expertise, complemented by growing skills in backend technologies. 
+          Proficient in JavaScript, TypeScript, React.js, Vue.js, and Node.js. Adept at problem-solving and 
+          collaborating in dynamic teams. Passionate about continuous learning and contributing to innovative projects.
         </p>
 
         {/* Experience Cards */}

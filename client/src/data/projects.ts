@@ -12,36 +12,33 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "manage-easy",
-    title: "Manage Easy",
-    description: "A comprehensive management platform built with React and Firebase",
-    image: "https://raw.githubusercontent.com/vishxly/Certification/main/Mnge.png",
-    technologies: ["React.js", "MongoDB", "Tailwind CSS", "Firebase"],
-    githubUrl: "https://github.com/vishxly/",
-    liveUrl: "https://manage-easy.vercel.app/",
-    isPrivate: true,
+    id: "no-rio",
+    title: "No RIO - B2C Rental Website",
+    description: "A comprehensive rental platform with responsive frontend and RESTful APIs, featuring user authentication and protected routes",
+    image: "https://raw.githubusercontent.com/UkejeJoseph/portfolio-assets/main/no-rio.jpg",
+    technologies: ["React.js", "CSS3", "HTML5", "Bootstrap", "Flask", "MongoDB", "OAuth2.0"],
+    githubUrl: "https://github.com/UkejeJoseph",
+    liveUrl: "https://github.com/UkejeJoseph",
     category: "web-development"
   },
   {
-    id: "trackcel",
-    title: "Trackcel",
-    description: "Advanced tracking application with PostgreSQL backend",
-    image: "https://raw.githubusercontent.com/vishxly/Certification/main/trackcel.png",
-    technologies: ["Next.js", "PostgreSQL", "TypeScript", "Tailwind CSS", "Prisma"],
-    githubUrl: "https://github.com/vishxly/",
-    liveUrl: "https://trackcel.vercel.app/",
-    isPrivate: true,
+    id: "cloud-kitchen",
+    title: "Cloud Kitchen Application",
+    description: "Responsive Single Page Application with lazy loading, NgRx state management, and RESTful API integration",
+    image: "https://raw.githubusercontent.com/UkejeJoseph/portfolio-assets/main/cloud-kitchen.jpg",
+    technologies: ["Angular 12", "TypeScript", "SCSS", "Angular Material", "Flask", "SQLAlchemy", "PostgreSQL", "JWT"],
+    githubUrl: "https://github.com/UkejeJoseph",
+    liveUrl: "https://github.com/UkejeJoseph",
     category: "web-development"
   },
   {
-    id: "vyrn-toast",
-    title: "Vyrn Toast",
-    description: "NPM package for customizable toast notifications",
-    image: "https://vyrn.vercel.app/social.png",
-    technologies: ["NPM", "React.js", "Next.js", "TypeScript"],
-    githubUrl: "https://github.com/vishxly/",
-    liveUrl: "https://vyrn.vercel.app/",
-    isPrivate: true,
+    id: "myc-transit",
+    title: "MYC Transit: Fair Estimation Application",
+    description: "Machine learning-powered transit fare estimation app with Google Places API integration and XGBoost ML model",
+    image: "https://raw.githubusercontent.com/UkejeJoseph/portfolio-assets/main/myc-transit.jpg",
+    technologies: ["React.js", "CSS3", "Flask", "Google Places API", "XGBoost", "Machine Learning"],
+    githubUrl: "https://github.com/UkejeJoseph",
+    liveUrl: "https://github.com/UkejeJoseph",
     category: "web-development"
   },
   {
@@ -50,7 +47,7 @@ export const projects: Project[] = [
     description: "Collection of free development tools",
     image: "https://raw.githubusercontent.com/vishxly/Certification/main/freetool.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    githubUrl: "https://github.com/vishxly/",
+    githubUrl: "https://github.com/UkejeJoseph",
     liveUrl: "https://freetool.vercel.app/",
     isPrivate: true,
     category: "web-development"
@@ -61,7 +58,7 @@ export const projects: Project[] = [
     description: "React UI component library with TypeScript support",
     image: "https://raw.githubusercontent.com/vishxly/Certification/main/oxy-ui.png",
     technologies: ["React.js", "TypeScript", "Tailwind CSS", "NPM"],
-    githubUrl: "https://github.com/vishxly/",
+    githubUrl: "https://github.com/UkejeJoseph",
     liveUrl: "https://oxyui.vercel.app/",
     isPrivate: true,
     category: "web-development"
@@ -72,7 +69,7 @@ export const projects: Project[] = [
     description: "Code snippet management platform with authentication",
     image: "https://raw.githubusercontent.com/vishxly/Certification/main/snippetvault.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Clerk"],
-    githubUrl: "https://github.com/vishxly/",
+    githubUrl: "https://github.com/UkejeJoseph",
     liveUrl: "https://snippetvault.vercel.app/",
     isPrivate: true,
     category: "web-development"
@@ -83,7 +80,7 @@ export const projects: Project[] = [
     description: "Code screenshot and sharing tool",
     image: "https://raw.githubusercontent.com/vishxly/Certification/main/codesnap.png",
     technologies: ["React.js", "TypeScript", "Tailwind CSS"],
-    githubUrl: "https://github.com/vishxly/",
+    githubUrl: "https://github.com/UkejeJoseph",
     liveUrl: "https://codesnapx.vercel.app/",
     isPrivate: true,
     category: "web-development"
@@ -94,7 +91,7 @@ export const projects: Project[] = [
     description: "Full-featured blogging platform with Firebase backend",
     image: "https://raw.githubusercontent.com/vishxly/Certification/main/Next-Blog-App.png",
     technologies: ["Next.js", "Firebase", "Tailwind CSS"],
-    githubUrl: "https://github.com/vishxly/",
+    githubUrl: "https://github.com/UkejeJoseph",
     liveUrl: "https://blog9.vercel.app/",
     isPrivate: true,
     category: "web-development"

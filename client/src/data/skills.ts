@@ -26,6 +26,26 @@ export const skills: Skill[] = [
     icon: "https://raw.githubusercontent.com/vishxly/Certification/main/ts.png",
     category: "languages"
   },
+  {
+    name: "Python",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+    category: "languages"
+  },
+  {
+    name: "Java",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+    category: "languages"
+  },
+  {
+    name: "C#",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
+    category: "languages"
+  },
+  {
+    name: "SQL",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg",
+    category: "languages"
+  },
   
   // Frameworks & Libraries
   {
@@ -56,6 +76,16 @@ export const skills: Skill[] = [
   {
     name: "Material UI",
     icon: "https://raw.githubusercontent.com/vishxly/Certification/main/materialui.png",
+    category: "frameworks"
+  },
+  {
+    name: "Angular",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg",
+    category: "frameworks"
+  },
+  {
+    name: "Vue.js",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg",
     category: "frameworks"
   },
 
@@ -90,6 +120,46 @@ export const skills: Skill[] = [
     icon: "https://raw.githubusercontent.com/vishxly/Certification/main/postgresql.png",
     category: "backend"
   },
+  {
+    name: "Django",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg",
+    category: "backend"
+  },
+  {
+    name: "Flask",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg",
+    category: "backend"
+  },
+  {
+    name: "GraphQL",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain.svg",
+    category: "backend"
+  },
+  {
+    name: ".NET",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/dotnetcore/dotnetcore-original.svg",
+    category: "backend"
+  },
+  {
+    name: "Spring Boot",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg",
+    category: "backend"
+  },
+  {
+    name: "PHP",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
+    category: "backend"
+  },
+  {
+    name: "Laravel",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain.svg",
+    category: "backend"
+  },
+  {
+    name: "MySQL",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg",
+    category: "backend"
+  },
 
   // Tools & DevOps
   {
@@ -120,6 +190,31 @@ export const skills: Skill[] = [
   {
     name: "Drizzle",
     icon: "https://console.dev/img/favicons/orm.drizzle.team.jpg",
+    category: "tools"
+  },
+  {
+    name: "Docker",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",
+    category: "tools"
+  },
+  {
+    name: "AWS",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg",
+    category: "tools"
+  },
+  {
+    name: "GCP",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg",
+    category: "tools"
+  },
+  {
+    name: "Azure",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg",
+    category: "tools"
+  },
+  {
+    name: "Linux",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
     category: "tools"
   }
 ];
