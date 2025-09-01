@@ -23,7 +23,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-2">Projects</h2>
         <div className="text-muted-foreground text-sm mb-8" data-testid="page-views-projects">
-          (9035 views)
+          (312 views)
         </div>
         
         {/* Filter Tabs */}

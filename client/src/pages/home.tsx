@@ -33,7 +33,7 @@ export default function Home() {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-2">About Me</h2>
         <div className="text-muted-foreground text-sm mb-8" data-testid="page-views-about">
-          (10451 views)
+          (247 views)
         </div>
         
         <p className="text-lg text-muted-foreground mb-12 leading-relaxed" data-testid="about-description">

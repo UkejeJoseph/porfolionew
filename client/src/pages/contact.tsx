@@ -57,7 +57,7 @@ export default function Contact() {
       <div className="max-w-2xl mx-auto">
         <h2 className="text-3xl font-bold mb-2">Contact</h2>
         <div className="text-muted-foreground text-sm mb-8" data-testid="page-views-contact">
-          (2244 views)
+          (67 views)
         </div>
         
         <div className="bg-card border border-border rounded-lg p-8">

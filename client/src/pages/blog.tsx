@@ -7,7 +7,7 @@ export default function Blog() {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-2">Blog</h2>
         <div className="text-muted-foreground text-sm mb-8" data-testid="page-views-blog">
-          (2803 views)
+          (89 views)
         </div>
         
         <div className="space-y-6">
