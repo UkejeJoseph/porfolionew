@@ -100,16 +100,16 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <nav className="space-y-2">
             {navigation.map((item) => (
               <Link key={item.path} href={item.path}>
-                <a
+                <div
                   data-testid={`nav-${item.name.toLowerCase()}-mobile`}
                   onClick={onClose}
                   className={cn(
-                    "flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-secondary transition-colors",
+                    "flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-secondary transition-colors cursor-pointer",
                     location === item.path && "bg-primary text-primary-foreground"
                   )}
                 >
                   <span>{item.name}</span>
-                </a>
+                </div>
               </Link>
             ))}
           </nav>
