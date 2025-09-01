@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(222, 84%, 5%);
+  --foreground: hsl(210, 40%, 96%);
+  --card: hsl(222, 84%, 8%);
+  --card-foreground: hsl(210, 40%, 96%);
+  --popover: hsl(222, 84%, 8%);
+  --popover-foreground: hsl(210, 40%, 96%);
+  --primary: hsl(217, 91%, 59%);
+  --primary-foreground: hsl(222, 84%, 5%);
+  --secondary: hsl(217, 32%, 17%);
+  --secondary-foreground: hsl(210, 40%, 96%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --accent: hsl(217, 32%, 17%);
+  --accent-foreground: hsl(210, 40%, 96%);
+  --destructive: hsl(356.3033, 90.5579%, 54.3137%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --ring: hsl(217, 91%, 59%);
+  --chart-1: hsl(217, 91%, 59%);
+  --chart-2: hsl(142, 71%, 35%);
+  --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
+  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
+  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
+  --sidebar: hsl(222, 84%, 8%);
+  --sidebar-foreground: hsl(210, 40%, 96%);
+  --sidebar-primary: hsl(217, 91%, 59%);
+  --sidebar-primary-foreground: hsl(222, 84%, 5%);
+  --sidebar-accent: hsl(217, 32%, 17%);
+  --sidebar-accent-foreground: hsl(210, 40%, 96%);
+  --sidebar-border: hsl(217, 32%, 17%);
+  --sidebar-ring: hsl(217, 91%, 59%);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'Fira Code', monospace;
+  --radius: 0.5rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(217, 91%, 59% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(217, 91%, 59% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(217, 91%, 59% / 0.00), 0px 1px 2px -1px hsl(217, 91%, 59% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(217, 91%, 59% / 0.00), 0px 1px 2px -1px hsl(217, 91%, 59% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(217, 91%, 59% / 0.00), 0px 2px 4px -1px hsl(217, 91%, 59% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(217, 91%, 59% / 0.00), 0px 4px 6px -1px hsl(217, 91%, 59% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(217, 91%, 59% / 0.00), 0px 8px 10px -1px hsl(217, 91%, 59% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(217, 91%, 59% / 0.00);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: hsl(222, 84%, 5%);
+  --foreground: hsl(210, 40%, 96%);
+  --card: hsl(222, 84%, 8%);
+  --card-foreground: hsl(210, 40%, 96%);
+  --popover: hsl(222, 84%, 8%);
+  --popover-foreground: hsl(210, 40%, 96%);
+  --primary: hsl(217, 91%, 59%);
+  --primary-foreground: hsl(222, 84%, 5%);
+  --secondary: hsl(217, 32%, 17%);
+  --secondary-foreground: hsl(210, 40%, 96%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --accent: hsl(217, 32%, 17%);
+  --accent-foreground: hsl(210, 40%, 96%);
+  --destructive: hsl(356.3033, 90.5579%, 54.3137%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --ring: hsl(217, 91%, 59%);
+  --sidebar: hsl(222, 84%, 8%);
+  --sidebar-foreground: hsl(210, 40%, 96%);
+  --sidebar-primary: hsl(217, 91%, 59%);
+  --sidebar-primary-foreground: hsl(222, 84%, 5%);
+  --sidebar-accent: hsl(217, 32%, 17%);
+  --sidebar-accent-foreground: hsl(210, 40%, 96%);
+  --sidebar-border: hsl(217, 32%, 17%);
+  --sidebar-ring: hsl(217, 91%, 59%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+.github-contrib-grid {
+  display: grid;
+  grid-template-columns: repeat(53, 1fr);
+  gap: 2px;
+  font-size: 10px;
+}
+
+.github-day {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.contrib-0 { 
+  background-color: hsl(217, 32%, 17%); 
+}
+
+.contrib-1 { 
+  background-color: hsl(142, 71%, 35%); 
+  opacity: 0.4; 
+}
+
+.contrib-2 { 
+  background-color: hsl(142, 71%, 35%); 
+  opacity: 0.6; 
+}
+
+.contrib-3 { 
+  background-color: hsl(142, 71%, 35%); 
+  opacity: 0.8; 
+}
+
+.contrib-4 { 
+  background-color: hsl(142, 71%, 35%); 
+}
+
+.tech-badge {
+  background: linear-gradient(135deg, hsl(217, 91%, 59%) 0%, hsl(142, 71%, 35%) 100%);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 8px;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .sidebar-mobile {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar-mobile.open {
+    transform: translateX(0);
+  }
+}
