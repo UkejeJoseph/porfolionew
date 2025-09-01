@@ -1,6 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { useCurrentTime } from "@/hooks/use-current-time";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -35,12 +36,17 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         isOpen && "open"
       )}>
         <div className="p-6">
+          {/* Theme Toggle */}
+          <div className="flex justify-end mb-4">
+            <ThemeToggle />
+          </div>
+          
           {/* Profile Section */}
           <div className="text-center mb-8">
             <img 
-              src="https://raw.githubusercontent.com/UkejeJoseph/portfolio-assets/main/profile.jpg" 
-              alt="Joseph Ukeje" 
-              className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-primary"
+              src="https://raw.githubusercontent.com/UkejeJoseph/portfolio-assets/main/curved-desktop-setup.jpg" 
+              alt="Joseph Ukeje - Curved Desktop Setup" 
+              className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-primary object-cover"
             />
             <h1 className="text-2xl font-bold mb-2">Joseph Ukeje</h1>
             <p className="text-muted-foreground mb-4">Junior Software Engineer</p>
