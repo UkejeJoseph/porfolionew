@@ -38,7 +38,7 @@ function App() {
             onClose={() => setMobileMenuOpen(false)} 
           />
           <Sidebar />
-          <div className="flex-1 md:ml-0 ml-0">
+          <div className="flex-1 md:ml-80 ml-0">
             <button
               data-testid="button-mobile-menu"
               onClick={() => setMobileMenuOpen(true)}
