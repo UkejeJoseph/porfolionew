@@ -7,7 +7,7 @@ export interface Project {
   githubUrl: string;
   liveUrl: string;
   isPrivate?: boolean;
-  category: 'web-design' | 'web-development' | 'all';
+  category: 'web-design' | 'web-development' | 'mobile-development' | 'ai-ml' | 'data-science' | 'all';
 }
 
 export const projects: Project[] = [
@@ -40,6 +40,56 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/UkejeJoseph",
     liveUrl: "https://github.com/UkejeJoseph",
     category: "web-development"
+  },
+  {
+    id: "ai-chatbot",
+    title: "AI-Powered Customer Support Chatbot",
+    description: "Intelligent chatbot with Natural Language Processing for customer service automation and real-time support",
+    image: "https://raw.githubusercontent.com/UkejeJoseph/portfolio-assets/main/ai-chatbot.jpg",
+    technologies: ["Python", "Flask", "NLP", "TensorFlow", "SQLAlchemy", "WebSocket", "React.js"],
+    githubUrl: "https://github.com/UkejeJoseph",
+    liveUrl: "https://github.com/UkejeJoseph",
+    category: "ai-ml"
+  },
+  {
+    id: "ecommerce-platform",
+    title: "Full-Stack E-commerce Platform",
+    description: "Complete e-commerce solution with payment integration, inventory management, and admin dashboard",
+    image: "https://raw.githubusercontent.com/UkejeJoseph/portfolio-assets/main/ecommerce.jpg",
+    technologies: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Stripe API", "Redux", "JWT"],
+    githubUrl: "https://github.com/UkejeJoseph",
+    liveUrl: "https://github.com/UkejeJoseph",
+    category: "web-development"
+  },
+  {
+    id: "task-management",
+    title: "Team Task Management System",
+    description: "Collaborative project management tool with real-time updates, file sharing, and team collaboration features",
+    image: "https://raw.githubusercontent.com/UkejeJoseph/portfolio-assets/main/task-management.jpg",
+    technologies: ["Vue.js", "Node.js", "Socket.io", "MongoDB", "Firebase", "Vuex"],
+    githubUrl: "https://github.com/UkejeJoseph",
+    liveUrl: "https://github.com/UkejeJoseph",
+    category: "web-development"
+  },
+  {
+    id: "weather-app",
+    title: "Smart Weather Analytics Dashboard",
+    description: "Weather forecasting application with data visualization, historical analysis, and location-based recommendations",
+    image: "https://raw.githubusercontent.com/UkejeJoseph/portfolio-assets/main/weather-app.jpg",
+    technologies: ["React.js", "D3.js", "OpenWeather API", "Chart.js", "TypeScript"],
+    githubUrl: "https://github.com/UkejeJoseph",
+    liveUrl: "https://github.com/UkejeJoseph",
+    category: "data-science"
+  },
+  {
+    id: "mobile-expense",
+    title: "Mobile Expense Tracker",
+    description: "Cross-platform mobile app for personal finance management with budget tracking and expense categorization",
+    image: "https://raw.githubusercontent.com/UkejeJoseph/portfolio-assets/main/mobile-expense.jpg",
+    technologies: ["React Native", "Firebase", "SQLite", "Redux", "Chart.js"],
+    githubUrl: "https://github.com/UkejeJoseph",
+    liveUrl: "https://github.com/UkejeJoseph",
+    category: "mobile-development"
   },
   {
     id: "free-tool",
