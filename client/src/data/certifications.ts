@@ -33,7 +33,7 @@ export const certifications: Certification[] = [
   {
     id: "oracle-administrator",
     title: "Oracle 12c Administrator: Java SE 8 (OCA/OCP)",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
     url: "https://github.com/UkejeJoseph"
   },
   {

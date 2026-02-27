@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
     category: "Development",
     date: "Sep 26, 2024",
     views: 58329,
-    image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffq943c6ufzm592mcvg0y.jpg",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000",
     url: "https://dev.to/vyan/12-essential-web-apis-every-developer-should-know-1m28"
   },
   {
@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     category: "Development",
     date: "July 27, 2024",
     views: 56795,
-    image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fko42x3apigcvt27hdf3p.jpg",
+    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=1000",
     url: "https://dev.to/vyan/react-19-a-game-changer-for-modern-web-development-1bih"
   },
   {
@@ -33,7 +33,7 @@ export const blogPosts: BlogPost[] = [
     category: "Development",
     date: "Jul 17, 2024",
     views: 52085,
-    image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwspa5varghey5vc2tmfx.jpg",
+    image: "https://images.unsplash.com/photo-1627398240444-cd732b1df400?auto=format&fit=crop&q=80&w=1000",
     url: "https://dev.to/vyan/how-to-structure-your-backend-code-in-nodejs-expressjs-2bdd"
   },
   {
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
     category: "Development",
     date: "Aug 4, 2024",
     views: 31532,
-    image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5hv8axjpny1i5ou6yiit.jpg",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
     url: "https://medium.com/stackademic/how-to-structure-your-backend-code-in-node-js-express-js-9b423becae3c"
   },
   {
@@ -51,7 +51,7 @@ export const blogPosts: BlogPost[] = [
     category: "Development",
     date: "Jun 21, 2024",
     views: 30855,
-    image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Few9k1u4eiyook2pgqvvq.png",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000",
     url: "https://dev.to/vyan/the-most-commonly-used-databases-with-nodejs-and-express-1koe"
   },
   {
@@ -60,7 +60,7 @@ export const blogPosts: BlogPost[] = [
     category: "Development",
     date: "July 01, 2024",
     views: 21772,
-    image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fz2hsv27obmmzmblaox3n.png",
+    image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?auto=format&fit=crop&q=80&w=1000",
     url: "https://dev.to/vyan/handling-cors-errors-in-reactjs-42pl"
   },
   {
@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
     category: "Design",
     date: "June 03, 2024",
     views: 736,
-    image: "https://raw.githubusercontent.com/vishxly/Certification/main/styling.png",
+    image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&q=80&w=1000",
     url: "https://dev.to/vyan/styling-in-reactjs-exploring-the-best-libraries-j42"
   },
   {
@@ -78,7 +78,7 @@ export const blogPosts: BlogPost[] = [
     category: "Development",
     date: "Feb 23, 2022",
     views: 1247,
-    image: "https://raw.githubusercontent.com/vishxly/Certification/main/gitb.png",
+    image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=1000",
     url: "https://dev.to/vyan/essential-github-commands-for-beginners-34ia"
   },
   {
@@ -87,7 +87,7 @@ export const blogPosts: BlogPost[] = [
     category: "Development",
     date: "Feb 23, 2022",
     views: 953,
-    image: "https://raw.githubusercontent.com/vishxly/Certification/main/nextjsb.webp",
+    image: "https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&q=80&w=1000",
     url: "https://dev.to/vyan/5-essential-tips-and-tricks-for-mastering-nextjs-1p7g"
   }
 ];
