@@ -56,15 +56,20 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
+  // Add a simple health check endpoint for Railway
+  app.get("/api/health", (_req, res) => {
+    res.json({ status: "ok", env: app.get("env"), time: new Date().toISOString() });
+  });
+
   // ALWAYS serve the app on the port specified in the environment variable PORT
   // Other ports are firewalled. Default to 4000 if not specified (matching Railway config).
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || '4000', 10);
+  const host = "0.0.0.0";
+
   server.listen({
     port,
-    host: "0.0.0.0",
+    host,
   }, () => {
-    log(`serving on port ${port} in ${app.get("env")} mode`);
+    log(`App version 1.0.1 - serving on http://${host}:${port} in ${app.get("env")} mode`);
   });
 })();
