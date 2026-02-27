@@ -23,6 +23,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </span>
           ))}
         </div>
+        <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+          {project.description}
+        </p>
         <div className="flex gap-3">
           <a
             href={project.githubUrl}
