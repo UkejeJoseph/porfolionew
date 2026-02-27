@@ -2,83 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  * {
+    cursor: none !important;
+  }
+}
+
 :root {
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(222, 84%, 4.9%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(222, 84%, 4.9%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(222, 84%, 4.9%);
-  --primary: hsl(217, 91%, 59%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(210, 40%, 96%);
-  --secondary-foreground: hsl(222, 84%, 4.9%);
-  --muted: hsl(210, 40%, 96%);
-  --muted-foreground: hsl(215, 16%, 46.9%);
-  --accent: hsl(210, 40%, 96%);
-  --accent-foreground: hsl(222, 84%, 4.9%);
-  --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --border: hsl(214, 32%, 91%);
-  --input: hsl(214, 32%, 91%);
-  --ring: hsl(217, 91%, 59%);
-  --chart-1: hsl(217, 91%, 59%);
-  --chart-2: hsl(142, 71%, 35%);
-  --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
-  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
-  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
-  --sidebar: hsl(0, 0%, 100%);
-  --sidebar-foreground: hsl(222, 84%, 4.9%);
-  --sidebar-primary: hsl(217, 91%, 59%);
-  --sidebar-primary-foreground: hsl(210, 40%, 98%);
-  --sidebar-accent: hsl(210, 40%, 96%);
-  --sidebar-accent-foreground: hsl(222, 84%, 4.9%);
-  --sidebar-border: hsl(214, 32%, 91%);
-  --sidebar-ring: hsl(217, 91%, 59%);
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-serif: Georgia, serif;
-  --font-mono: 'Fira Code', monospace;
-  --radius: 0.5rem;
-  --shadow-2xs: 0px 1px 2px 0px hsl(0, 0%, 0% / 0.05);
-  --shadow-xs: 0px 1px 2px 0px hsl(0, 0%, 0% / 0.05);
-  --shadow-sm: 0px 1px 2px 0px hsl(0, 0%, 0% / 0.05), 0px 1px 3px 0px hsl(0, 0%, 0% / 0.1);
-  --shadow: 0px 1px 2px 0px hsl(0, 0%, 0% / 0.05), 0px 1px 3px 0px hsl(0, 0%, 0% / 0.1);
-  --shadow-md: 0px 4px 6px -1px hsl(0, 0%, 0% / 0.1), 0px 2px 4px -1px hsl(0, 0%, 0% / 0.06);
-  --shadow-lg: 0px 10px 15px -3px hsl(0, 0%, 0% / 0.1), 0px 4px 6px -2px hsl(0, 0%, 0% / 0.05);
-  --shadow-xl: 0px 20px 25px -5px hsl(0, 0%, 0% / 0.1), 0px 10px 10px -5px hsl(0, 0%, 0% / 0.04);
-  --shadow-2xl: 0px 25px 50px -12px hsl(0, 0%, 0% / 0.25);
-  --tracking-normal: 0em;
-  --spacing: 0.25rem;
+  /* Light mode - emerald accent */
+  --background: hsl(0, 0%, 98%);
+  --foreground: hsl(240, 6%, 10%);
+  --card: hsl(0, 0%, 96%);
+  --card-foreground: hsl(240, 6%, 10%);
+  --popover: hsl(0, 0%, 98%);
+  --popover-foreground: hsl(240, 6%, 10%);
+  --primary: hsl(160, 60%, 45%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 5%, 90%);
+  --secondary-foreground: hsl(240, 6%, 10%);
+  --muted: hsl(240, 5%, 90%);
+  --muted-foreground: hsl(240, 4%, 40%);
+  --accent: hsl(160, 60%, 45%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 100%, 50%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(240, 6%, 85%);
+  --input: hsl(240, 6%, 85%);
+  --ring: hsl(160, 60%, 45%);
+  --radius: 1rem;
 }
 
 .dark {
-  --background: hsl(224, 71%, 4%);
-  --foreground: hsl(210, 40%, 98%);
-  --card: hsl(224, 71%, 4%);
-  --card-foreground: hsl(210, 40%, 98%);
-  --popover: hsl(224, 71%, 4%);
-  --popover-foreground: hsl(210, 40%, 98%);
-  --primary: hsl(263, 70%, 50%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(215, 27%, 17%);
-  --secondary-foreground: hsl(210, 40%, 98%);
-  --muted: hsl(215, 27%, 17%);
-  --muted-foreground: hsl(217, 10%, 64%);
-  --accent: hsl(215, 27%, 17%);
-  --accent-foreground: hsl(210, 40%, 98%);
-  --destructive: hsl(0, 63%, 31%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --border: hsl(215, 27%, 17%);
-  --input: hsl(215, 27%, 17%);
-  --ring: hsl(263, 70%, 50%);
-  --sidebar: hsl(224, 71%, 4%);
-  --sidebar-foreground: hsl(210, 40%, 98%);
-  --sidebar-primary: hsl(263, 70%, 50%);
-  --sidebar-primary-foreground: hsl(210, 40%, 98%);
-  --sidebar-accent: hsl(215, 27%, 17%);
-  --sidebar-accent-foreground: hsl(210, 40%, 98%);
-  --sidebar-border: hsl(215, 27%, 17%);
-  --sidebar-ring: hsl(263, 70%, 50%);
+  /* Deep charcoal background with Emerald/Halo green accent */
+  --background: hsl(240, 6%, 4%);
+  /* ~#09090b */
+  --foreground: hsl(240, 5%, 96%);
+  --card: hsl(240, 4%, 6%);
+  --card-foreground: hsl(240, 5%, 96%);
+  --popover: hsl(240, 6%, 4%);
+  --popover-foreground: hsl(240, 5%, 96%);
+  --primary: hsl(160, 60%, 52%);
+  /* #34d399 - Halo green */
+  --primary-foreground: hsl(240, 6%, 4%);
+  --secondary: hsl(240, 4%, 10%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(240, 4%, 13%);
+  --muted-foreground: hsl(240, 4%, 65%);
+  --accent: hsl(160, 60%, 52%);
+  --accent-foreground: hsl(240, 6%, 4%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsla(0, 0%, 100%, 0.1);
+  --input: hsla(0, 0%, 100%, 0.1);
+  --ring: hsl(160, 60%, 52%);
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(160, 60%, 52%);
+  border-radius: 10px;
+  border: 4px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(160, 60%, 42%);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+@layer utilities {
+  .glow-pulse {
+    animation: glow-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .glow-blink {
+    animation: glow-blink 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.3);
+  }
+
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 40px rgba(52, 211, 153, 0.6);
+  }
+}
+
+@keyframes glow-blink {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 5px rgba(52, 211, 153, 0.8));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 15px rgba(52, 211, 153, 0.4));
+  }
 }
 
 @layer base {
@@ -88,6 +123,7 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    cursor: none !important;
   }
 }
 
@@ -104,27 +140,27 @@
   border-radius: 2px;
 }
 
-.contrib-0 { 
-  background-color: hsl(217, 32%, 17%); 
+.contrib-0 {
+  background-color: hsl(217, 32%, 17%);
 }
 
-.contrib-1 { 
-  background-color: hsl(142, 71%, 35%); 
-  opacity: 0.4; 
+.contrib-1 {
+  background-color: hsl(142, 71%, 35%);
+  opacity: 0.4;
 }
 
-.contrib-2 { 
-  background-color: hsl(142, 71%, 35%); 
-  opacity: 0.6; 
+.contrib-2 {
+  background-color: hsl(142, 71%, 35%);
+  opacity: 0.6;
 }
 
-.contrib-3 { 
-  background-color: hsl(142, 71%, 35%); 
-  opacity: 0.8; 
+.contrib-3 {
+  background-color: hsl(142, 71%, 35%);
+  opacity: 0.8;
 }
 
-.contrib-4 { 
-  background-color: hsl(142, 71%, 35%); 
+.contrib-4 {
+  background-color: hsl(142, 71%, 35%);
 }
 
 .tech-badge {
@@ -150,8 +186,51 @@
     transform: translateX(-100%);
     transition: transform 0.3s ease;
   }
-  
+
   .sidebar-mobile.open {
     transform: translateX(0);
   }
+}
+
+/* AI Chat Widget Styles */
+.typing-indicator span {
+  animation: typing-bounce 1.4s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing-bounce {
+
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+.chat-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(160, 60%, 52%);
+  border-radius: 10px;
+  opacity: 0.5;
 }

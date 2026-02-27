@@ -6,10 +6,10 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-      <img 
-        src={project.image} 
-        alt={project.title} 
+    <div className="bg-card/40 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+      <img
+        src={project.image}
+        alt={project.title}
         className="w-full h-48 object-cover"
       />
       <div className="p-6">
@@ -24,8 +24,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
         <div className="flex gap-3">
-          <a 
-            href={project.githubUrl} 
+          <a
+            href={project.githubUrl}
             data-testid={`link-github-${project.id}`}
             className="text-sm text-muted-foreground hover:text-primary"
             target="_blank"
@@ -33,8 +33,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           >
             GitHub {project.isPrivate && "(Private)"}
           </a>
-          <a 
-            href={project.liveUrl} 
+          <a
+            href={project.liveUrl}
             data-testid={`link-live-${project.id}`}
             className="text-sm text-primary hover:underline"
             target="_blank"

@@ -6,11 +6,11 @@ interface BlogPostCardProps {
 
 export default function BlogPostCard({ post }: BlogPostCardProps) {
   return (
-    <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+    <div className="bg-background border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all">
       <div className="flex md:flex-row flex-col">
-        <img 
-          src={post.image} 
-          alt={post.title} 
+        <img
+          src={post.image}
+          alt={post.title}
           className="md:w-64 w-full h-48 md:h-auto object-cover"
         />
         <div className="p-6 flex-1">
@@ -23,8 +23,8 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
           <div className="text-muted-foreground mb-4" data-testid={`blog-views-${post.id}`}>
             {post.views.toLocaleString()} views
           </div>
-          <a 
-            href={post.url} 
+          <a
+            href={post.url}
             data-testid={`link-blog-${post.id}`}
             className="text-primary hover:underline"
             target="_blank"

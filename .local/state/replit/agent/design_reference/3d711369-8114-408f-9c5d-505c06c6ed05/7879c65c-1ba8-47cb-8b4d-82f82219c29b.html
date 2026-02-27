@@ -1,0 +1,555 @@
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Yadav - Fullstack Developer</title>
+    <meta name="description" content="Full-Stack Developer skilled in JavaScript, React.js, Next.js, Node.js, and Express">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/heroicons@2.0.18/24/outline/index.js" type="module"></script>
+    <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          borderRadius: {
+            lg: "var(--radius)",
+            md: "calc(var(--radius) - 2px)",
+            sm: "calc(var(--radius) - 4px)",
+          },
+          colors: {
+            background: "var(--background)",
+            foreground: "var(--foreground)",
+            card: {
+              DEFAULT: "var(--card)",
+              foreground: "var(--card-foreground)",
+            },
+            popover: {
+              DEFAULT: "var(--popover)",
+              foreground: "var(--popover-foreground)",
+            },
+            primary: {
+              DEFAULT: "var(--primary)",
+              foreground: "var(--primary-foreground)",
+            },
+            secondary: {
+              DEFAULT: "var(--secondary)",
+              foreground: "var(--secondary-foreground)",
+            },
+            muted: {
+              DEFAULT: "var(--muted)",
+              foreground: "var(--muted-foreground)",
+            },
+            accent: {
+              DEFAULT: "var(--accent)",
+              foreground: "var(--accent-foreground)",
+            },
+            destructive: {
+              DEFAULT: "var(--destructive)",
+              foreground: "var(--destructive-foreground)",
+            },
+            border: "var(--border)",
+            input: "var(--input)",
+            ring: "var(--ring)",
+            chart: {
+              "1": "var(--chart-1)",
+              "2": "var(--chart-2)",
+              "3": "var(--chart-3)",
+              "4": "var(--chart-4)",
+              "5": "var(--chart-5)",
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          }
+        },
+      }
+    };
+    </script>
+    <style>
+        :root {
+            --background: hsl(0 0% 6%);
+            --foreground: hsl(0 0% 98%);
+            --card: hsl(0 0% 9%);
+            --card-foreground: hsl(0 0% 98%);
+            --popover: hsl(0 0% 9%);
+            --popover-foreground: hsl(0 0% 98%);
+            --primary: hsl(142 76% 36%);
+            --primary-foreground: hsl(0 0% 98%);
+            --secondary: hsl(0 0% 14%);
+            --secondary-foreground: hsl(0 0% 98%);
+            --muted: hsl(0 0% 14%);
+            --muted-foreground: hsl(0 0% 64%);
+            --accent: hsl(0 0% 14%);
+            --accent-foreground: hsl(0 0% 98%);
+            --destructive: hsl(0 84% 60%);
+            --destructive-foreground: hsl(0 0% 98%);
+            --border: hsl(0 0% 14%);
+            --input: hsl(0 0% 14%);
+            --ring: hsl(142 76% 36%);
+            --radius: 0.5rem;
+            --chart-1: hsl(142 76% 36%);
+            --chart-2: hsl(346 87% 43%);
+            --chart-3: hsl(262 83% 58%);
+            --chart-4: hsl(47 96% 53%);
+            --chart-5: hsl(199 89% 48%);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .contribution-square {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+        }
+        
+        .contribution-level-0 { background-color: hsl(0 0% 14%); }
+        .contribution-level-1 { background-color: hsl(142 76% 20%); }
+        .contribution-level-2 { background-color: hsl(142 76% 28%); }
+        .contribution-level-3 { background-color: hsl(142 76% 36%); }
+        .contribution-level-4 { background-color: hsl(142 76% 44%); }
+        
+        .nav-link {
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .experience-card {
+            transition: all 0.3s ease;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-4px);
+            background-color: hsl(0 0% 12%);
+        }
+    </style>
+</head>
+<body class="bg-background text-foreground min-h-screen">
+    <!-- @COMPONENT: Layout [Main layout wrapper] -->
+    <div class="min-h-screen bg-background">
+        <!-- @COMPONENT: Header [Top navigation and profile section] -->
+        <header class="max-w-4xl mx-auto px-4 py-8">
+            <!-- Profile Section -->
+            <!-- @COMPONENT: ProfileCard [User profile display] -->
+            <div class="text-center mb-12">
+                <!-- Profile photo from the original site -->
+                <img src="https://www.vshall.me/_next/image?url=https%3A%2F%2Fraw.githubusercontent.com%2Fvishxly%2FCertification%2Fmain%2Fmy.jpg&w=128&q=75" 
+                     alt="Vishal Yadav Profile Photo" 
+                     class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-border object-cover"
+                     data-mock-image="true"
+                     data-implementation="Use Next.js Image component with optimization">
+                
+                <h1 class="text-3xl font-bold text-foreground mb-2" data-bind="user.name">Vishal Yadav</h1>
+                <p class="text-xl text-muted-foreground mb-6" data-bind="user.title">Fullstack Developer</p>
+                
+                <div class="flex justify-center items-center gap-4 mb-8">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary text-primary-foreground">
+                        Available
+                    </span>
+                    <a href="mailto:vishxly@gmail.com" 
+                       class="inline-flex items-center px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+                       data-bind="user.email">
+                        Reach out
+                    </a>
+                </div>
+            </div>
+            <!-- @END_COMPONENT: ProfileCard -->
+
+            <!-- Contact Info Grid -->
+            <!-- @COMPONENT: ContactInfo [Contact details display] -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-card border border-border rounded-lg p-6 text-center">
+                    <div class="w-8 h-8 mx-auto mb-3 text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-foreground mb-1">EMAIL</h3>
+                    <a href="mailto:vishxly@gmail.com" class="text-primary hover:underline" data-bind="user.email">
+                        vishxly@gmail.com
+                    </a>
+                </div>
+
+                <div class="bg-card border border-border rounded-lg p-6 text-center">
+                    <div class="w-8 h-8 mx-auto mb-3 text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-foreground mb-1">PHONE</h3>
+                    <p class="text-muted-foreground" data-bind="user.phone">8668279388</p>
+                </div>
+
+                <div class="bg-card border border-border rounded-lg p-6 text-center">
+                    <div class="w-8 h-8 mx-auto mb-3 text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-foreground mb-1">LOCATION</h3>
+                    <p class="text-muted-foreground" data-bind="user.location">Nashik, India</p>
+                    <p class="text-sm text-primary mt-2" id="currentTime" data-implementation="Real-time clock update">07:22:44 AM</p>
+                </div>
+            </div>
+            <!-- @END_COMPONENT: ContactInfo -->
+
+            <!-- Navigation -->
+            <!-- @COMPONENT: Navigation [Main navigation menu] -->
+            <nav class="flex justify-center mb-12">
+                <div class="flex flex-wrap gap-8 text-sm font-medium">
+                    <a href="#about" class="nav-link text-primary" data-bind="nav.about">About</a>
+                    <a href="/resume" class="nav-link text-muted-foreground hover:text-primary" data-bind="nav.resume">Resume</a>
+                    <a href="/portfolio" class="nav-link text-muted-foreground hover:text-primary" data-bind="nav.projects">Projects</a>
+                    <a href="/blog" class="nav-link text-muted-foreground hover:text-primary" data-bind="nav.blog">Blog</a>
+                    <a href="/contact" class="nav-link text-muted-foreground hover:text-primary" data-bind="nav.contact">Contact</a>
+                </div>
+            </nav>
+            <!-- @END_COMPONENT: Navigation -->
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-4xl mx-auto px-4 pb-16">
+            <!-- About Section -->
+            <!-- @COMPONENT: AboutSection [About me content and view counter] -->
+            <section id="about" class="mb-16">
+                <div class="flex items-center gap-3 mb-6">
+                    <h2 class="text-2xl font-bold text-foreground">About Me</h2>
+                    <span class="text-sm text-muted-foreground bg-muted px-2 py-1 rounded" data-bind="analytics.views">
+                        (10451 views)
+                    </span>
+                </div>
+                
+                <p class="text-lg text-muted-foreground leading-relaxed mb-12" data-bind="user.description">
+                    I am a Full-Stack Developer skilled in JavaScript, React.js, Next.js, Node.js, and Express. I have experience working with databases such as MongoDB, Firebase, and PostgreSQL. Additionally, I specialize in building scalable and user-focused applications with Tailwind CSS, creating efficient and reusable solutions.
+                </p>
+            </section>
+            <!-- @END_COMPONENT: AboutSection -->
+
+            <!-- Experience Cards -->
+            <!-- @COMPONENT: ExperienceShowcase [Experience and skills display] -->
+            <section class="mb-16">
+                <!-- @MAP: experiences.map(experience => ( -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="experience-card bg-card border border-border rounded-lg p-6 cursor-pointer">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <!-- Full-Stack Development icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-foreground mb-2" data-bind="experience.title">Full-Stack Development</h3>
+                                <p class="text-sm text-muted-foreground" data-bind="experience.description">Developed end-to-end solutions using React, Node.js, and MongoDB.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-card bg-card border border-border rounded-lg p-6 cursor-pointer">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <!-- Developer Community icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-foreground mb-2" data-bind="experience.title">Developer Community</h3>
+                                <p class="text-sm text-muted-foreground" data-bind="experience.description">I run a developer community platform on daily.dev with over 2 thousand active members.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-card bg-card border border-border rounded-lg p-6 cursor-pointer">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <!-- Freelancer icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6m8 0H8" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-foreground mb-2" data-bind="experience.title">Freelancer</h3>
+                                <p class="text-sm text-muted-foreground" data-bind="experience.description">Designed intuitive user interfaces and built web solutions for various clients.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-card bg-card border border-border rounded-lg p-6 cursor-pointer">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <!-- Technical Blogging icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-foreground mb-2" data-bind="experience.title">Technical Blogging</h3>
+                                <p class="text-sm text-muted-foreground" data-bind="experience.description">I also write technical blogs with over 1 million views.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </section>
+            <!-- @END_COMPONENT: ExperienceShowcase -->
+
+            <!-- GitHub Contributions -->
+            <!-- @COMPONENT: GitHubContributions [Contributions chart visualization] -->
+            <section class="mb-16">
+                <div class="bg-card border border-border rounded-lg p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-semibold text-foreground">GitHub Contributions</h3>
+                        <span class="text-sm text-muted-foreground" data-bind="github.contributionCount">1832 contributions in the last year</span>
+                    </div>
+                    
+                    <!-- Contributions Chart -->
+                    <div class="overflow-x-auto">
+                        <div class="inline-block min-w-full">
+                            <!-- Month labels -->
+                            <div class="flex text-xs text-muted-foreground mb-2 pl-8">
+                                <div class="w-3 mr-1"></div>
+                                <!-- @MAP: months.map(month => ( -->
+                                <div class="flex-1 text-center min-w-[60px]" data-bind="month.name">Aug</div>
+                                <div class="flex-1 text-center min-w-[60px]" data-bind="month.name">Sep</div>
+                                <div class="flex-1 text-center min-w-[60px]" data-bind="month.name">Oct</div>
+                                <div class="flex-1 text-center min-w-[60px]" data-bind="month.name">Nov</div>
+                                <div class="flex-1 text-center min-w-[60px]" data-bind="month.name">Dec</div>
+                                <div class="flex-1 text-center min-w-[60px]" data-bind="month.name">Jan</div>
+                                <div class="flex-1 text-center min-w-[60px]" data-bind="month.name">Feb</div>
+                                <div class="flex-1 text-center min-w-[60px]" data-bind="month.name">Mar</div>
+                                <div class="flex-1 text-center min-w-[60px]" data-bind="month.name">Apr</div>
+                                <div class="flex-1 text-center min-w-[60px]" data-bind="month.name">May</div>
+                                <div class="flex-1 text-center min-w-[60px]" data-bind="month.name">Jun</div>
+                                <div class="flex-1 text-center min-w-[60px]" data-bind="month.name">Jul</div>
+                                <!-- @END_MAP )) -->
+                            </div>
+                            
+                            <!-- Contribution grid -->
+                            <div class="flex">
+                                <!-- Day labels -->
+                                <div class="flex flex-col text-xs text-muted-foreground pr-2">
+                                    <div class="h-3 mb-1"></div>
+                                    <div class="h-3 mb-1 flex items-center">Mon</div>
+                                    <div class="h-3 mb-1"></div>
+                                    <div class="h-3 mb-1 flex items-center">Wed</div>
+                                    <div class="h-3 mb-1"></div>
+                                    <div class="h-3 mb-1 flex items-center">Fri</div>
+                                    <div class="h-3 mb-1"></div>
+                                </div>
+                                
+                                <!-- Contribution squares grid -->
+                                <div class="grid grid-rows-7 grid-flow-col gap-1" style="grid-template-rows: repeat(7, 12px);" data-implementation="Generate dynamic contribution data">
+                                    <!-- Sample contribution data - this would be dynamically generated -->
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="1 contribution"></div>
+                                    <div class="contribution-square contribution-level-2" title="3 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    <div class="contribution-square contribution-level-3" title="7 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="2 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    
+                                    <!-- Repeat for all 52 weeks * 7 days -->
+                                    <!-- This is a sample representation - in real implementation, this would be generated from GitHub API data -->
+                                    <!-- Generate approximately 364 squares with varying contribution levels -->
+                                    <div class="contribution-square contribution-level-2" title="4 contributions"></div>
+                                    <div class="contribution-square contribution-level-3" title="8 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="1 contribution"></div>
+                                    <div class="contribution-square contribution-level-4" title="12 contributions"></div>
+                                    <div class="contribution-square contribution-level-2" title="3 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="2 contributions"></div>
+                                    
+                                    <!-- Continue pattern for demonstration - in real app this would be data-driven -->
+                                    <div class="contribution-square contribution-level-3" title="6 contributions"></div>
+                                    <div class="contribution-square contribution-level-2" title="4 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="1 contribution"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    <div class="contribution-square contribution-level-4" title="15 contributions"></div>
+                                    <div class="contribution-square contribution-level-3" title="9 contributions"></div>
+                                    <div class="contribution-square contribution-level-2" title="5 contributions"></div>
+                                    
+                                    <!-- Add more squares to fill the year -->
+                                    <div class="contribution-square contribution-level-1" title="2 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    <div class="contribution-square contribution-level-3" title="7 contributions"></div>
+                                    <div class="contribution-square contribution-level-2" title="4 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="1 contribution"></div>
+                                    <div class="contribution-square contribution-level-4" title="11 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    
+                                    <!-- Continuing the pattern for more weeks -->
+                                    <div class="contribution-square contribution-level-2" title="3 contributions"></div>
+                                    <div class="contribution-square contribution-level-3" title="8 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="2 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    <div class="contribution-square contribution-level-4" title="13 contributions"></div>
+                                    <div class="contribution-square contribution-level-2" title="5 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="1 contribution"></div>
+                                    
+                                    <!-- More contribution squares - this pattern would continue for 52 weeks -->
+                                    <!-- For brevity in this mockup, showing representative sample -->
+                                    <div class="contribution-square contribution-level-3" title="6 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    <div class="contribution-square contribution-level-2" title="4 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="2 contributions"></div>
+                                    <div class="contribution-square contribution-level-4" title="14 contributions"></div>
+                                    <div class="contribution-square contribution-level-3" title="7 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+
+                                    <!-- Additional weeks to demonstrate the full year -->
+                                    <div class="contribution-square contribution-level-1" title="1 contribution"></div>
+                                    <div class="contribution-square contribution-level-2" title="3 contributions"></div>
+                                    <div class="contribution-square contribution-level-4" title="10 contributions"></div>
+                                    <div class="contribution-square contribution-level-3" title="8 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="2 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    <div class="contribution-square contribution-level-2" title="4 contributions"></div>
+
+                                    <!-- Continue filling out the grid with varied contribution levels -->
+                                    <div class="contribution-square contribution-level-3" title="9 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="1 contribution"></div>
+                                    <div class="contribution-square contribution-level-4" title="16 contributions"></div>
+                                    <div class="contribution-square contribution-level-2" title="5 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    <div class="contribution-square contribution-level-3" title="7 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="2 contributions"></div>
+
+                                    <!-- More squares to represent the full 52 weeks -->
+                                    <div class="contribution-square contribution-level-2" title="3 contributions"></div>
+                                    <div class="contribution-square contribution-level-4" title="12 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="1 contribution"></div>
+                                    <div class="contribution-square contribution-level-3" title="6 contributions"></div>
+                                    <div class="contribution-square contribution-level-2" title="4 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="2 contributions"></div>
+
+                                    <!-- Final weeks of the year -->
+                                    <div class="contribution-square contribution-level-4" title="11 contributions"></div>
+                                    <div class="contribution-square contribution-level-3" title="8 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    <div class="contribution-square contribution-level-2" title="5 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="1 contribution"></div>
+                                    <div class="contribution-square contribution-level-3" title="7 contributions"></div>
+                                    <div class="contribution-square contribution-level-2" title="3 contributions"></div>
+
+                                    <!-- Additional representative squares for the remaining weeks -->
+                                    <div class="contribution-square contribution-level-1" title="2 contributions"></div>
+                                    <div class="contribution-square contribution-level-4" title="15 contributions"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+                                    <div class="contribution-square contribution-level-3" title="9 contributions"></div>
+                                    <div class="contribution-square contribution-level-2" title="4 contributions"></div>
+                                    <div class="contribution-square contribution-level-1" title="1 contribution"></div>
+                                    <div class="contribution-square contribution-level-0" title="0 contributions"></div>
+
+                                    <!-- Continue pattern to fill approximately 52 weeks × 7 days = 364 squares -->
+                                    <!-- For mockup purposes, showing representative pattern -->
+                                    <!-- TODO: In real implementation, fetch from GitHub API and generate dynamically -->
+                                </div>
+                            </div>
+                            
+                            <!-- Legend -->
+                            <div class="flex items-center justify-between mt-4">
+                                <div class="flex items-center gap-2 text-xs text-muted-foreground">
+                                    <span>Less</span>
+                                    <div class="flex gap-1">
+                                        <div class="contribution-square contribution-level-0"></div>
+                                        <div class="contribution-square contribution-level-1"></div>
+                                        <div class="contribution-square contribution-level-2"></div>
+                                        <div class="contribution-square contribution-level-3"></div>
+                                        <div class="contribution-square contribution-level-4"></div>
+                                    </div>
+                                    <span>More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- @END_COMPONENT: GitHubContributions -->
+
+            <!-- Bottom Navigation -->
+            <!-- @COMPONENT: BottomNavigation [Footer navigation] -->
+            <footer class="border-t border-border pt-8">
+                <nav class="flex justify-center">
+                    <div class="flex flex-wrap gap-8 text-sm font-medium">
+                        <a href="#about" class="nav-link text-primary" data-bind="nav.about">About</a>
+                        <a href="/resume" class="nav-link text-muted-foreground hover:text-primary" data-bind="nav.resume">Resume</a>
+                        <a href="/portfolio" class="nav-link text-muted-foreground hover:text-primary" data-bind="nav.projects">Projects</a>
+                        <a href="/blog" class="nav-link text-muted-foreground hover:text-primary" data-bind="nav.blog">Blog</a>
+                        <a href="/contact" class="nav-link text-muted-foreground hover:text-primary" data-bind="nav.contact">Contact</a>
+                    </div>
+                </nav>
+            </footer>
+            <!-- @END_COMPONENT: BottomNavigation -->
+        </main>
+    </div>
+    <!-- @END_COMPONENT: Layout -->
+
+    <script>
+        (function() {
+            // Time display functionality
+            function updateTime() {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('en-US', {
+                    hour12: true,
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                });
+                const timeElement = document.getElementById('currentTime');
+                if (timeElement) {
+                    timeElement.textContent = timeString;
+                }
+            }
+
+            // Update time every second
+            updateTime();
+            setInterval(updateTime, 1000);
+
+            // Contribution square hover effects
+            const contributionSquares = document.querySelectorAll('.contribution-square');
+            contributionSquares.forEach(square => {
+                square.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.2)';
+                    this.style.transition = 'transform 0.1s ease';
+                });
+                
+                square.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // TODO: Implement GitHub API integration for real contribution data
+            // TODO: Add view counter functionality 
+            // TODO: Implement contact form validation
+            // TODO: Add blog post fetching from CMS
+            // TODO: Implement project portfolio gallery
+        })();
+    </script>
+</body>
+</html>

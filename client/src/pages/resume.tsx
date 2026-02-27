@@ -1,5 +1,6 @@
 import { skills } from "@/data/skills";
 import SkillIcon from "@/components/skill-icon";
+import LiveVisitors from "@/components/ui/live-visitors";
 
 export default function Resume() {
   const skillsByCategory = {
@@ -12,66 +13,93 @@ export default function Resume() {
   return (
     <div className="p-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Resume</h2>
-        
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-3xl font-bold">Resume</h2>
+          <div className="flex items-center gap-3">
+            <a
+              href="/resume_joseph_ukeje.pdf"
+              download
+              data-testid="download-resume-btn"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 hover:shadow-[0_0_15px_rgba(52,211,153,0.4)] transition-all text-sm font-medium"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download PDF
+            </a>
+            <LiveVisitors />
+          </div>
+        </div>
         {/* Education Section */}
         <div className="mb-12">
           <h3 className="text-2xl font-semibold mb-6">Education</h3>
           <div className="border-l-2 border-primary pl-6" data-testid="education-babcock">
             <h4 className="text-xl font-semibold">Bachelor of Science in Software Engineering</h4>
-            <p className="text-primary mb-2">Babcock University, Nigeria (GPA: 4.1)</p>
+            <p className="text-primary mb-2">Babcock University, Ogun state, Nigeria (GPA: 3.93/5.00)</p>
             <p className="text-muted-foreground mb-2">Jan '20 — Jul '24</p>
             <p className="text-muted-foreground">Relevant Coursework: Data Structures & Algorithms, Objects & Design, Computer Organization & Programming, Combinatorics, Machine Learning</p>
           </div>
         </div>
-        
+
         {/* Experience Section */}
         <div className="mb-12">
           <h3 className="text-2xl font-semibold mb-6">Experience</h3>
-          
+
           <div className="space-y-8">
+            <div className="border-l-2 border-primary pl-6" data-testid="experience-interswitch">
+              <h4 className="text-xl font-semibold">Senior Software Engineer</h4>
+              <p className="text-primary mb-2">Interswitch, Lagos, Nigeria (Apr '25 — Present)</p>
+              <ul className="text-muted-foreground space-y-2">
+                <li>• Architected and deployed enterprise-grade Identity and Access Management (IAM) systems with LDAP, multi-tenant onboarding, and advanced authentication/authorization, cutting onboarding time by 50%.</li>
+                <li>• Designed and scaled Spring Boot microservices for onboarding, modification, approvals, and lifecycle management, streaming ERP-driven operations and improving efficiency by 70%.</li>
+                <li>• Developed secure APIs and SWIFT message flows integrated with ERP and IBM MQ, boosting transaction throughput by 40%.</li>
+                <li>• Optimized resilience with Redis caching, retry/error handling, and audit logging frameworks, reducing downtime by 60%.</li>
+                <li>• Led enterprise deployments using Docker, WebLogic, and Veracode remediation, resolving 100% of high-severity vulnerabilities and hardening infrastructure for Tier-1 banks.</li>
+                <li>• Designed and developed an AI-powered knowledge-based chatbot for enterprise customer support at Interswitch, leveraging NLP models and contextual search to automate responses, reducing support tickets by 40%.</li>
+              </ul>
+            </div>
+
             <div className="border-l-2 border-primary pl-6" data-testid="experience-huawei">
-              <h4 className="text-xl font-semibold">Software Engineer/Developer</h4>
-              <p className="text-primary mb-2">Huawei Technologies (Feb '25 — Present)</p>
+              <h4 className="text-xl font-semibold">Software Engineer</h4>
+              <p className="text-primary mb-2">Huawei Technologies, Nigeria (Jan '25 — Apr '25)</p>
               <ul className="text-muted-foreground space-y-2">
-                <li>• Redesigned rebuild of an internal Tech Community application using React.js, Node.js, and AWS services, resulting in a 30% increase in user satisfaction and improved functionality.</li>
-                <li>• Developed advanced React components and implemented comprehensive testing strategies using Jest and Postman, accelerating the development process by 20% and ensuring a 95% bug-free release.</li>
-                <li>• Collaborated effectively in a 3-person team, conducting peer code reviews and maintaining project quality metrics, which contributed to completing project milestones 10% ahead of schedule.</li>
-                <li>• Designed/Developed a Cash Catalogue page by developing a Vue.js component to display different redemption options for installers, improving User Experience.</li>
+                <li>• Redesigned and rebuilt an internal Tech Community application leveraging ReactJS, Node.js, and AWS services, delivering a 30% increase in user satisfaction.</li>
+                <li>• Developed advanced React components and implemented comprehensive testing strategies using Jest and Postman, accelerating development velocity by 20% and achieving a 95% bug-free release rate.</li>
+                <li>• Designed and implemented a Cash Catalogue feature using Vue.js, enabling installers to seamlessly redeem rewards.</li>
+                <li>• Optimized front-end architecture and integrated CI/CD pipelines with Jenkins and Git, cutting build times by 25%.</li>
               </ul>
             </div>
-            
+
             <div className="border-l-2 border-primary pl-6" data-testid="experience-vision-forge">
-              <h4 className="text-xl font-semibold">Junior Software Engineer</h4>
-              <p className="text-primary mb-2">Vision Forge AI Automations, Lagos (Remote) (Jan '24 — Present)</p>
+              <h4 className="text-xl font-semibold">Software Engineer</h4>
+              <p className="text-primary mb-2">Vision Forge AI Automations, Nigeria (Remote) (Jan '24 — Jan '25)</p>
               <ul className="text-muted-foreground space-y-2">
-                <li>• Developed and implemented an API strategy with Spring Boot, integrating 5 microservices to synchronize data updates, reducing data-related errors reported by the QA team by 50%.</li>
-                <li>• Optimized system performance by refactoring Java and PL/SQL codebases, reducing system response time by 15%.</li>
-                <li>• Applied performance testing methodologies to ensure system stability under load.</li>
-                <li>• Utilized RabbitMQ for event-driven communication between system components, enabling real-time data flow and seamless integration.</li>
-                <li>• Contributed to feature testing with JUnit, achieving over 85% code coverage and enhancing software reliability.</li>
+                <li>• Developed and executed an API integration strategy with Spring Boot, connecting 5 microservices to synchronize data updates and reducing QA-reported data errors by 50%.</li>
+                <li>• Refactored Java and PL/SQL codebases to enhance efficiency, cutting system response times by 15%.</li>
+                <li>• Leveraged RabbitMQ for event-driven communication, enabling real-time data flow and seamless integration across distributed system components.</li>
+                <li>• Increased code reliability by expanding JUnit test coverage to over 85%, strengthening software quality.</li>
               </ul>
             </div>
-            
+
             <div className="border-l-2 border-primary pl-6" data-testid="experience-schlumberger">
               <h4 className="text-xl font-semibold">Full-Stack Developer Intern</h4>
-              <p className="text-primary mb-2">Schlumberger Oil and Gas Servicing Limited, Lagos (Jan '23 — Aug '23)</p>
+              <p className="text-primary mb-2">Schlumberger Oil and Gas Servicing Limited, Lagos, Nigeria (Jan '23 — Aug '23)</p>
               <ul className="text-muted-foreground space-y-2">
-                <li>• Developed 7 responsive mobile app screens with real-time interactions, improving user engagement across multiple devices.</li>
-                <li>• Deployed a secure user authentication system using Express.js, JWT, and cookies, including automatic token refreshing and expiration handling, enhancing application security.</li>
-                <li>• Integrated Twilio API to build a robust OAuth2.0 (2FA) system, adhering to OWASP Top 10 security standards, reducing vulnerabilities such as XSS and SQL injection.</li>
-                <li>• Orchestrated cloud infrastructure on GCP, managing PostgreSQL databases, configuring and optimizing cloud storage which reduced cloud costs and enhanced data accessibility and processing speeds.</li>
+                <li>• Developed 7 cross-platform mobile app screens with real-time interactions, improving user engagement and responsiveness across devices.</li>
+                <li>• Integrated secure authentication system with Express.js, JWT, and cookies, implementing automatic token refresh and expiration handling to fortify application security.</li>
+                <li>• Integrated Twilio API to deliver OAuth2.0-based two-factor authentication (2FA), fully aligned with OWASP Top 10 security standards.</li>
+                <li>• Orchestrated cloud infrastructure on GCP, managing PostgreSQL databases, optimizing cloud storage and configurations to reduce cloud costs by 18%.</li>
               </ul>
             </div>
-            
+
             <div className="border-l-2 border-primary pl-6" data-testid="experience-intrepid">
               <h4 className="text-xl font-semibold">Software Developer Intern</h4>
-              <p className="text-primary mb-2">The Intrepid Technologies Chevron, Lagos (Jan '22 — Dec '22)</p>
+              <p className="text-primary mb-2">The Intrepid Technologies Chevron, Lekki, Nigeria (Jan '22 — Dec '22)</p>
               <ul className="text-muted-foreground space-y-2">
-                <li>• Collaborated on redesigning 6 webpages, implementing responsiveness and optimizing image assets, increasing page load speeds by 35% and enhanced user experience across devices.</li>
-                <li>• Assisted in migrating backend services to Django and optimizing database queries, which streamlined development and improved API performance, reducing average response times across pages by up to 200ms.</li>
-                <li>• Utilized Git for version control and participated in regular code reviews, helping to reduce the bug backlog by 20% over a 3-month period.</li>
-                <li>• Employed RPA analytics tools to monitor and evaluate automation performance metrics, producing detailed reports to guide strategy refinements and demonstrate the impact of automation.</li>
+                <li>• Redesigned and optimized 6 enterprise webpages, implementing responsive layouts and compressed image assets, boosting page load speeds by 35%.</li>
+                <li>• Migrated backend services to Django and refined database queries, reducing average API response times by up to 200ms.</li>
+                <li>• Strengthened code quality processes by leveraging Git for version control and conducting systematic code reviews, resulting in a 20% reduction in bug backlog.</li>
+                <li>• Applied RPA analytics tools to track automation performance, producing actionable reports that guided strategy refinements.</li>
               </ul>
             </div>
           </div>
@@ -80,7 +108,7 @@ export default function Resume() {
         {/* Skills Section */}
         <div className="mb-12">
           <h3 className="text-2xl font-semibold mb-6">Skills</h3>
-          
+
           <div className="space-y-8">
             <div>
               <h4 className="text-lg font-semibold mb-4">Languages</h4>
@@ -90,7 +118,7 @@ export default function Resume() {
                 ))}
               </div>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Frameworks & Libraries</h4>
               <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
@@ -99,7 +127,7 @@ export default function Resume() {
                 ))}
               </div>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Backend & Databases</h4>
               <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
@@ -108,7 +136,7 @@ export default function Resume() {
                 ))}
               </div>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Tools & DevOps</h4>
               <div className="grid grid-cols-3 md:grid-cols-6 gap-4">

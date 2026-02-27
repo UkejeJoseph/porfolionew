@@ -1,0 +1,1098 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Yadav - Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                borderRadius: {
+                    lg: "var(--radius)",
+                    md: "calc(var(--radius) - 2px)",
+                    sm: "calc(var(--radius) - 4px)",
+                },
+                colors: {
+                    background: "var(--background)",
+                    foreground: "var(--foreground)",
+                    card: {
+                        DEFAULT: "var(--card)",
+                        foreground: "var(--card-foreground)",
+                    },
+                    primary: {
+                        DEFAULT: "var(--primary)",
+                        foreground: "var(--primary-foreground)",
+                    },
+                    secondary: {
+                        DEFAULT: "var(--secondary)",
+                        foreground: "var(--secondary-foreground)",
+                    },
+                    muted: {
+                        DEFAULT: "var(--muted)",
+                        foreground: "var(--muted-foreground)",
+                    },
+                    accent: {
+                        DEFAULT: "var(--accent)",
+                        foreground: "var(--accent-foreground)",
+                    },
+                    border: "var(--border)",
+                    input: "var(--input)",
+                    ring: "var(--ring)",
+                }
+            }
+        }
+    };
+    </script>
+    <style>
+        :root {
+            --background: hsl(222 84% 5%);
+            --foreground: hsl(210 40% 96%);
+            --card: hsl(222 84% 8%);
+            --card-foreground: hsl(210 40% 96%);
+            --primary: hsl(217 91% 59%);
+            --primary-foreground: hsl(222 84% 5%);
+            --secondary: hsl(217 32% 17%);
+            --secondary-foreground: hsl(210 40% 96%);
+            --muted: hsl(217 32% 17%);
+            --muted-foreground: hsl(215 20% 65%);
+            --accent: hsl(217 32% 17%);
+            --accent-foreground: hsl(210 40% 96%);
+            --border: hsl(217 32% 17%);
+            --input: hsl(217 32% 17%);
+            --ring: hsl(217 91% 59%);
+            --radius: 0.5rem;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .github-contrib {
+            display: grid;
+            grid-template-columns: repeat(53, 1fr);
+            gap: 2px;
+            font-size: 10px;
+        }
+        
+        .github-day {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+        }
+        
+        .contrib-0 { background-color: hsl(217 32% 17%); }
+        .contrib-1 { background-color: hsl(142 71% 35%); opacity: 0.4; }
+        .contrib-2 { background-color: hsl(142 71% 35%); opacity: 0.6; }
+        .contrib-3 { background-color: hsl(142 71% 35%); opacity: 0.8; }
+        .contrib-4 { background-color: hsl(142 71% 35%); }
+        
+        .tech-badge {
+            background: linear-gradient(135deg, hsl(217 91% 59%) 0%, hsl(142 71% 35%) 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        
+        .page-section {
+            display: none;
+        }
+        
+        .page-section.active {
+            display: block;
+        }
+        
+        .nav-link.active {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+        
+        .view-counter {
+            color: var(--muted-foreground);
+            font-size: 0.875rem;
+        }
+        
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            padding: 8px;
+            background: var(--card);
+            border: 1px solid var(--border);
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .sidebar.open {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-foreground antialiased">
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden fixed top-4 left-4 z-50 p-2 bg-card border border-border rounded-lg">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div id="sidebar" class="sidebar fixed md:relative w-80 bg-card border-r border-border h-screen overflow-y-auto z-40">
+            <div class="p-6">
+                <!-- Profile Section -->
+                <div class="text-center mb-8">
+                    <!-- Vishal's actual profile image -->
+                    <img src="https://raw.githubusercontent.com/vishxly/Certification/main/my.jpg" 
+                         alt="Vishal Yadav" 
+                         class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-primary">
+                    <h1 class="text-2xl font-bold mb-2">Vishal Yadav</h1>
+                    <p class="text-muted-foreground mb-4">Fullstack Developer</p>
+                    <a href="mailto:vishxly@gmail.com" 
+                       class="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                        Available for work
+                    </a>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
+                            📧
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">EMAIL</div>
+                            <a href="mailto:vishxly@gmail.com" class="text-sm hover:text-primary">vishxly@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
+                            📱
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">PHONE</div>
+                            <div class="text-sm">8668279388</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
+                            📍
+                        </div>
+                        <div>
+                            <div class="text-xs text-muted-foreground">LOCATION</div>
+                            <div class="text-sm">Nashik, India</div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center text-muted-foreground text-sm" id="current-time">
+                        07:22:44 AM
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="space-y-2">
+                    <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-secondary transition-colors active" data-page="about">
+                        <span>About</span>
+                    </a>
+                    <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-secondary transition-colors" data-page="resume">
+                        <span>Resume</span>
+                    </a>
+                    <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-secondary transition-colors" data-page="projects">
+                        <span>Projects</span>
+                    </a>
+                    <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-secondary transition-colors" data-page="blog">
+                        <span>Blog</span>
+                    </a>
+                    <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-secondary transition-colors" data-page="contact">
+                        <span>Contact</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 md:ml-0 ml-0">
+            <!-- About Page -->
+            <div id="about-page" class="page-section active p-8">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-2">About Me</h2>
+                    <div class="view-counter mb-8">(10451 views)</div>
+                    
+                    <p class="text-lg text-muted-foreground mb-12 leading-relaxed">
+                        I am a Full-Stack Developer skilled in JavaScript, React.js, Next.js, Node.js, and Express. 
+                        I have experience working with databases such as MongoDB, Firebase, and PostgreSQL. 
+                        Additionally, I specialize in building scalable and user-focused applications with Tailwind CSS, 
+                        creating efficient and reusable solutions.
+                    </p>
+
+                    <!-- Experience Cards -->
+                    <div class="grid md:grid-cols-2 gap-8 mb-12">
+                        <div class="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+                            <img src="https://www.vshall.me/images/exp1.svg" alt="Full-Stack Development" class="w-12 h-12 mb-4">
+                            <h3 class="text-xl font-semibold mb-3">Full-Stack Development</h3>
+                            <p class="text-muted-foreground">Developed end-to-end solutions using React, Node.js, and MongoDB.</p>
+                        </div>
+                        
+                        <div class="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+                            <img src="https://www.vshall.me/images/exp2.svg" alt="Developer Community" class="w-12 h-12 mb-4">
+                            <h3 class="text-xl font-semibold mb-3">Developer Community</h3>
+                            <p class="text-muted-foreground">I run a developer community platform on daily.dev with over 2 thousand active members.</p>
+                        </div>
+                        
+                        <div class="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+                            <img src="https://www.vshall.me/images/exp3.svg" alt="Freelancer" class="w-12 h-12 mb-4">
+                            <h3 class="text-xl font-semibold mb-3">Freelancer</h3>
+                            <p class="text-muted-foreground">Designed intuitive user interfaces and built web solutions for various clients.</p>
+                        </div>
+                        
+                        <div class="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+                            <img src="https://www.vshall.me/images/exp4.svg" alt="Technical Blogging" class="w-12 h-12 mb-4">
+                            <h3 class="text-xl font-semibold mb-3">Technical Blogging</h3>
+                            <p class="text-muted-foreground">I also write technical blogs with over 1 million views.</p>
+                        </div>
+                    </div>
+
+                    <!-- GitHub Contributions -->
+                    <div class="bg-card border border-border rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">GitHub Contributions</h3>
+                        <p class="text-sm text-muted-foreground mb-4">1832 contributions in the last year</p>
+                        
+                        <div class="github-contrib mb-4">
+                            <!-- GitHub contribution grid - simplified for mockup -->
+                            <div class="grid grid-cols-53 gap-1">
+                                <!-- Generate contribution squares -->
+                                <script>
+                                    const contributionContainer = document.currentScript.parentNode;
+                                    const contributions = [];
+                                    
+                                    // Generate random contribution data for visualization
+                                    for (let week = 0; week < 53; week++) {
+                                        for (let day = 0; day < 7; day++) {
+                                            const intensity = Math.floor(Math.random() * 5);
+                                            const square = document.createElement('div');
+                                            square.className = `github-day contrib-${intensity}`;
+                                            square.title = `${intensity} contributions`;
+                                            contributionContainer.appendChild(square);
+                                        }
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-xs text-muted-foreground">
+                            <div class="flex items-center gap-2">
+                                <span>Aug</span>
+                                <span>Sep</span>
+                                <span>Oct</span>
+                                <span>Nov</span>
+                                <span>Dec</span>
+                                <span>Jan</span>
+                                <span>Feb</span>
+                                <span>Mar</span>
+                                <span>Apr</span>
+                                <span>May</span>
+                                <span>Jun</span>
+                                <span>Jul</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span>Less</span>
+                                <div class="flex gap-1">
+                                    <div class="github-day contrib-0"></div>
+                                    <div class="github-day contrib-1"></div>
+                                    <div class="github-day contrib-2"></div>
+                                    <div class="github-day contrib-3"></div>
+                                    <div class="github-day contrib-4"></div>
+                                </div>
+                                <span>More</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resume Page -->
+            <div id="resume-page" class="page-section p-8">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-8">Resume</h2>
+                    
+                    <!-- Experience Section -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-semibold mb-6">Experience</h3>
+                        
+                        <div class="space-y-8">
+                            <div class="border-l-2 border-primary pl-6">
+                                <h4 class="text-xl font-semibold">Software Developer</h4>
+                                <p class="text-primary mb-2">Yugandhara Technologies (Pune)</p>
+                                <ul class="text-muted-foreground space-y-2">
+                                    <li>• Built a full-stack Sports Management App using Next.js, Node.js, AWS Lambda, and DynamoDB.</li>
+                                    <li>• Implemented role-based authentication to provide secure and distinct access flows for Players and Coaches.</li>
+                                    <li>• Developed a scheduling and booking system for coaching sessions and events with Razorpay integration.</li>
+                                    <li>• Implemented an Admin dashboard to approve coach slots, manage bookings, and edit events and courts.</li>
+                                    <li>• Engineered scalable serverless APIs using AWS Lambda and API Gateway, ensuring cost efficiency and high availability.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="border-l-2 border-primary pl-6">
+                                <h4 class="text-xl font-semibold">Frontend Developer</h4>
+                                <p class="text-primary mb-2">Bharat Tech (Remote)</p>
+                                <ul class="text-muted-foreground space-y-2">
+                                    <li>• Played a key role in designing and developing an HRMS web application, ensuring seamless functionality and an exceptional user experience.</li>
+                                    <li>• Led the development of 'Recag' from scratch, contributing to the landing page, dashboard, and all sections.</li>
+                                    <li>• Collaborated with the team to create a robust and user-friendly interface, ensuring a smooth user experience.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-semibold mb-6">Skills</h3>
+                        
+                        <div class="space-y-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Languages</h4>
+                                <div class="grid grid-cols-4 md:grid-cols-6 gap-4">
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/html.png" alt="HTML" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">HTML</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/css.png" alt="CSS" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">CSS</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/js.png" alt="JavaScript" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">JavaScript</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/ts.png" alt="TypeScript" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">TypeScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Frameworks & Libraries</h4>
+                                <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/react.png" alt="React.js" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">React.js</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/7e3324af30104ddae7f7ccad115c03b512db8644/nextjs.svg" alt="Next.js" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">Next.js</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/7e3324af30104ddae7f7ccad115c03b512db8644/redux.svg" alt="Redux" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">Redux</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/bootstrap.png" alt="Bootstrap" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">Bootstrap</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/7e3324af30104ddae7f7ccad115c03b512db8644/tailwind-css.svg" alt="Tailwind CSS" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">Tailwind CSS</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/materialui.png" alt="Material UI" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">Material UI</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Backend & Databases</h4>
+                                <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/node.png" alt="Node.js" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">Node.js</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/7e3324af30104ddae7f7ccad115c03b512db8644/express.svg" alt="Express.js" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">Express.js</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/7e3324af30104ddae7f7ccad115c03b512db8644/mongodb.svg" alt="MongoDB" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">MongoDB</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/jwt.png" alt="JWT" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">JWT</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/firebase.png" alt="Firebase" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">Firebase</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/postgresql.png" alt="PostgreSQL" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">PostgreSQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Tools & DevOps</h4>
+                                <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/git.png" alt="Git" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">Git</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/githubb.png" alt="GitHub" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">GitHub</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/postman.png" alt="Postman" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">Postman</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://raw.githubusercontent.com/vishxly/Certification/main/vscode.png" alt="VS Code" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">VS Code</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://img.icons8.com/?size=512&id=aqb9SdV9P8oC&format=png" alt="Prisma" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">Prisma</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://console.dev/img/favicons/orm.drizzle.team.jpg" alt="Drizzle" class="skill-icon mx-auto mb-2">
+                                        <span class="text-sm">Drizzle</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Page -->
+            <div id="projects-page" class="page-section p-8">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-2">Projects</h2>
+                    <div class="view-counter mb-8">(9035 views)</div>
+                    
+                    <!-- Filter Tabs -->
+                    <div class="flex gap-4 mb-8">
+                        <button class="px-4 py-2 bg-primary text-primary-foreground rounded-lg">All</button>
+                        <button class="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors">Web design</button>
+                        <button class="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors">Web development</button>
+                    </div>
+
+                    <!-- Projects Grid -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Manage Easy -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Certification/main/Mnge.png" alt="Manage Easy" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Manage Easy</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">MongoDB</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                    <span class="tech-badge">Firebase</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/" class="text-sm text-muted-foreground hover:text-primary">GitHub (Private)</a>
+                                    <a href="https://manage-easy.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trackcel -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Certification/main/trackcel.png" alt="Trackcel" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Trackcel</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">Next.js</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                    <span class="tech-badge">Prisma</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/" class="text-sm text-muted-foreground hover:text-primary">GitHub (Private)</a>
+                                    <a href="https://trackcel.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vyrn Toast -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://vyrn.vercel.app/social.png" alt="Vyrn Toast" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Vyrn Toast</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">NPM</span>
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">Next.js</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/" class="text-sm text-muted-foreground hover:text-primary">GitHub (Private)</a>
+                                    <a href="https://vyrn.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Free Tool -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Certification/main/freetool.png" alt="Free Tool" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Free Tool</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">Next.js</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/" class="text-sm text-muted-foreground hover:text-primary">GitHub (Private)</a>
+                                    <a href="https://freetool.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Oxy UI -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Certification/main/oxy-ui.png" alt="Oxy UI" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Oxy UI</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                    <span class="tech-badge">NPM</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/" class="text-sm text-muted-foreground hover:text-primary">GitHub (Private)</a>
+                                    <a href="https://oxyui.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Snippet Vault -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Certification/main/snippetvault.png" alt="Snippet Vault" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Snippet Vault</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">Next.js</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                    <span class="tech-badge">Clerk</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/" class="text-sm text-muted-foreground hover:text-primary">GitHub (Private)</a>
+                                    <a href="https://snippetvault.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- More projects... -->
+                        <!-- CodeSnapx -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Certification/main/codesnap.png" alt="CodeSnapx" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">CodeSnapx</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/" class="text-sm text-muted-foreground hover:text-primary">GitHub (Private)</a>
+                                    <a href="https://codesnapx.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog App -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Certification/main/Next-Blog-App.png" alt="Blog App" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Blog App</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">Next.js</span>
+                                    <span class="tech-badge">Firebase</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/" class="text-sm text-muted-foreground hover:text-primary">GitHub (Private)</a>
+                                    <a href="https://blog9.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Currency Converter -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Certification/main/Currency-Converter.png" alt="Currency Converter" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Currency Converter</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/Currency-Converter" class="text-sm text-muted-foreground hover:text-primary">GitHub</a>
+                                    <a href="https://currencyy-converterr.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Continue with remaining projects... -->
+                        <!-- Draw App -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Certification/main/draw.png" alt="Draw App" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Draw App</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">Next.js</span>
+                                    <span class="tech-badge">MongoDB</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                    <span class="tech-badge">Kinde</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/Draw-App" class="text-sm text-muted-foreground hover:text-primary">GitHub (Private)</a>
+                                    <a href="https://draw-app-seven.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expense Tracker -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Certification/main/expense.png" alt="Expense Tracker" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Expense Tracker</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">Express</span>
+                                    <span class="tech-badge">MongoDB</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/Expense-Track/tree/main" class="text-sm text-muted-foreground hover:text-primary">GitHub</a>
+                                    <a href="https://expense-track-iota.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- URL Shortener -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Certification/main/url-short.png" alt="URL Shortener" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">URL Shortener</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">Next.js</span>
+                                    <span class="tech-badge">MongoDB</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/Url-Shortner" class="text-sm text-muted-foreground hover:text-primary">GitHub</a>
+                                    <a href="https://url-shortnerx.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Continue with all remaining projects following the same pattern -->
+                        <!-- Myntra Clone, Job Portal, Next AI Chat App, File Sharing App, Trello, Bookmark Extension -->
+                        
+                        <!-- Myntra Clone -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Myntra-Clone/main/Myntra%20Clone.png" alt="Myntra Clone" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Myntra Clone</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/Myntra-Clone" class="text-sm text-muted-foreground hover:text-primary">GitHub</a>
+                                    <a href="https://github.com/vishxly/Myntra-Clone" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Job Portal -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Job-Portal/main/Job%20Portal.png" alt="Job Portal" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Job Portal</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">Firebase</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/Job-Portal" class="text-sm text-muted-foreground hover:text-primary">GitHub</a>
+                                    <a href="https://job-portal-eight-gamma.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Next AI Chat App -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/NextAI-Chatbot/master/Next%20Ai%20App.png" alt="Next AI Chat App" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Next AI Chat App</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">Next.js</span>
+                                    <span class="tech-badge">Clerk</span>
+                                    <span class="tech-badge">OpenAI</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                    <span class="tech-badge">Shadcn UI</span>
+                                    <span class="tech-badge">PineCone</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/NextAI-Chatbot" class="text-sm text-muted-foreground hover:text-primary">GitHub</a>
+                                    <a href="https://github.com/vishxly/NextAI-Chatbot" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- File Sharing App -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/File-Sharing-App/main/File%20Sharing%20App.png" alt="File Sharing App" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">File Sharing App</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">Next.js</span>
+                                    <span class="tech-badge">Firebase</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/File-Sharing-App" class="text-sm text-muted-foreground hover:text-primary">GitHub</a>
+                                    <a href="https://file-sharing-app-xi.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trello -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Trello/main/src/assets/trello.png" alt="Trello" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Trello</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/Trello" class="text-sm text-muted-foreground hover:text-primary">GitHub</a>
+                                    <a href="https://trello-tau-rosy.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bookmark Extension -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="https://raw.githubusercontent.com/vishxly/Bookmark/main/src/assets/bookmark-ext.png" alt="Bookmark Extension" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3">Bookmark Extension</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">Tailwind CSS</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/vishxly/Bookmark" class="text-sm text-muted-foreground hover:text-primary">GitHub</a>
+                                    <a href="https://bookmark-vert.vercel.app/" class="text-sm text-primary hover:underline">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Section -->
+                    <div class="mt-16">
+                        <h3 class="text-2xl font-semibold mb-8">Certifications</h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Front-End Development -->
+                            <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                                <img src="https://raw.githubusercontent.com/vishxly/Certification/main/Frontend%20Developement%20META.jpeg" alt="Front-End Development" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h4 class="text-lg font-semibold mb-2">Front-End Development</h4>
+                                    <a href="https://drive.google.com/file/d/1_v8lrkEKNd8-ImO98bF_rc5lnGSJ_qnd/view" class="text-primary hover:underline">View Certification</a>
+                                </div>
+                            </div>
+
+                            <!-- Frontend Developer React -->
+                            <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                                <img src="https://raw.githubusercontent.com/vishxly/Certification/main/Frontend%20React%20HackerRank.jpeg" alt="Frontend Developer React" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h4 class="text-lg font-semibold mb-2">Frontend Developer(React)</h4>
+                                    <a href="https://drive.google.com/file/d/11R1mjGjg-2o-MdNuHbXkZQSKZieC1WYy/view" class="text-primary hover:underline">View Certification</a>
+                                </div>
+                            </div>
+
+                            <!-- Java Training Complete Course -->
+                            <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                                <img src="https://raw.githubusercontent.com/vishxly/Certification/main/Java%20Training%20Complete%20Course.jpeg" alt="Java Training Complete Course" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h4 class="text-lg font-semibold mb-2">Java Training Complete Course</h4>
+                                    <a href="https://drive.google.com/file/d/1mzdQFfGndQWJEQpJOctDVzncfuAbESgb/view" class="text-primary hover:underline">View Certification</a>
+                                </div>
+                            </div>
+
+                            <!-- Technical Careers Training Program -->
+                            <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                                <img src="https://raw.githubusercontent.com/vishxly/Certification/main/C2TC.jpeg" alt="Technical Careers Training Program" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h4 class="text-lg font-semibold mb-2">Technical Careers Training Program</h4>
+                                    <a href="https://drive.google.com/file/d/1laBMvxrUzMOvGC3_0vHrqTM8pn2tU97k/view" class="text-primary hover:underline">View Certification</a>
+                                </div>
+                            </div>
+
+                            <!-- Cloud Computing IBM -->
+                            <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                                <img src="https://raw.githubusercontent.com/vishxly/Certification/main/Cloud%20Computing%20IBM.jpeg" alt="Cloud Computing IBM" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h4 class="text-lg font-semibold mb-2">Cloud Computing IBM</h4>
+                                    <a href="https://drive.google.com/file/d/1YWodbZ8Ro8soQNGQb9iVT7hvGUoL6TEO/view" class="text-primary hover:underline">View Certification</a>
+                                </div>
+                            </div>
+
+                            <!-- GitHub -->
+                            <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                                <img src="https://raw.githubusercontent.com/vishxly/Certification/main/GitHub%20Actions.jpeg" alt="GitHub" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h4 class="text-lg font-semibold mb-2">GitHub</h4>
+                                    <a href="https://drive.google.com/file/d/14Z3LqF-U-ZPdvJYIMX876WiA21x0s6Xb/view?usp=sharing" class="text-primary hover:underline">View Certification</a>
+                                </div>
+                            </div>
+
+                            <!-- React IBM -->
+                            <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                                <img src="https://raw.githubusercontent.com/vishxly/Certification/main/React(IBM).png" alt="React IBM" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h4 class="text-lg font-semibold mb-2">React(IBM)</h4>
+                                    <a href="https://drive.google.com/file/d/1IKLkCeR-SC_9pR5Im6OebS8ghKUI55go/view?usp=sharing" class="text-primary hover:underline">View Certification</a>
+                                </div>
+                            </div>
+
+                            <!-- Python for Data Science -->
+                            <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                                <img src="https://raw.githubusercontent.com/vishxly/Certification/main/Python%20(IBM).png" alt="Python for Data Science" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h4 class="text-lg font-semibold mb-2">Python for Data Science, AI & Development</h4>
+                                    <a href="https://drive.google.com/file/d/1ymsdfyqoTQL_4hC48onP3-E9VkpVMaU5/view?usp=sharing" class="text-primary hover:underline">View Certification</a>
+                                </div>
+                            </div>
+
+                            <!-- NodeJs and Express -->
+                            <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                                <img src="https://raw.githubusercontent.com/vishxly/Certification/main/NodeJs.png" alt="NodeJs and Express" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h4 class="text-lg font-semibold mb-2">NodeJs and Express</h4>
+                                    <a href="https://drive.google.com/file/d/1lOziN5Jxz2MwVunhoVFI6_RhrjvSNOvf/view?usp=sharing" class="text-primary hover:underline">View Certification</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Page -->
+            <div id="blog-page" class="page-section p-8">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-2">Blog</h2>
+                    <div class="view-counter mb-8">(2803 views)</div>
+                    
+                    <div class="space-y-6">
+                        <!-- Blog Post 1 -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <div class="flex md:flex-row flex-col">
+                                <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffq943c6ufzm592mcvg0y.jpg" 
+                                     alt="12 Essential Web APIs" class="md:w-64 w-full h-48 md:h-auto object-cover">
+                                <div class="p-6 flex-1">
+                                    <div class="text-sm text-muted-foreground mb-2">Development • Sep 26, 2024</div>
+                                    <h3 class="text-xl font-semibold mb-3">12 Essential Web APIs Every Developer Should Know</h3>
+                                    <div class="text-muted-foreground mb-4">58329 views</div>
+                                    <a href="https://dev.to/vyan/12-essential-web-apis-every-developer-should-know-1m28" class="text-primary hover:underline">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 2 -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <div class="flex md:flex-row flex-col">
+                                <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fko42x3apigcvt27hdf3p.jpg" 
+                                     alt="React 19" class="md:w-64 w-full h-48 md:h-auto object-cover">
+                                <div class="p-6 flex-1">
+                                    <div class="text-sm text-muted-foreground mb-2">Development • July 27, 2024</div>
+                                    <h3 class="text-xl font-semibold mb-3">React 19: A Game-Changer for Modern Web Development</h3>
+                                    <div class="text-muted-foreground mb-4">56795 views</div>
+                                    <a href="https://dev.to/vyan/react-19-a-game-changer-for-modern-web-development-1bih" class="text-primary hover:underline">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 3 -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <div class="flex md:flex-row flex-col">
+                                <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwspa5varghey5vc2tmfx.jpg" 
+                                     alt="Backend Structure" class="md:w-64 w-full h-48 md:h-auto object-cover">
+                                <div class="p-6 flex-1">
+                                    <div class="text-sm text-muted-foreground mb-2">Development • Jul 17, 2024</div>
+                                    <h3 class="text-xl font-semibold mb-3">How to Structure Your Backend Code in Node.js (Express.js)</h3>
+                                    <div class="text-muted-foreground mb-4">52085 views</div>
+                                    <a href="https://dev.to/vyan/how-to-structure-your-backend-code-in-nodejs-expressjs-2bdd" class="text-primary hover:underline">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 4 -->
+                        <div class="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                            <div class="flex md:flex-row flex-col">
+                                <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5hv8axjpny1i5ou6yiit.jpg" 
+                                     alt="React UI Libraries" class="md:w-64 w-full h-48 md:h-auto object-cover">
+                                <div class="p-6 flex-1">
+                                    <div class="text-sm text-muted-foreground mb-2">Development • Aug 4, 2024</div>
+                                    <h3 class="text-xl font-semibold mb-3">9 Must-Try React UI Component Libraries for Stunning Web Apps in 2024</h3>
+                                    <div class="text-muted-foreground mb-4">31532 views</div>
+                                    <a href="https://medium.com/stackademic/how-to-structure-your-backend-code-in-node-js-express-js-9b423becae3c" class="text-primary hover:underline">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Continue with remaining blog posts... -->
+                        <!-- Additional blog posts following same pattern -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Page -->
+            <div id="contact-page" class="page-section p-8">
+                <div class="max-w-2xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-2">Contact</h2>
+                    <div class="view-counter mb-8">(2244 views)</div>
+                    
+                    <div class="bg-card border border-border rounded-lg p-8">
+                        <h3 class="text-xl font-semibold mb-6">Send Message</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent" placeholder="Your name">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent" placeholder="your@email.com">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Subject</label>
+                                <input type="text" class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent" placeholder="Message subject">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Message</label>
+                                <textarea rows="6" class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent" placeholder="Your message"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary text-primary-foreground py-3 rounded-lg hover:opacity-90 transition-opacity font-medium">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation functionality
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove active class from all nav links and pages
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked link
+                link.classList.add('active');
+                
+                // Show corresponding page
+                const pageId = link.dataset.page + '-page';
+                document.getElementById(pageId).classList.add('active');
+                
+                // Close mobile menu
+                document.getElementById('sidebar').classList.remove('open');
+            });
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.toggle('open');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            
+            if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                sidebar.classList.remove('open');
+            }
+        });
+
+        // Time display functionality
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', {
+                hour12: true,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.getElementById('current-time').textContent = timeString;
+        }
+
+        // Update time every second
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Generate GitHub contributions grid
+        function generateContributions() {
+            const grid = document.querySelector('.github-contrib');
+            if (!grid) return;
+            
+            grid.innerHTML = '';
+            
+            // Create month labels
+            const months = ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'];
+            
+            // Generate 53 weeks × 7 days
+            for (let week = 0; week < 53; week++) {
+                for (let day = 0; day < 7; day++) {
+                    const square = document.createElement('div');
+                    const intensity = Math.floor(Math.random() * 5);
+                    square.className = `github-day contrib-${intensity}`;
+                    square.title = `${intensity} contributions`;
+                    grid.appendChild(square);
+                }
+            }
+        }
+
+        // Initialize contributions grid when about page is shown
+        generateContributions();
+
+        // TODO: Implement actual GitHub API integration for real contribution data
+        // TODO: Add form validation and submission handling
+        // TODO: Implement view counter functionality with backend integration
+        // TODO: Add loading states and error handling
+        // TODO: Implement search functionality for projects and blog posts
+    </script>
+</body>
+</html>
