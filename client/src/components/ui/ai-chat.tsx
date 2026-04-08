@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { API_BASE_URL } from "@/lib/api";
 
 interface ChatMessage {
     role: "user" | "assistant";
@@ -47,7 +48,7 @@ export default function AiChat() {
                 .filter((_, i) => i > 0 || newMessages[0].role === "user")
                 .map((m) => ({ role: m.role === "assistant" ? "model" : "user", content: m.content }));
 
-            const res = await fetch("/api/chat", {
+            const res = await fetch(`${API_BASE_URL}/api/chat`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ messages: apiMessages }),

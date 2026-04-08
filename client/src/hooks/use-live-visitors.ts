@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
+import { getWsUrl } from "@/lib/api";
 
 export function useLiveVisitors() {
     const [count, setCount] = useState<number>(1);
 
     useEffect(() => {
-        const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-        const wsUrl = `${protocol}//${window.location.host}/ws`;
+        const wsUrl = getWsUrl();
         const socket = new WebSocket(wsUrl);
 
         socket.onmessage = (event) => {
