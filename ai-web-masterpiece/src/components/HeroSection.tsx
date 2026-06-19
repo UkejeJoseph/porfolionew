@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { ArrowDown, Bot, CornerRightDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import profilePhoto from "../assets/profile.png";
 
 export default function HeroSection() {
@@ -83,15 +83,7 @@ export default function HeroSection() {
             </p>
 
             {/* Legacy Portfolio Button */}
-            <div className="animate-fade-up-delay-3 relative mt-12">
-              {/* Robot Mascot pointing to the button */}
-              <div className="absolute -top-12 left-8 md:left-24 flex items-end gap-2 animate-fly-around z-50">
-                <div className="bg-foreground text-background text-xs font-bold px-3 py-1 rounded-t-xl rounded-br-xl shadow-lg border border-border">
-                  View Secondary!
-                </div>
-                <Bot size={28} className="text-primary mb-1" />
-                <CornerRightDown size={24} className="text-primary translate-y-2 -translate-x-1" />
-              </div>
+            <div className="animate-fade-up-delay-3">
               <a
                 href="http://localhost:4000/"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-body text-sm font-medium rounded-full hover:bg-foreground/90 transition-colors"

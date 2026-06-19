@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CustomCursor from "./components/CustomCursor";
 import StarBackground from "./components/StarBackground";
+import FlyingRobots from "./components/FlyingRobots";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ const App = () => (
     <TooltipProvider>
       <CustomCursor />
       <StarBackground />
+      <FlyingRobots />
       <Toaster />
       <Sonner />
       <BrowserRouter>
