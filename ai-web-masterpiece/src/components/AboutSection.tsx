@@ -106,7 +106,7 @@ export default function AboutSection() {
 							<img
 								src={profilePhotoUrl}
 								alt="About Joseph Ukeje"
-								className="w-full h-full object-cover object-center grayscale"
+								className="w-full h-full object-cover object-center grayscale contrast-125 brightness-110"
 							/>
 						</div>
 					</div>
@@ -118,7 +118,7 @@ export default function AboutSection() {
 							<img
 								src={profilePhotoUrl}
 								alt="Joseph Ukeje Profile"
-								className="w-full h-48 object-contain object-bottom grayscale bg-muted p-4"
+								className="w-full h-48 object-contain object-bottom grayscale contrast-125 brightness-110 bg-muted p-4"
 							/>
 							<a
 								href="https://www.linkedin.com/in/joseph-ukeje-8a0300220/"

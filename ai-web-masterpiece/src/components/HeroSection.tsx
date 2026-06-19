@@ -29,7 +29,7 @@ export default function HeroSection() {
               <img
                 src={profilePhoto}
                 alt="Joseph Ukeje - Senior Software Engineer"
-                className="w-full h-full object-cover object-center grayscale"
+                className="w-full h-full object-cover object-center grayscale contrast-125 brightness-110"
               />
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function HeroSection() {
           <img
             src={profilePhoto}
             alt="Joseph Ukeje - Senior Software Engineer"
-            className="w-full h-full object-cover object-center grayscale"
+            className="w-full h-full object-cover object-center grayscale contrast-125 brightness-110"
           />
         </div>
       </div>
