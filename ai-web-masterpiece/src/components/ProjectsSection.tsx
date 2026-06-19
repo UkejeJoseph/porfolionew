@@ -205,8 +205,8 @@ export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [showAll, setShowAll] = useState(false);
 
-  const filteredProjects = activeFilter === "All" 
-    ? projects 
+  const filteredProjects = activeFilter === "All"
+    ? projects
     : projects.filter(p => p.category === activeFilter);
 
   const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
@@ -225,7 +225,7 @@ export default function ProjectsSection() {
               Latest Works
             </h2>
           </div>
-          
+
           {/* Filters */}
           <div className="flex flex-wrap gap-2">
             {filters.map((filter) => (
@@ -235,11 +235,10 @@ export default function ProjectsSection() {
                   setActiveFilter(filter);
                   setShowAll(false);
                 }}
-                className={`px-4 py-2 rounded-full text-xs font-body border transition-all duration-200 ${
-                  activeFilter === filter
+                className={`px-4 py-2 rounded-full text-xs font-body border transition-all duration-200 ${activeFilter === filter
                     ? "bg-foreground text-background border-foreground"
                     : "bg-transparent text-muted-foreground border-border hover:border-foreground/50"
-                }`}
+                  }`}
               >
                 {filter}
               </button>
@@ -279,7 +278,7 @@ export default function ProjectsSection() {
                     {project.tech[0]}
                   </span>
                 </div>
-                
+
                 {/* Description */}
                 <p className="text-sm text-muted-foreground font-body leading-relaxed line-clamp-2">
                   {project.description}
