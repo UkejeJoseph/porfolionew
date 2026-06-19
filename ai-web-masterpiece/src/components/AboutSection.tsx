@@ -1,7 +1,7 @@
 import { Plus, ArrowUpRight, Download } from "lucide-react";
 import cvPdf from "../assets/Atharv_s_Cv.pdf";
 
-import profilePhotoUrl from "../assets/profile-photo.jpg";
+import profilePhotoUrl from "../assets/profile.png";
 
 const highlights = [
 	{
@@ -105,7 +105,7 @@ export default function AboutSection() {
 						<div className="rounded-2xl overflow-hidden">
 							<img
 								src={profilePhotoUrl}
-								alt="About Atharv Golait"
+								alt="About Joseph Ukeje"
 								className="w-full h-auto object-cover object-center grayscale mx-auto"
 							/>
 						</div>
@@ -117,7 +117,7 @@ export default function AboutSection() {
 						<div className="relative rounded-2xl overflow-hidden bg-muted">
 							<img
 								src={profilePhotoUrl}
-								alt="Atharv Golait Profile"
+								alt="Joseph Ukeje Profile"
 								className="w-full h-48 object-cover object-center grayscale"
 							/>
 							<a
