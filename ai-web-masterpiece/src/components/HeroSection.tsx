@@ -85,7 +85,7 @@ export default function HeroSection() {
             {/* Legacy Portfolio Button */}
             <div className="animate-fade-up-delay-3">
               <a
-                href="http://localhost:4000/"
+                href="https://porfolionew.vercel.app/"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-foreground text-background font-body text-sm font-medium rounded-full hover:bg-foreground/90 transition-colors"
               >
                 View Legacy Portfolio

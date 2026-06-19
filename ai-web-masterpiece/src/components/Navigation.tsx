@@ -75,7 +75,7 @@ export default function Navigation() {
               <ArrowUpRight size={14} />
             </button>
             <a
-              href="http://localhost:4000/"
+              href="https://porfolionew.vercel.app/"
               className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-foreground text-background text-sm font-body font-medium hover:bg-foreground/90 transition-colors"
             >
               Secondary Portfolio
@@ -122,7 +122,7 @@ export default function Navigation() {
             <ArrowUpRight size={14} />
           </button>
           <a
-            href="http://localhost:4000/"
+            href="https://porfolionew.vercel.app/"
             className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-foreground text-background text-sm font-body font-medium mt-2 hover:bg-foreground/90 transition-colors"
           >
             Secondary Portfolio
