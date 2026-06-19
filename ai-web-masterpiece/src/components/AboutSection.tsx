@@ -102,11 +102,11 @@ export default function AboutSection() {
 						</div>
 
 						{/* Image */}
-						<div className="rounded-2xl overflow-hidden">
+						<div className="w-[80vw] sm:w-[60vw] max-w-[350px] aspect-square rounded-full overflow-hidden border-[8px] border-muted mx-auto shadow-xl">
 							<img
 								src={profilePhotoUrl}
 								alt="About Joseph Ukeje"
-								className="w-full h-auto object-cover object-center grayscale mx-auto"
+								className="w-full h-full object-cover object-center grayscale"
 							/>
 						</div>
 					</div>
@@ -118,7 +118,7 @@ export default function AboutSection() {
 							<img
 								src={profilePhotoUrl}
 								alt="Joseph Ukeje Profile"
-								className="w-full h-48 object-cover object-center grayscale"
+								className="w-full h-48 object-contain object-bottom grayscale bg-muted p-4"
 							/>
 							<a
 								href="https://www.linkedin.com/in/joseph-ukeje-8a0300220/"

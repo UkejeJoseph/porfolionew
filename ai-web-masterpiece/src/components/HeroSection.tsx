@@ -24,13 +24,12 @@ export default function HeroSection() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
         <div className="min-h-screen flex flex-col lg:flex-row items-start lg:items-center py-16 sm:py-20 lg:py-24">
-          {/* Mobile Image - Positioned at the top on mobile */}
           <div className="lg:hidden w-full mb-8 sm:mb-12 flex justify-center relative z-10">
-            <div className="w-[80vw] sm:w-[70vw] max-w-md h-[50vh] sm:h-[55vh]">
+            <div className="w-[60vw] sm:w-[50vw] max-w-[250px] aspect-square rounded-full overflow-hidden border-4 border-muted">
               <img
                 src={profilePhoto}
                 alt="Joseph Ukeje - Senior Software Engineer"
-                className="w-full h-full object-contain object-center grayscale"
+                className="w-full h-full object-cover object-center grayscale"
               />
             </div>
           </div>
@@ -74,12 +73,12 @@ export default function HeroSection() {
       </div>
 
       {/* Profile Image - Positioned to the right edge (Desktop only) */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block">
-        <div className="relative w-[45vw] h-[90vh]">
+      <div className="absolute right-12 top-1/2 -translate-y-1/2 hidden lg:block">
+        <div className="relative w-[400px] h-[400px] xl:w-[500px] xl:h-[500px] rounded-full overflow-hidden border-[8px] border-muted shadow-2xl">
           <img
             src={profilePhoto}
             alt="Joseph Ukeje - Senior Software Engineer"
-            className="w-full h-full object-cover object-top grayscale"
+            className="w-full h-full object-cover object-center grayscale"
           />
         </div>
       </div>
