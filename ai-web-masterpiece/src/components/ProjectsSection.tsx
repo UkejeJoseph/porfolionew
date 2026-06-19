@@ -48,12 +48,22 @@ const projects = [
     githubUrl: "#"
   },
   {
+    id: "nova-bills",
+    title: "Nova Bills - Billing Web Application",
+    category: "Full Stack",
+    description: "A comprehensive billing web application designed for streamlined invoicing and payment management.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+    tech: ["Java", "Spring Boot", "PostgreSQL", "React.js"],
+    liveUrl: "https://nova-bills.vercel.app/",
+    githubUrl: "#"
+  },
+  {
     id: "rivet-ai",
     title: "RivetAI",
     category: "AI Project",
     description: "An AI-powered pre-production SaaS workflow platform designed to streamline script coverage, scheduling, and budgeting. Built responsive ReactJS frontend features, and designed RESTful backend APIs using C#/.NET Core and Flask with MongoDB.",
     image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&q=80&w=800",
-    tech: ["C#", ".NET Core", "MongoDB", "REST APIs", "OAuth 2.0", "React", "Flask"],
+    tech: ["C#", "Java", ".NET Core", "MongoDB", "REST APIs", "OAuth 2.0", "React", "Flask"],
     liveUrl: "https://rivetai.com/",
     githubUrl: "#"
   },
