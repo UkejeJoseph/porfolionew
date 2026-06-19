@@ -85,7 +85,7 @@ export default function HeroSection() {
             {/* Legacy Portfolio Button */}
             <div className="animate-fade-up-delay-3 relative mt-12">
               {/* Robot Mascot pointing to the button */}
-              <div className="absolute -top-12 left-8 md:left-24 flex items-end gap-2 animate-bounce">
+              <div className="absolute -top-12 left-8 md:left-24 flex items-end gap-2 animate-fly-around z-50">
                 <div className="bg-foreground text-background text-xs font-bold px-3 py-1 rounded-t-xl rounded-br-xl shadow-lg border border-border">
                   View Secondary!
                 </div>
