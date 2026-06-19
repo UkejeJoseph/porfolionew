@@ -33,7 +33,7 @@ const projects = [
     category: "Full Stack",
     description: "A stablecoin wallet and exchange platform for transacting stablecoins. Built full-stack features using React.js, Node.js, and C# backend services, integrating gRPC (.NET) blockchain RPC validation, Socket.IO customer support chat, and Solidity smart contracts.",
     image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&q=80&w=800",
-    tech: ["React", "Node.js", "C#", "gRPC", "Solidity"],
+    tech: ["C#", "Java", "gRPC (.NET)", "Solidity", "React.js", "PostgreSQL", "Docker"],
     liveUrl: "https://stable-xv1.vercel.app/",
     githubUrl: "https://github.com/UkejeJoseph/StableXv1"
   },
@@ -53,7 +53,7 @@ const projects = [
     category: "AI Project",
     description: "An AI-powered pre-production SaaS workflow platform designed to streamline script coverage, scheduling, and budgeting. Built responsive ReactJS frontend features, and designed RESTful backend APIs using C#/.NET Core and Flask with MongoDB.",
     image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&q=80&w=800",
-    tech: ["React", "C# .NET", "Flask", "AI/ML"],
+    tech: ["C#", ".NET Core", "MongoDB", "REST APIs", "OAuth 2.0", "React", "Flask"],
     liveUrl: "https://rivetai.com/",
     githubUrl: "#"
   },
