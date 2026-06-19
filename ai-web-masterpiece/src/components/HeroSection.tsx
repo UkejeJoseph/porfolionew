@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import profilePhoto from "../assets/profile-photo.jpg";
 
 export default function HeroSection() {
   const scrollToAbout = () => {
@@ -27,7 +28,7 @@ export default function HeroSection() {
           <div className="lg:hidden w-full mb-8 sm:mb-12 flex justify-center relative z-10">
             <div className="w-[80vw] sm:w-[70vw] max-w-md h-[50vh] sm:h-[55vh]">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+                src={profilePhoto}
                 alt="Joseph Ukeje - Senior Software Engineer"
                 className="w-full h-full object-contain object-center grayscale"
               />
@@ -76,7 +77,7 @@ export default function HeroSection() {
       <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block">
         <div className="relative w-[45vw] h-[90vh]">
           <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+            src={profilePhoto}
             alt="Joseph Ukeje - Senior Software Engineer"
             className="w-full h-full object-cover object-top grayscale"
           />
