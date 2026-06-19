@@ -1,4 +1,4 @@
-﻿export interface Project {
+export interface Project {
   id: string;
   title: string;
   description: string;
@@ -12,6 +12,16 @@
 
 export const projects: Project[] = [
   // === FEATURED PROJECTS (shown on Hero page) ===
+  {
+    id: "stablex",
+    title: "StableX - Stablecoin Wallet & Exchange",
+    description: "A stablecoin wallet and exchange platform for transacting stablecoins. Built full-stack features using React.js, Node.js, and C# backend services, integrating gRPC (.NET) blockchain RPC validation, Socket.IO customer support chat, and Solidity smart contracts.",
+    image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&q=80&w=800",
+    technologies: ["React.js", "Node.js", "C#", "gRPC", "Solidity", "MongoDB", "Express", "Socket.IO"],
+    githubUrl: "https://github.com/UkejeJoseph/StableXv1",
+    liveUrl: "#",
+    category: "blockchain"
+  },
   {
     id: "crypto-legions",
     title: "CryptoLegions",
@@ -37,23 +47,13 @@ export const projects: Project[] = [
   {
     id: "rivet-ai",
     title: "RivetAI",
-    description: "An AI-powered workflow platform designed to help writers, producers, and directors streamline their script coverage, scheduling, and budgeting processes. With next-generation tools provided by RivetAI, writers can finally focus on writing and producers can focus on pushing out great content.",
+    description: "An AI-powered pre-production SaaS workflow platform designed to streamline script coverage, scheduling, and budgeting. Built responsive ReactJS frontend features, and designed RESTful backend APIs using C#/.NET Core and Flask with MongoDB. Implemented OAuth 2.0 / IdentityServer role-based access control and protected routing.",
     image: "/rivetai.png",
-    technologies: ["Next.js", "Node.js", "AI/ML"],
+    technologies: ["ReactJS", "C#", ".NET Core", "Flask", "MongoDB", "OAuth 2.0", "AI/ML"],
     githubUrl: "#",
     liveUrl: "https://rivetai.com/",
     isPrivate: true,
     category: "ai-ml"
-  },
-  {
-    id: "stablex",
-    title: "StableX - Stablecoin Wallet",
-    description: "A stablecoin wallet and exchange platform for merchants and users to transact stablecoins with integrated chat customer support",
-    image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&q=80&w=800",
-    technologies: ["React.js", "Node.js", "Express", "MongoDB", "Web3.js", "Socket.IO"],
-    githubUrl: "https://github.com/UkejeJoseph/buck-swap-demo",
-    liveUrl: "#",
-    category: "blockchain"
   },
   {
     id: "crypto-wallet",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     description: "A crypto wallet application for basic token swaps built on the blockchain, featuring secure transactions and real-time market data",
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800",
     technologies: ["React.js", "Node.js", "Solidity", "Web3.js", "TypeScript"],
-    githubUrl: "https://github.com/UkejeJoseph/Crypto-app",
+    githubUrl: "https://github.com/UkejeJoseph/Crypto-Dashboard",
     liveUrl: "#",
     category: "blockchain"
   },
@@ -259,7 +259,7 @@ export const projects: Project[] = [
     description: "Personal finance management application",
     image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800",
     technologies: ["React.js", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    githubUrl: "https://github.com/vishxly/Expense-Track/tree/main",
+    githubUrl: "#",
     liveUrl: "https://expense-track-iota.vercel.app/",
     category: "web-development"
   },
@@ -269,7 +269,7 @@ export const projects: Project[] = [
     description: "URL shortening service with analytics",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
     technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
-    githubUrl: "https://github.com/vishxly/Url-Shortner",
+    githubUrl: "#",
     liveUrl: "https://url-shortnerx.vercel.app/",
     category: "web-development"
   },
@@ -279,8 +279,8 @@ export const projects: Project[] = [
     description: "E-commerce platform clone with full functionality",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800",
     technologies: ["React.js", "Node.js", "Tailwind CSS"],
-    githubUrl: "https://github.com/vishxly/Myntra-Clone",
-    liveUrl: "https://github.com/vishxly/Myntra-Clone",
+    githubUrl: "#",
+    liveUrl: "https://myntra-clone-liard.vercel.app/",
     category: "web-development"
   },
   {
@@ -289,7 +289,7 @@ export const projects: Project[] = [
     description: "Job search and application platform",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800",
     technologies: ["React.js", "Firebase", "Tailwind CSS"],
-    githubUrl: "https://github.com/vishxly/Job-Portal",
+    githubUrl: "#",
     liveUrl: "https://job-portal-eight-gamma.vercel.app/",
     category: "web-development"
   },
@@ -299,7 +299,7 @@ export const projects: Project[] = [
     description: "Secure file sharing platform with Firebase storage",
     image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
     technologies: ["Next.js", "Firebase", "Tailwind CSS"],
-    githubUrl: "https://github.com/vishxly/File-Sharing-App",
+    githubUrl: "#",
     liveUrl: "https://file-sharing-app-xi.vercel.app/",
     category: "web-development"
   },
@@ -309,7 +309,7 @@ export const projects: Project[] = [
     description: "Task management application inspired by Trello",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80&w=800",
     technologies: ["React.js", "Tailwind CSS", "TypeScript"],
-    githubUrl: "https://github.com/vishxly/Trello",
+    githubUrl: "#",
     liveUrl: "https://trello-tau-rosy.vercel.app/",
     category: "web-development"
   },
@@ -319,7 +319,7 @@ export const projects: Project[] = [
     description: "Browser extension for bookmark management",
     image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&q=80&w=800",
     technologies: ["React.js", "Tailwind CSS", "TypeScript"],
-    githubUrl: "https://github.com/vishxly/Bookmark",
+    githubUrl: "#",
     liveUrl: "https://bookmark-vert.vercel.app/",
     category: "web-development"
   }

@@ -25,7 +25,7 @@ export default function Sidebar() {
             className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-primary object-cover"
           />
           <h1 className="text-2xl font-bold mb-2">Joseph Ukeje</h1>
-          <p className="text-muted-foreground mb-4">Junior Software Engineer</p>
+          <p className="text-muted-foreground mb-4">Senior Software Engineer</p>
           <a
             href="mailto:ukejejoseph1@gmail.com"
             data-testid="link-email-cta"

@@ -88,6 +88,26 @@ export const skills: Skill[] = [
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg",
     category: "frameworks"
   },
+  {
+    name: "Entity Framework Core",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/dotnetcore/dotnetcore-original.svg",
+    category: "frameworks"
+  },
+  {
+    name: "Dapper",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
+    category: "frameworks"
+  },
+  {
+    name: "gRPC",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/grpc/grpc-original.svg",
+    category: "frameworks"
+  },
+  {
+    name: "MassTransit",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/dotnetcore/dotnetcore-original.svg",
+    category: "frameworks"
+  },
 
   // Backend & Databases
   {
@@ -160,6 +180,11 @@ export const skills: Skill[] = [
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg",
     category: "backend"
   },
+  {
+    name: "SQL Server",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-original.svg",
+    category: "backend"
+  },
 
   // Tools & DevOps
   {
@@ -215,6 +240,11 @@ export const skills: Skill[] = [
   {
     name: "Linux",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+    category: "tools"
+  },
+  {
+    name: "xUnit",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/dotnetcore/dotnetcore-original.svg",
     category: "tools"
   }
 ];

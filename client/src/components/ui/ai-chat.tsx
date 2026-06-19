@@ -86,7 +86,7 @@ export default function AiChat() {
                 onClick={() => setIsOpen(!isOpen)}
                 className="fixed bottom-6 right-6 z-[100] w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:scale-110 transition-transform"
                 style={{
-                    boxShadow: "0 0 20px rgba(52, 211, 153, 0.4), 0 0 40px rgba(52, 211, 153, 0.15)",
+                    boxShadow: "0 0 20px rgba(150, 150, 150, 0.2), 0 0 40px rgba(150, 150, 150, 0.08)",
                 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -119,7 +119,7 @@ export default function AiChat() {
                         transition={{ duration: 0.2, ease: "easeOut" }}
                         className="fixed bottom-24 right-6 z-[100] w-[360px] max-w-[calc(100vw-2rem)] h-[500px] max-h-[calc(100vh-8rem)] bg-card/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden"
                         style={{
-                            boxShadow: "0 8px 32px rgba(0,0,0,0.3), 0 0 15px rgba(52, 211, 153, 0.1)",
+                            boxShadow: "0 8px 32px rgba(0,0,0,0.3), 0 0 15px rgba(150, 150, 150, 0.05)",
                         }}
                     >
                         {/* Header */}

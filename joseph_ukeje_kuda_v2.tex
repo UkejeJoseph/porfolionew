@@ -1,0 +1,268 @@
+%-------------------------
+% Joseph Ukeje — Senior C# / .NET Core 8 Engineer
+% Tailored for Kuda — Backend Software Engineer
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\definecolor{darkblue}{RGB}{0,0,139}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small#2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\link}[2]{\href{#1}{\textcolor{darkblue}{\underline{#2}}}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Large Joseph Ukeje} \\ \vspace{2pt}
+    \small +2347087232777 $|$
+    \link{mailto:ukejejoseph1@gmail.com}{ukejejoseph1@gmail.com} $|$
+    Remote, Nigeria $|$
+    \link{https://www.linkedin.com/in/joseph-ukeje-8a0300220/}{LinkedIn} $|$
+    \link{https://github.com/UkejeJoseph}{GitHub} $|$
+    \link{https://www.youtube.com/@josephukeje8068}{YouTube} $|$
+    \link{https://porfolionew-puce.vercel.app/}{Portfolio}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Backend Software Engineer with 5+ years building clean, maintainable, and production-grade systems in fintech and enterprise SaaS. Deep expertise in \textbf{C\#, .NET Core 8, and ASP.NET Core}, with a strong track record designing and debugging scalable REST APIs, optimising database performance across \textbf{SQL Server, PostgreSQL, and Oracle}, and improving legacy applications with modern .NET patterns. Experienced delivering reusable libraries, writing clear API documentation, and driving code quality through structured code reviews and unit testing in Agile teams. Comfortable across the full SDLC --- from requirements to cloud deployment on \textbf{Azure and AWS}.}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt]
+  \small{\item{
+    \textbf{Languages:} C\#, SQL, TypeScript, JavaScript, Solidity
+  }}
+  \small{\item{
+    \textbf{Frameworks \& Libraries:} .NET Core 8, ASP.NET Core Web API, ASP.NET Core MVC, Entity Framework Core, LINQ, Dapper, gRPC (.NET), MediatR (CQRS), FluentValidation, AutoMapper, Polly (Resilience), Hangfire, MassTransit, GraphQL (Hot Chocolate)
+  }}
+  \small{\item{
+    \textbf{Databases:} SQL Server (T-SQL), PostgreSQL, Oracle, MySQL, MongoDB, Redis, Flyway, EF Core Migrations
+  }}
+  \small{\item{
+    \textbf{APIs \& Protocols:} REST APIs, SOAP, RPC, gRPC, ISO 20022/SWIFT, OAuth 2.0, JWT, IdentityServer/Duende
+  }}
+  \small{\item{
+    \textbf{Cloud \& DevOps:} Azure (AKS, App Service, Azure Functions, Azure DevOps), AWS (EC2, EKS), GCP, Docker, Kubernetes, Helm, Terraform, Jenkins, GitHub Actions
+  }}
+  \small{\item{
+    \textbf{Testing \& Quality:} xUnit, NUnit, Moq, FluentAssertions, SpecFlow (BDD), Testcontainers, Postman, SonarQube, Veracode
+  }}
+  \small{\item{
+    \textbf{Observability \& Security:} Prometheus, Grafana, Application Insights, Serilog, HashiCorp Vault, Azure Key Vault, OWASP
+  }}
+  \small{\item{
+    \textbf{Methodology:} Agile/Scrum, SDLC, CQRS, Domain-Driven Design, Code Reviews, Technical Documentation, Git, Linux, GitHub Copilot, Jira, Trello
+  }}
+\end{itemize}\vspace{-5pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Senior Software Engineer}{Apr 2025 -- Present}
+    {Interswitch Group}{Remote (Germany)}
+  \resumeItemListStart
+    \resumeItem{Designed and built a complete \textbf{C\# / .NET Core 8} ISO 20022 integration layer (pacs.008, pacs.002, pacs.028) with XML canonicalisation (C14N), digital signatures, and namespace standardisation, eliminating \textbf{100\%} of production payment failures across Tier-1 bank transaction volumes.}
+    \resumeItem{Engineered a custom \textbf{.NET Core 8 TCP server} from the ground up with connection lifecycle management, protocol framing, idempotency key enforcement, and atomic transaction boundaries, enabling reliable concurrent transaction processing at peak load with zero duplicate-processing incidents.}
+    \resumeItem{Decoupled fraud evaluation logic from core payment services by building a cross-cutting risk engine using \textbf{ASP.NET Core Middleware} and custom action filters with graceful degradation, reducing production incident risk and enabling independent deployment of fraud logic.}
+    \resumeItem{Implemented \textbf{OAuth 2.0 / JWT} authentication with \textbf{IdentityServer/Duende} at the API Gateway layer and resolved \textbf{100\%} of Veracode high-severity vulnerabilities, hardening the platform to enterprise production compliance standards.}
+    \resumeItem{Led structured code reviews and architecture discussions, establishing documented team-wide standards for API design, graceful degradation, and testability via written ADRs, reducing production incidents and improving onboarding speed.}
+    \resumeItem{Built \textbf{Prometheus/Grafana} observability infrastructure and Serilog structured logging pipelines across all .NET services, enabling proactive issue detection and significantly reducing MTTR for production incidents.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineer}{Jun 2024 -- Apr 2025}
+    {Huawei Technologies Nigeria}{Nigeria}
+  \resumeItemListStart
+    \resumeItem{Architected \textbf{ASP.NET Core Web API} microservices with structured service layers, RESTful contracts, and async event-driven workflows using \textbf{Entity Framework Core} for multi-tenant data management, delivering a reliable provisioning platform handling enterprise-scale API traffic.}
+    \resumeItem{Designed and delivered a partner rewards management service end-to-end in C\# and engineered \textbf{Azure DevOps CI/CD pipelines} with automated testing gates, reducing deployment times by \textbf{25\%} and improving release reliability.}
+    \resumeItem{Architected an async \textbf{RabbitMQ} notification pipeline with multiple broker replicas for automatic failover and a dead-letter queue for failed delivery retry, achieving \textbf{99\% uptime} for customer-facing alerts at low latency.}
+    \resumeItem{Established \textbf{xUnit and Moq} testing standards with \textbf{FluentAssertions} and contract-first API design across all .NET services, achieving a \textbf{95\% bug-free release rate} and accelerating delivery velocity by \textbf{20\%}.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineer}{Jan 2024 -- Jun 2024}
+    {Vision Forge AI Automations}{Remote, Nigeria}
+  \resumeItemListStart
+    \resumeItem{Designed and built a \textbf{.NET Core 8 microservice integration library} using \textbf{MassTransit} over RabbitMQ with contract validation and idempotency patterns, reducing QA data errors by \textbf{50\%} and giving the team a reusable integration layer adopted by all squads.}
+    \resumeItem{Refactored legacy C\# services toward clean architecture principles, introduced async messaging pipelines, and optimised database query patterns, reducing average API response times by \textbf{15\%}.}
+    \resumeItem{Expanded \textbf{xUnit and Moq} test coverage to \textbf{85\%+} using \textbf{FluentAssertions} and \textbf{Testcontainers} for integration tests, significantly reducing regression defects and improving deployment confidence.}
+    \resumeItem{Architected a \textbf{GraphQL (Hot Chocolate)} API layer in .NET Core with DataLoader-based batching, replacing a brittle REST aggregation approach and improving dashboard load performance for the frontend team.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineer}{Jan 2023 -- Dec 2023}
+    {Schlumberger (SLB) Oil \& Gas Servicing Limited}{Lagos, Nigeria}
+  \resumeItemListStart
+    \resumeItem{Designed and delivered production-grade \textbf{C\# / ASP.NET Core Web API} RESTful services with a \textbf{JWT + OAuth 2.0} authentication framework and Twilio 2FA, fully compliant with OWASP Top 10, with no authentication-related vulnerabilities.}
+    \resumeItem{Architected \textbf{Azure} infrastructure and built C\#-based \textbf{Azure DevOps} CI/CD pipelines with environment right-sizing, reducing cloud infrastructure costs by \textbf{18\%} while improving deployment reliability.}
+    \resumeItem{Implemented \textbf{ASP.NET Core Identity} with custom middleware and designed \textbf{SQL Server} and \textbf{PostgreSQL} data models for high-volume operational reporting, establishing consistent, auditable role-based access across internal services.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineer}{Jan 2022 -- Dec 2022}
+    {The Intrepid Technologies (Chevron)}{Lekki, Nigeria}
+  \resumeItemListStart
+    \resumeItem{Re-engineered \textbf{C\# / .NET} backend services across six enterprise web applications, redesigning controller logic, async processing, and middleware pipelines, reducing average API response times by \textbf{200ms}.}
+    \resumeItem{Implemented connection pooling, index optimisation, and rewrote slow queries using \textbf{Dapper} and \textbf{Entity Framework Core} across \textbf{Oracle and PostgreSQL} data layers, improving database throughput by \textbf{35\%} under peak load.}
+    \resumeItem{Engineered RPA-integrated \textbf{.NET analytics modules} in C\# to automate data collation and report generation end-to-end, eliminating manual reporting effort and reducing reporting cycle time by \textbf{40\%}.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Freelance .NET / C\# Developer}{Jan 2020 -- Dec 2021}
+    {Self-Employed (Upwork)}{Remote, Nigeria}
+  \resumeItemListStart
+    \resumeItem{Independently designed and delivered full-stack \textbf{C\# / ASP.NET Core} applications --- EF Core data models, RESTful Web API layers, and Azure-hosted deployment pipelines --- with thorough REST API integration documentation, delivering production-ready systems end-to-end for multiple clients across fintech and SaaS verticals.}
+    \resumeItem{Managed \textbf{Linux server environments} for .NET application hosting, deployment monitoring, and performance optimisation across client projects.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{IRIS --- ISO 20022 Core Banking Payment Integration} $|$ \emph{C\#, .NET Core 8, ASP.NET Core, gRPC (.NET), Azure Service Bus, Kubernetes}}{\link{https://www.aciworldwide.com/solutions/fraud-management}{Link}}
+  \begin{itemize}[leftmargin=0.18in, itemsep=0pt, parsep=0pt, topsep=3pt, partopsep=0pt]
+    \resumeItem{Built a custom \textbf{.NET Core 8 TCP server} and an \textbf{ASP.NET Core} inbound/outbound ISO 20022 integration layer (pacs.008, pacs.002, pacs.028) with C14N XML canonicalisation, digital signatures, and full production error recovery. Engineered \textbf{gRPC (.NET)} RPC validation with Protobuf contracts for blockchain service communication.}
+  \end{itemize}\vspace{-5pt}
+
+  \resumeProjectHeading
+    {\textbf{PRM --- Real-Time Payment Risk Management Engine} $|$ \emph{C\#, .NET Core 8, ASP.NET Core Middleware, Docker, Kubernetes}}{\link{https://www.aciworldwide.com/solutions/fraud-management}{Link}}
+  \begin{itemize}[leftmargin=0.18in, itemsep=0pt, parsep=0pt, topsep=3pt, partopsep=0pt]
+    \resumeItem{Architected a non-intrusive \textbf{ASP.NET Core Middleware} risk engine mapping 20+ transaction attributes via custom action filters and CQRS (MediatR); engineered fail-safe graceful degradation and a full audit trail pipeline meeting regulatory compliance requirements across Tier-1 bank environments.}
+  \end{itemize}\vspace{-5pt}
+
+  \resumeProjectHeading
+    {\textbf{StableX --- Crypto Wallet \& Blockchain Exchange} $|$ \emph{C\#, gRPC (.NET), Solidity, PostgreSQL, Docker, React.js}}{\link{https://stable-xv1.vercel.app/}{Link}}
+  \begin{itemize}[leftmargin=0.18in, itemsep=0pt, parsep=0pt, topsep=3pt, partopsep=0pt]
+    \resumeItem{Designed a decentralised exchange with a dedicated \textbf{C\# SMS notification service} handling transactional alerts, \textbf{gRPC (.NET)} blockchain RPC validation, and Solidity smart contract integration --- with a developer-facing SDK integration guide.}
+  \end{itemize}\vspace{-5pt}
+
+  \resumeProjectHeading
+    {\textbf{Nova Bills --- Billing Web Application} $|$ \emph{C\#, .NET Core, SQL Server, PostgreSQL, React.js}}{\link{https://nova-bills.vercel.app/}{Link}}
+  \begin{itemize}[leftmargin=0.18in, itemsep=0pt, parsep=0pt, topsep=3pt, partopsep=0pt]
+    \resumeItem{Built a full-stack billing and payments platform with \textbf{C\# / .NET Core} backend services, \textbf{EF Core} SQL Server and PostgreSQL persistence, and a React.js SPA frontend --- implementing clean, reusable service and repository layers.}
+  \end{itemize}\vspace{-5pt}
+
+  \resumeProjectHeading
+    {\textbf{Rivet AI --- Film Pre-Production SaaS Platform} $|$ \emph{C\#, .NET Core, MongoDB, REST APIs, OAuth 2.0, IdentityServer}}{\link{https://rivetai.com/}{Link}}
+  \begin{itemize}[leftmargin=0.18in, itemsep=0pt, parsep=0pt, topsep=3pt, partopsep=0pt]
+    \resumeItem{Designed \textbf{C\# / .NET Core} RESTful APIs with MongoDB persistence and \textbf{OAuth 2.0 / IdentityServer} authentication and role-based access control for a multi-tenant SaaS pre-production platform --- alongside full REST API technical documentation for developer consumers.}
+  \end{itemize}\vspace{-5pt}
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Babcock University}{}
+    {Bachelor of Science in Software Engineering --- GPA: 4.10/5.00}{Ogun State, Nigeria}
+  \begin{itemize}[leftmargin=0.18in, itemsep=0pt, parsep=0pt, topsep=3pt, partopsep=0pt]
+    \resumeItem{Relevant Coursework: Data Structures \& Algorithms, Object-Oriented Design, Computer Organisation, Software Architecture, Combinatorics}
+  \end{itemize}\vspace{-5pt}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\resumeSubHeadingListStart
+  \small{\item{
+    \link{https://catalog-education.oracle.com/ords/certview/sharebadge?id=2AE32043664103BD1F363F0CFB45953132E6DD1E0DC56DACCEF889C6FC349FE0}{Oracle Cloud Infrastructure DevOps Certificate}, Oracle (Oct 2025)
+  }}
+  \small{\item{
+    \link{https://catalog-education.oracle.com/ords/certview/sharebadge?id=6249543B0DB4347806CEC83C635E2E1A7E83F74B9DE58F219CE7E340B93BA84F}{Oracle Cloud Infrastructure Developer Certificate}, Oracle (Oct 2025)
+  }}
+  \small{\item{
+    \link{https://catalog-education.oracle.com/ords/certview/sharebadge?id=6249543B0DB4347806CEC83C635E2E1A7E83F74B9DE58F219CE7E340B93BA84F}{Oracle 12c Administrator Certified Associate (OCA)}, New Horizons (Jul 2024)
+  }}
+  \small{\item{
+    \link{https://drive.google.com/file/d/1484ZjBkBQ6WRXPBl1-RPtCFhDdVezPji/view?usp=sharing}{Domain 4 Review: AWS Certified Solutions Architect -- Professional (SAP-C02)}, AWS
+  }}
+  \small{\item{
+    \link{https://drive.google.com/file/d/1NF0f-s8IngP8IxJV0LZKQXPhyD_oelDd/view?usp=sharing}{AWS Fundamentals of Architecting on AWS}, AWS
+  }}
+  \small{\item{
+    \link{https://learn.microsoft.com/api/credentials/share/en-us/87864556/F8113CDCD50CB9F8?sharingId=5E6999516CAFD9FF}{Microsoft Applied Skills: Deploy Cloud-Native Apps Using Azure Container Apps}, Microsoft
+  }}
+  \small{\item{
+    Microsoft AZ-204: Developing Solutions for Microsoft Azure \textit{(In Progress)}
+  }}
+  \small{\item{
+    \link{https://cloud.uipath.com/intrepidtechnologiesltd/academy_/achievements}{UiPath RPA Certification}, UiPath (Jun 2023)
+  }}
+\resumeSubHeadingListEnd
+
+%-----------AWARDS \& AFFILIATIONS-----------
+\section{Awards \& Affiliations}
+\resumeSubHeadingListStart
+  \small{\item{
+    \textbf{\link{https://hackaholics.wemabank.com/}{3rd Place --- Wema Bank Hackathon}} (Dec 2025): NeuraFeed, an AI-driven fintech platform delivering personalised financial insights.
+  }}
+  \small{\item{
+    Student Lead, Enactus (Aug 2023) $|$ Digital Onboarders, MindTheGap (Jan 2024) $|$ IEEE Graduate Member
+  }}
+\resumeSubHeadingListEnd
+
+\end{document}

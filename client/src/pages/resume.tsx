@@ -20,7 +20,7 @@ export default function Resume() {
               href="/resume_joseph_ukeje.pdf"
               download
               data-testid="download-resume-btn"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 hover:shadow-[0_0_15px_rgba(52,211,153,0.4)] transition-all text-sm font-medium"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 hover:shadow-lg transition-all text-sm font-medium"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -36,7 +36,6 @@ export default function Resume() {
           <div className="border-l-2 border-primary pl-6" data-testid="education-babcock">
             <h4 className="text-xl font-semibold">Bachelor of Science in Software Engineering</h4>
             <p className="text-primary mb-2">Babcock University, Ogun state, Nigeria (GPA: 3.93/5.00)</p>
-            <p className="text-muted-foreground mb-2">Jan '20 — Jul '24</p>
             <p className="text-muted-foreground">Relevant Coursework: Data Structures & Algorithms, Objects & Design, Computer Organization & Programming, Combinatorics, Machine Learning</p>
           </div>
         </div>
@@ -48,58 +47,69 @@ export default function Resume() {
           <div className="space-y-8">
             <div className="border-l-2 border-primary pl-6" data-testid="experience-interswitch">
               <h4 className="text-xl font-semibold">Senior Software Engineer</h4>
-              <p className="text-primary mb-2">Interswitch, Lagos, Nigeria (Apr '25 — Present)</p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Architected and deployed enterprise-grade Identity and Access Management (IAM) systems with LDAP, multi-tenant onboarding, and advanced authentication/authorization, cutting onboarding time by 50%.</li>
-                <li>• Designed and scaled Spring Boot microservices for onboarding, modification, approvals, and lifecycle management, streaming ERP-driven operations and improving efficiency by 70%.</li>
-                <li>• Developed secure APIs and SWIFT message flows integrated with ERP and IBM MQ, boosting transaction throughput by 40%.</li>
-                <li>• Optimized resilience with Redis caching, retry/error handling, and audit logging frameworks, reducing downtime by 60%.</li>
-                <li>• Led enterprise deployments using Docker, WebLogic, and Veracode remediation, resolving 100% of high-severity vulnerabilities and hardening infrastructure for Tier-1 banks.</li>
-                <li>• Designed and developed an AI-powered knowledge-based chatbot for enterprise customer support at Interswitch, leveraging NLP models and contextual search to automate responses, reducing support tickets by 40%.</li>
+              <p className="text-primary mb-2">Interswitch Group, Lagos, Nigeria / Germany (Apr '25 — Present)</p>
+              <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed">
+                <li>• **Core Payment Integration (C# / .NET Core 8)**: Designed and built a complete ISO 20022 integration layer (pacs.008, pacs.002, pacs.028) with XML canonicalization (C14N), digital signatures, and namespace standardization, eliminating 100% of payment failures for Tier-1 banks.</li>
+                <li>• **TCP Servers & Microservices**: Engineered a custom .NET Core 8 TCP server with lifecycle management and idempotency keys, and designed/scaled Spring Boot microservices for onboarding and modification, improving ERP operations efficiency by 70%.</li>
+                <li>• **IAM & Security Gateway**: Architected and deployed enterprise-grade Identity and Access Management (IAM) systems with LDAP and OAuth 2.0 / JWT (IdentityServer/Duende), resolving 100% of Veracode high-severity vulnerabilities.</li>
+                <li>• **Resilience & Observability**: Optimized performance and uptime using Redis caching, retry/error handling, Prometheus/Grafana dashboards, and Serilog structured logging pipelines, reducing MTTR and cut downtime by 60%.</li>
+                <li>• **AI Customer Chatbot**: Designed and developed an AI-powered customer support chatbot leveraging NLP models and contextual search, reducing support ticket volume by 40% and response times by 60%.</li>
+                <li>• **Leadership & Deployments**: Led architecture discussions (ADRs), code reviews, and enterprise deployments using Docker and WebLogic, hardening infrastructure for Tier-1 banks.</li>
               </ul>
             </div>
 
             <div className="border-l-2 border-primary pl-6" data-testid="experience-huawei">
               <h4 className="text-xl font-semibold">Software Engineer</h4>
-              <p className="text-primary mb-2">Huawei Technologies, Nigeria (Jan '25 — Apr '25)</p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Redesigned and rebuilt an internal Tech Community application leveraging ReactJS, Node.js, and AWS services, delivering a 30% increase in user satisfaction.</li>
-                <li>• Developed advanced React components and implemented comprehensive testing strategies using Jest and Postman, accelerating development velocity by 20% and achieving a 95% bug-free release rate.</li>
-                <li>• Designed and implemented a Cash Catalogue feature using Vue.js, enabling installers to seamlessly redeem rewards.</li>
-                <li>• Optimized front-end architecture and integrated CI/CD pipelines with Jenkins and Git, cutting build times by 25%.</li>
+              <p className="text-primary mb-2">Huawei Technologies, Nigeria (Jun '24 — Apr '25)</p>
+              <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed">
+                <li>• **API & Microservices**: Architected ASP.NET Core Web API microservices with EF Core for multi-tenant data management, handling enterprise-scale API traffic.</li>
+                <li>• **Tech Community Application**: Redesigned and rebuilt an internal Tech Community application leveraging ReactJS, Node.js, and AWS services, delivering a 30% increase in user satisfaction.</li>
+                <li>• **Rewards Management Service**: Designed and implemented a Cash Catalogue rewards management feature using Vue.js and C# backend, automating reward redemption end-to-end.</li>
+                <li>• **CI/CD Pipelines**: Engineered Azure DevOps and Jenkins CI/CD pipelines with automated testing gates, reducing deployment times by 25%.</li>
+                <li>• **Uptime & Messaging**: Architected an async RabbitMQ notification pipeline with broker replicas for automatic failover, achieving 99.9% uptime for customer-facing alerts.</li>
+                <li>• **Testing & QA**: Established comprehensive testing strategies using xUnit, Moq, FluentAssertions, Jest, and Postman, achieving a 95% bug-free release rate.</li>
               </ul>
             </div>
 
             <div className="border-l-2 border-primary pl-6" data-testid="experience-vision-forge">
               <h4 className="text-xl font-semibold">Software Engineer</h4>
-              <p className="text-primary mb-2">Vision Forge AI Automations, Nigeria (Remote) (Jan '24 — Jan '25)</p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Developed and executed an API integration strategy with Spring Boot, connecting 5 microservices to synchronize data updates and reducing QA-reported data errors by 50%.</li>
-                <li>• Refactored Java and PL/SQL codebases to enhance efficiency, cutting system response times by 15%.</li>
-                <li>• Leveraged RabbitMQ for event-driven communication, enabling real-time data flow and seamless integration across distributed system components.</li>
-                <li>• Increased code reliability by expanding JUnit test coverage to over 85%, strengthening software quality.</li>
+              <p className="text-primary mb-2">Vision Forge AI Automations, Nigeria (Remote) (Jan '24 — Jun '24)</p>
+              <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed">
+                <li>• **Integration Library**: Developed a Spring Boot and .NET Core 8 microservice integration library using MassTransit over RabbitMQ, reducing QA-reported data errors by 50%.</li>
+                <li>• **Refactoring & Performance**: Refactored legacy Java, C#, and PL/SQL codebases to enhance efficiency, cutting average API response times by 15%.</li>
+                <li>• **API Modernization**: Architected a GraphQL (Hot Chocolate) API layer in .NET Core with DataLoader batching to optimize frontend dashboard load performance.</li>
+                <li>• **Testing & Reliability**: Increased code reliability by expanding JUnit, xUnit, and Moq test coverage to over 85%, utilizing Testcontainers for integration testing.</li>
               </ul>
             </div>
 
             <div className="border-l-2 border-primary pl-6" data-testid="experience-schlumberger">
-              <h4 className="text-xl font-semibold">Full-Stack Developer Intern</h4>
-              <p className="text-primary mb-2">Schlumberger Oil and Gas Servicing Limited, Lagos, Nigeria (Jan '23 — Aug '23)</p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Developed 7 cross-platform mobile app screens with real-time interactions, improving user engagement and responsiveness across devices.</li>
-                <li>• Integrated secure authentication system with Express.js, JWT, and cookies, implementing automatic token refresh and expiration handling to fortify application security.</li>
-                <li>• Integrated Twilio API to deliver OAuth2.0-based two-factor authentication (2FA), fully aligned with OWASP Top 10 security standards.</li>
-                <li>• Orchestrated cloud infrastructure on GCP, managing PostgreSQL databases, optimizing cloud storage and configurations to reduce cloud costs by 18%.</li>
+              <h4 className="text-xl font-semibold">Software Engineer / Full-Stack Developer</h4>
+              <p className="text-primary mb-2">Schlumberger Oil and Gas Servicing Limited, Lagos, Nigeria (Jan '23 — Dec '23)</p>
+              <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed">
+                <li>• **API & Auth Security**: Designed and delivered C# / ASP.NET Core and Express.js RESTful Web APIs, integrating JWT + OAuth 2.0 authentication, automatic token refresh, and Twilio 2FA aligned with OWASP Top 10.</li>
+                <li>• **Identity & Access**: Implemented ASP.NET Core Identity with custom middleware and designed SQL Server and PostgreSQL data models for high-volume operational reporting.</li>
+                <li>• **Cloud Infrastructure & CI/CD**: Orchestrated cloud infrastructure on Azure and GCP, building C#-based Azure DevOps CI/CD pipelines, reducing cloud infrastructure costs by 18%.</li>
+                <li>• **Mobile Apps**: Developed 7 cross-platform React Native mobile app screens with real-time interactions, improving user engagement and responsiveness.</li>
               </ul>
             </div>
 
             <div className="border-l-2 border-primary pl-6" data-testid="experience-intrepid">
-              <h4 className="text-xl font-semibold">Software Developer Intern</h4>
+              <h4 className="text-xl font-semibold">Software Developer</h4>
               <p className="text-primary mb-2">The Intrepid Technologies Chevron, Lekki, Nigeria (Jan '22 — Dec '22)</p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Redesigned and optimized 6 enterprise webpages, implementing responsive layouts and compressed image assets, boosting page load speeds by 35%.</li>
-                <li>• Migrated backend services to Django and refined database queries, reducing average API response times by up to 200ms.</li>
-                <li>• Strengthened code quality processes by leveraging Git for version control and conducting systematic code reviews, resulting in a 20% reduction in bug backlog.</li>
-                <li>• Applied RPA analytics tools to track automation performance, producing actionable reports that guided strategy refinements.</li>
+              <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed">
+                <li>• **Re-engineering & Web Pages**: Re-engineered C#/.NET and Django backend services across six enterprise web applications, reducing average API response times by 200ms and boosting page load speeds by 35%.</li>
+                <li>• **Database Tuning**: Implemented connection pooling and query optimization using Dapper and Entity Framework Core across Oracle, PostgreSQL, and SQL Server data layers, boosting throughput by 35%.</li>
+                <li>• **Analytics & Automation**: Engineered RPA-integrated .NET analytics modules in C# to automate data collation and report generation end-to-end, reducing reporting cycle times by 40%.</li>
+                <li>• **Systematic QA**: Strengthened code quality and version control processes with Git and systematic code reviews, reducing the bug backlog by 20%.</li>
+              </ul>
+            </div>
+
+            <div className="border-l-2 border-primary pl-6" data-testid="experience-freelance">
+              <h4 className="text-xl font-semibold">Freelance .NET / C# Developer</h4>
+              <p className="text-primary mb-2">Self-Employed (Upwork), Remote (Jan '20 — Dec '21)</p>
+              <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed">
+                <li>• **End-to-End Delivery**: Independently designed and delivered full-stack C# / ASP.NET Core applications (EF Core data models, RESTful Web API layers, and Azure deployment pipelines) for fintech and SaaS clients.</li>
+                <li>• **Server Administration**: Managed Linux server environments for hosting, deployment monitoring, and performance optimization across client projects.</li>
               </ul>
             </div>
           </div>

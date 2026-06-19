@@ -1,0 +1,277 @@
+%-------------------------
+% Joseph Ukeje - Senior Software Engineer (Java)
+% Tailored for Moniepoint Inc.
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Dark blue color for links
+\definecolor{darkblue}{RGB}{0,0,139}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small#2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\link}[2]{\href{#1}{\textcolor{darkblue}{\underline{#2}}}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Large Joseph Ukeje} \\ \vspace{2pt}
+    \small +2347087232777 $|$
+    \link{mailto:ukejejoseph1@gmail.com}{ukejejoseph1@gmail.com} $|$
+    Remote, Nigeria $|$
+    \link{https://www.linkedin.com/in/joseph-ukeje-8a0300220/}{LinkedIn} $|$
+    \link{https://github.com/UkejeJoseph}{GitHub} $|$
+    \link{https://www.youtube.com/@josephukeje8068}{YouTube} $|$
+    \link{https://porfolionew-puce.vercel.app/}{Portfolio}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Senior Software Engineer with 5+ years delivering scalable, production-grade distributed systems in fintech and payments. Deep expertise in \textbf{Java 21, Spring Boot 3.x, Spring WebFlux, and Kubernetes}. Proven track record designing reliable, cloud-native microservices, ISO 20022/SWIFT payment flows, and high-throughput event-driven architectures with Kafka and RabbitMQ. Strong command of \textbf{PostgreSQL, AWS EKS, Docker}, and observability tooling (Prometheus/Grafana). Experienced collaborating across product, design, and QA in Agile environments to ship well-tested, maintainable systems at Tier-2 bank core banking transaction volumes.}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt]
+  \small{\item{
+    \textbf{Languages:} Java (21, 17, 11), SQL, TypeScript, JavaScript, C\#, Solidity
+  }}
+  \small{\item{
+    \textbf{Frameworks:} Spring Boot 3.x, Spring WebFlux (Reactive/Async), Spring Data JPA / Hibernate (ORM), Spring Security, .NET, gRPC-Java (Protobuf), GraphQL (Apollo), React
+  }}
+  \small{\item{
+    \textbf{Databases:} PostgreSQL, Oracle, MySQL, MongoDB, Redis, Flyway
+  }}
+  \small{\item{
+    \textbf{Messaging \& Streaming:} Kafka, IBM MQ, RabbitMQ, JMS
+  }}
+  \small{\item{
+    \textbf{Cloud \& DevOps:} AWS (EC2, EKS), Azure, GCP, Docker, Kubernetes, Helm, Jenkins, Terraform, Bitbucket CI/CD
+  }}
+  \small{\item{
+    \textbf{Observability \& Security:} Prometheus, Grafana, Micrometer, HashiCorp Vault, OAuth 2.0, JWT, Veracode, SonarQube
+  }}
+  \small{\item{
+    \textbf{Testing:} JUnit 5, Mockito, PowerMock, Testcontainers, Postman
+  }}
+  \small{\item{
+    \textbf{Methodology:} Agile/Scrum, REST APIs, SOAP, ISO 20022/SWIFT, Netty TCP, Oracle WebLogic, Git, Linux, GitHub Copilot
+  }}
+\end{itemize}\vspace{-5pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Senior Software Engineer}{Apr 2025 -- Present}
+    {Interswitch Group}{Remote (Germany)}
+  \resumeItemListStart
+    \resumeItem{High-volume outbound payment flows were failing intermittently due to ISO 20022 non-compliance; engineered end-to-end pacs.008/pacs.002/pacs.028 integration with XML canonicalisation (C14N), digital signatures, and namespace standardisation --- \textbf{eliminating 100\% of production payment failures} across Tier-2 bank transaction volumes.}
+    \resumeItem{The IRIS payment engine required low-level transport beyond standard Spring Boot abstractions; designed and built a \textbf{Netty-based TCP server} architecting connection lifecycle management and protocol framing --- leveraging \textbf{Java 21 Virtual Threads} (Project Loom) to handle thousands of concurrent incoming transactions with minimal overhead, enforcing \textbf{idempotency keys} and \textbf{atomic transaction boundaries} for duplicate-free, all-or-nothing payment processing at peak load.}
+    \resumeItem{Architected \textbf{gRPC-Java} service integrations for blockchain RPC validation --- authored protobuf contracts and engineered serialisation, streaming, and graceful degradation across distributed Java services.}
+    \resumeItem{Fraud evaluation logic was tightly coupled to core payment services, elevating incident risk; engineered a non-intrusive cross-cutting risk layer using \textbf{Spring AOP/AspectJ} with custom annotations --- fully decoupling fraud logic from business services and enabling graceful degradation without disruption to core payment flows.}
+    \resumeItem{Designed and shipped scalable microservices on Kubernetes sustaining sub-100ms latency targets; integrated \textbf{Kafka and RabbitMQ} event-driven pipelines across 5+ distributed services --- improving async workflow throughput and decoupling service dependencies for greater reliability at Tier-2 bank core banking volumes.}
+    \resumeItem{Implemented \textbf{OAuth 2.0 and JWT} authentication flows with an authorisation server validated at the API Gateway; built \textbf{Prometheus/Grafana} observability infrastructure and resolved 100\% of Veracode high-severity vulnerabilities --- hardening Docker/Kubernetes deployments for production compliance.}
+    \resumeItem{Contributed two \textbf{React.js} screens to the risk-management operations dashboard, wiring components to the Spring Boot risk-engine APIs to surface real-time fraud signals for the operations team.}
+    \resumeItem{Production incidents were elevated due to inconsistent error-handling patterns; \textbf{led code reviews and architecture discussions}, establishing team-wide standards for graceful degradation and testability --- reducing production incidents and improving cross-team transparency through documented technical decisions.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineer}{Jun 2024 -- Apr 2025}
+    {Huawei Technologies Nigeria}{Nigeria}
+  \resumeItemListStart
+    \resumeItem{Designed scalable \textbf{Java microservices} for Huawei Cloud's enterprise B2B platform --- architecting REST APIs, service layers, and async event-driven workflows for cloud-native resource provisioning at enterprise scale.}
+    \resumeItem{Built \textbf{Spring Boot} microservices with \textbf{Spring Data JPA/Hibernate} for ORM-based multi-tenant data management; implemented Kafka ETL pipelines for reliable data flow across platform services.}
+    \resumeItem{Deployment cycles were slow and error-prone across cloud-native environments; collaborated with cross-functional product and QA teams to deliver a partner rewards management service end-to-end within Agile sprint cycles --- architecting CI/CD pipelines that \textbf{reduced deployment times by 25\%}.}
+    \resumeItem{Multiple distributed services required reliable customer-facing SMS alerts on form approval events with no single point of failure; architected an async \textbf{RabbitMQ} notification pipeline routing events from 5+ services to an email microservice for SMS engine dispatch --- implementing multiple broker replicas for automatic failover and a \textbf{dead-letter queue} for failed delivery retry, achieving \textbf{99\% uptime} and consistently low-latency alert delivery at scale.}
+    \resumeItem{Implemented \textbf{Helm} for Kubernetes deployments ensuring efficient resource allocation and scaling across cloud-native AWS infrastructure.}
+    \resumeItem{Established \textbf{JUnit 5 and Mockito} testing standards with a strong focus on reliability and testability, achieving a 95\% bug-free release rate; accelerated delivery velocity by 20\% through contract-first API design and proactive code review participation.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Junior Software Engineer}{Jan 2024 -- Jun 2024}
+    {Vision Forge AI Automations}{Remote, Nigeria}
+  \resumeItemListStart
+    \resumeItem{Collaborated with cross-functional stakeholders to independently design and architect a \textbf{Spring Boot} microservice integration layer connecting 5 distributed services, reducing QA data errors by 50\% through contract validation and idempotency patterns.}
+    \resumeItem{Implemented \textbf{RabbitMQ} event-driven messaging pipelines for async inter-service communication; refactored Java codebases with a focus on maintainability and clean code, reducing average response times by 15\%.}
+    \resumeItem{Expanded \textbf{JUnit 5 and Mockito} test coverage to 85\%+, significantly reducing regression defects across all Spring Boot services.}
+    \resumeItem{Architected \textbf{GraphQL (Apollo)} API layer consumed by React.js dashboards, enabling flexible querying across heterogeneous microservice data sources.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Junior Software Engineer}{Jan 2023 -- Dec 2023}
+    {Schlumberger (SLB) Oil \& Gas Servicing Limited}{Lagos, Nigeria}
+  \resumeItemListStart
+    \resumeItem{Designed and delivered production-grade \textbf{Java/Spring Boot} RESTful APIs for enterprise applications, implementing a JWT + OAuth 2.0 authentication framework with Twilio 2FA --- fully compliant with OWASP Top 10 security standards.}
+    \resumeItem{Architected \textbf{GCP} cloud infrastructure and Java-based CI/CD deployment pipelines, reducing infrastructure costs by 18\% through right-sizing and environment optimisation.}
+    \resumeItem{Implemented \textbf{Spring Security} for role-based access control; designed PostgreSQL relational data models supporting high-volume operational reporting workflows.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Junior Software Engineer}{Jan 2022 -- Dec 2022}
+    {The Intrepid Technologies (Chevron)}{Lekki, Nigeria}
+  \resumeItemListStart
+    \resumeItem{Re-engineered Java backend services for 6 enterprise web applications, redesigning API response pipelines and reducing average response times by 200ms.}
+    \resumeItem{Implemented connection pooling and query optimisation strategies with \textbf{Oracle and PostgreSQL}, improving database throughput by 35\%.}
+    \resumeItem{Engineered RPA-driven Java analytics modules to automate performance reporting, eliminating manual data collation across project delivery teams.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Freelance Java Developer}{Jan 2020 -- Dec 2021}
+    {Self-Employed (Upwork)}{Remote, Nigeria}
+  \resumeItemListStart
+    \resumeItem{Designed and delivered full-stack \textbf{Java/Spring Boot} applications for international clients --- data models, REST API layers, and service integrations end-to-end.}
+    \resumeItem{Managed Linux server environments for Java application hosting, deployment, and monitoring.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{IRIS --- ISO 20022 Core Banking Payment Integration} $|$ \emph{Java 21, Spring Boot 3.x, Netty TCP, gRPC-Java, Spring AOP}}{\link{https://www.aciworldwide.com/solutions/fraud-management}{Link}}
+  \begin{itemize}[leftmargin=0.18in, itemsep=0pt, parsep=0pt, topsep=3pt, partopsep=0pt]
+    \resumeItem{Built a Netty-based TCP server for the IRIS payment engine; architected ISO 20022 inbound/outbound flow integration (pacs.008, pacs.002, pacs.028) with C14N canonicalisation, digital signatures, and production error recovery; engineered gRPC-Java RPC validation with protobuf service contracts.}
+  \end{itemize}\vspace{-5pt}
+
+  \resumeProjectHeading
+    {\textbf{PRM --- Real-Time Payment Risk Management Engine} $|$ \emph{Java 21, Spring AOP, Spring WebFlux, Docker, Kubernetes}}{[Link]}
+  \begin{itemize}[leftmargin=0.18in, itemsep=0pt, parsep=0pt, topsep=3pt, partopsep=0pt]
+    \resumeItem{Architected a non-intrusive Spring AOP cross-cutting risk engine mapping 20+ transaction attributes; engineered graceful degradation and a full audit pipeline for regulatory compliance across Tier-2 bank core banking environments.}
+  \end{itemize}\vspace{-5pt}
+
+  \resumeProjectHeading
+    {\textbf{StableX --- Crypto Wallet \& Blockchain Exchange} $|$ \emph{Java, gRPC-Java, Solidity, PostgreSQL, Docker, React.js}}{\link{https://stable-xv1.vercel.app/}{Link}}
+  \begin{itemize}[leftmargin=0.18in, itemsep=0pt, parsep=0pt, topsep=3pt, partopsep=0pt]
+    \resumeItem{Designed a Java-backed decentralised exchange with gRPC-Java blockchain RPC validation and Solidity smart contract integration.}
+  \end{itemize}\vspace{-5pt}
+
+  \resumeProjectHeading
+    {\textbf{Nova Bills --- Billing Web Application} $|$ \emph{Java, Spring Boot, PostgreSQL, React.js}}{\link{https://nova-bills.vercel.app/}{Link}}
+  \begin{itemize}[leftmargin=0.18in, itemsep=0pt, parsep=0pt, topsep=3pt, partopsep=0pt]
+    \resumeItem{Architected a full-stack billing and payments platform with PostgreSQL persistence and a React.js frontend.}
+  \end{itemize}\vspace{-5pt}
+
+  \resumeProjectHeading
+    {\textbf{Rivet AI --- Film Pre-Production Platform} $|$ \emph{Java, Spring Boot, MongoDB, REST APIs, OAuth 2.0}}{\link{https://rivetai.com/}{Link}}
+  \begin{itemize}[leftmargin=0.18in, itemsep=0pt, parsep=0pt, topsep=3pt, partopsep=0pt]
+    \resumeItem{Designed Java/Spring Boot RESTful APIs with MongoDB persistence; engineered OAuth 2.0 authentication and role-based access control for a multi-tenant SaaS pre-production platform.}
+  \end{itemize}\vspace{-5pt}
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Babcock University}{}
+    {Bachelor of Science in Software Engineering --- GPA: 4.10/5.00}{Ogun State, Nigeria}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\resumeSubHeadingListStart
+  \small{\item{
+    \link{https://catalog-education.oracle.com/ords/certview/sharebadge?id=2AE32043664103BD1F363F0CFB45953132E6DD1E0DC56DACCEF889C6FC349FE0}{Oracle Cloud Infrastructure DevOps Certificate}, Oracle (Oct 2025)
+  }}
+  \small{\item{
+    \link{https://catalog-education.oracle.com/ords/certview/sharebadge?id=6249543B0DB4347806CEC83C635E2E1A7E83F74B9DE58F219CE7E340B93BA84F}{Oracle Cloud Infrastructure Developer Certificate}, Oracle (Oct 2025)
+  }}
+  \small{\item{
+    \link{https://catalog-education.oracle.com/ords/certview/sharebadge?id=6249543B0DB4347806CEC83C635E2E1A7E83F74B9DE58F219CE7E340B93BA84F}{Oracle 12c Administrator / Java SE 8 (OCA/OCP)}, New Horizons (Jul 2024)
+  }}
+  \small{\item{
+    \link{https://drive.google.com/file/d/1484ZjBkBQ6WRXPBl1-RPtCFhDdVezPji/view?usp=sharing}{Domain 4 Review: AWS Certified Solutions Architect -- Professional (SAP-C02)}, AWS
+  }}
+  \small{\item{
+    \link{https://drive.google.com/file/d/1NF0f-s8IngP8IxJV0LZKQXPhyD_oelDd/view?usp=sharing}{AWS Fundamentals of Architecting on AWS}, AWS
+  }}
+  \small{\item{
+    \link{https://learn.microsoft.com/api/credentials/share/en-us/87864556/F8113CDCD50CB9F8?sharingId=5E6999516CAFD9FF}{Microsoft Applied Skills: Deploy Cloud-Native Apps Using Azure Container Apps}, Microsoft
+  }}
+  \small{\item{
+    \link{https://cloud.uipath.com/intrepidtechnologiesltd/academy_/achievements}{UiPath RPA Certification}, UiPath (Jun 2023)
+  }}
+  \small{\item{
+    Udemy Java Masterclass, Udemy (Jan 2023)
+  }}
+\resumeSubHeadingListEnd
+
+%-----------AWARDS & AFFILIATIONS-----------
+\section{Awards \& Affiliations}
+\resumeSubHeadingListStart
+  \small{\item{
+    \textbf{3rd Place --- Wema Bank Hackathon} (Dec 2025): NeuraFeed, an AI-driven fintech platform delivering personalised financial insights.
+  }}
+  \small{\item{
+    Student Lead, Enactus (Aug 2023) $|$ Digital Onboarders, MindTheGap (Jan 2024) $|$ IEEE Graduate Member
+  }}
+\resumeSubHeadingListEnd
+
+\end{document}

@@ -6,7 +6,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-card/40 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+    <div className="bg-transparent border border-foreground/10 rounded-2xl overflow-hidden hover:border-foreground/25 hover:shadow-lg transition-all duration-300">
       <img
         src={project.image}
         alt={project.title}
