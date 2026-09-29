@@ -63,7 +63,7 @@ export default function HeroSection() {
             {/* Stats */}
             <div className="flex gap-8 sm:gap-12 mb-8 sm:mb-12 lg:mb-16 animate-fade-up">
               <div className="text-left">
-                <span className="text-3xl sm:text-4xl md:text-5xl font-display font-light tracking-tight text-foreground">5+</span>
+                <span className="text-3xl sm:text-4xl md:text-5xl font-display font-light tracking-tight text-foreground">6+</span>
                 <p className="text-xs sm:text-sm text-muted-foreground mt-1 font-body">Years experience</p>
               </div>
               <div className="text-left">
@@ -74,12 +74,12 @@ export default function HeroSection() {
 
             {/* Main Heading */}
             <h1 className="font-display text-[4.5rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] font-extralight tracking-tight text-foreground leading-[0.85] mb-4 sm:mb-6 animate-fade-up-delay-1">
-              Hello
+              Hi
             </h1>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-muted-foreground font-body leading-relaxed animate-fade-up-delay-2 max-w-md mb-8">
-              — It's <span className="text-foreground">Joseph Ukeje</span>, a Senior Software Engineer specialising in Java &amp; C# .NET
+              — I'm <span className="text-foreground">Joseph Ukeje</span>, a Senior Software Engineer building distributed fintech and enterprise systems with Java, C#/.NET, Node.js, and React.
             </p>
 
             {/* Legacy Portfolio Button */}

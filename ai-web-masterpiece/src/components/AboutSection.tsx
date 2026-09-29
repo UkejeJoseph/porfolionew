@@ -1,23 +1,23 @@
 import { Plus, ArrowUpRight, Download } from "lucide-react";
-import cvPdf from "../assets/Atharv_s_Cv.pdf";
+import cvPdf from "../assets/Joseph_Ukeje_Paga_Senior_Java_Resume_V2.pdf";
 
 import profilePhotoUrl from "../assets/profile.png";
 
 const highlights = [
 	{
-		text: "Senior Software Engineer with 5+ years building high-throughput enterprise systems across fintech, oil & gas, and AI automation.",
+		text: "Senior Software Engineer with 6+ years delivering transaction-heavy systems across fintech, payments, enterprise SaaS, and AI automation.",
 	},
 	{
-		text: "Currently at Interswitch Group — engineering ISO 20022 payment infrastructure in Java Spring Boot & C# .NET Core 8, processing millions of transactions across Tier-1 banks.",
+		text: "At Interswitch, I engineer ISO 20022 payment and core-banking infrastructure with Java/Spring Boot, C#/.NET, Kafka, Redis, and Kubernetes at Tier-1 bank transaction volumes.",
 	},
 	{
-		text: "Deep expertise in gRPC microservices, distributed systems, IBM MQ, Kubernetes, and enterprise integration patterns.",
+		text: "I work across Java 21, Spring Boot, C#/.NET, Node.js/NestJS, React/TypeScript, REST/gRPC APIs, and event-driven systems.",
 	},
 	{
-		text: "I run a developer community on daily.dev with 2,000+ active members, and write technical blogs with over 1 million views.",
+		text: "My work spans multi-tenant APIs, Open Banking and AML/KYC integrations, financial audit trails, cloud delivery, and production incident recovery.",
 	},
 	{
-		text: "Passionate about crafting systems that are not just functional, but fault-tolerant, observable, and production-grade.",
+		text: "I own services from architecture and implementation through testing, observability, performance optimisation, mentoring, and production support.",
 	},
 ];
 
@@ -33,10 +33,10 @@ export default function AboutSection() {
 						</h2>
 
 						<p className="text-base text-muted-foreground font-body leading-relaxed italic">
-							I'm specialized in turning complex problems into elegant solutions. My
-							approach blends creativity with strategic thinking to deliver applications
-							that not only work great but scale seamlessly. Ready to start your next
-							project?
+							I turn complex financial and enterprise workflows into reliable software.
+							My work combines backend depth, product ownership, and pragmatic system
+							design so services remain correct under concurrency and recover cleanly
+							from failure.
 						</p>
 
 							{/* Download CV Button */}

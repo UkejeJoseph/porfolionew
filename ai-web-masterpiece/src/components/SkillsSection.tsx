@@ -9,94 +9,108 @@ import {
 const experiences = [
   {
     company: "Interswitch Group",
-    role: "Senior Software Engineer",
+    role: "Senior Software Engineer (Backend)",
     period: "Apr 2025 - Present",
-    description: "Lagos, Nigeria / Germany. Core Payment Integration & Microservices.",
-    fullDescription: "Designed and built a complete ISO 20022 integration layer (pacs.008, pacs.002, pacs.028) with XML canonicalization, eliminating 100% of payment failures for Tier-1 banks. Engineered custom TCP servers and Spring Boot microservices, improving ERP operations efficiency by 70%.",
+    description: "Remote. Core banking, payment infrastructure, and distributed systems.",
+    fullDescription: "Engineered ISO 20022/SWIFT payment flows across Java/Spring Boot and C#/.NET integration services, owning high-throughput systems from architecture and implementation through observability, incident investigation, and production recovery.",
     achievements: [
-      "Engineered a custom .NET Core 8 TCP server and scaled Spring Boot microservices",
-      "Architected IAM systems with LDAP and OAuth 2.0 / JWT",
-      "Optimized performance using Redis caching, Prometheus/Grafana, and Serilog",
-      "Developed an AI customer support chatbot, reducing ticket volume by 40%"
+      "Built IRIS on Netty TCP with CompletableFuture and Java 21 Virtual Threads, sustaining 5,000+ concurrent connections per node",
+      "Owned secured REST and gRPC services for 10+ institutions across 30+ production endpoints",
+      "Integrated Kafka, Azure Service Bus, Redis deduplication, circuit breakers, and production observability across distributed services",
+      "Delivered payment-risk controls, Open Banking and AML/KYC integrations, immutable audit trails, and an internal LiteLLM AI gateway"
     ],
-    tags: ["C# .NET Core", "Java Spring Boot", "Microservices", "React", "Solidity", "TypeScript"]
+    tags: ["Java 21", "Spring Boot", "C#/.NET", "Kafka", "Redis", "React"]
   },
   {
     company: "Huawei Technologies",
-    role: "Software Engineer",
+    role: "Senior Software Engineer",
     period: "Jun 2024 - Apr 2025",
-    description: "Nigeria. API, Microservices and CI/CD.",
-    fullDescription: "Architected ASP.NET Core Web API microservices with EF Core for multi-tenant data management. Redesigned and rebuilt internal Tech Community application, delivering a 30% increase in user satisfaction.",
+    description: "Enterprise B2B platform, event-driven services, and cloud delivery.",
+    fullDescription: "Designed Java/Spring Boot microservices, Spring Data JPA/Hibernate persistence, Kafka pipelines, and React/TypeScript workflows for Huawei Cloud's multi-tenant B2B platform.",
     achievements: [
-      "Designed a Cash Catalogue rewards management feature using Vue.js and C#",
-      "Engineered Azure DevOps and Jenkins CI/CD pipelines, reducing deployment times by 25%",
-      "Architected an async RabbitMQ notification pipeline achieving 99.9% uptime",
-      "Established comprehensive testing strategies using xUnit, Moq, and Jest"
+      "Delivered a partner rewards administration platform end to end across APIs, transactional services, and product workflows",
+      "Built Azure DevOps CI/CD, Helm, Terraform, and AWS EKS delivery workflows that reduced deployment time by 25%",
+      "Architected a RabbitMQ notification service across 5+ services with failover and dead-letter retries, achieving 99% uptime",
+      "Established JUnit, Mockito, WireMock, and Testcontainers standards while mentoring junior engineers"
     ],
-    tags: ["ASP.NET Core", "Vue.js", "CI/CD", "RabbitMQ", "React", "C#", "Java", "TypeScript"]
+    tags: ["Java", "Spring Boot", "React", "Kafka", "RabbitMQ", "AWS EKS"]
   },
   {
     company: "Vision Forge AI Automations",
     role: "Software Engineer",
     period: "Jan 2024 - Jun 2024",
-    description: "Remote. API Modernization & Integration.",
-    fullDescription: "Developed a Spring Boot and .NET Core 8 microservice integration library using MassTransit over RabbitMQ. Architected a GraphQL API layer in .NET Core with DataLoader batching to optimize frontend dashboard load performance.",
+    description: "Remote. API modernisation, automation, and service integration.",
+    fullDescription: "Architected Java/Spring Boot and C#/.NET integration services over RabbitMQ, alongside Node.js/TypeScript automation APIs and GraphQL data services consumed by React product workflows.",
     achievements: [
-      "Reduced QA-reported data errors by 50% via microservice integration",
-      "Refactored legacy Java, C#, and PL/SQL codebases cutting API response times by 15%",
-      "Increased code reliability by expanding test coverage to over 85%"
+      "Reduced QA data errors by 50% through contract validation and idempotency",
+      "Designed GraphQL APIs with DataLoader batching across heterogeneous services",
+      "Expanded automated test coverage to 85%+ using JUnit, xUnit, Mockito, Moq, Testcontainers, and WireMock"
     ],
-    tags: ["Java", "GraphQL", "MassTransit", "C#", "React", "TypeScript", "Solidity"]
+    tags: ["Java", "C#/.NET", "Node.js", "RabbitMQ", "GraphQL", "React"]
   },
   {
     company: "Schlumberger Oil and Gas",
     role: "Software Engineer / Full-Stack Developer",
     period: "Jan 2023 - Dec 2023",
-    description: "Lagos, Nigeria. Cloud Infrastructure & Security.",
-    fullDescription: "Designed and delivered C# / ASP.NET Core and Express.js RESTful Web APIs, integrating JWT + OAuth 2.0 authentication, automatic token refresh, and Twilio 2FA aligned with OWASP Top 10.",
+    description: "Lagos. Secure APIs, operational products, and cloud delivery.",
+    fullDescription: "Delivered Java/Spring Boot and C#/ASP.NET Core REST APIs with JWT, OAuth 2.0, Twilio 2FA, RBAC, and OWASP-aligned controls, supported by React/TypeScript operational interfaces.",
     achievements: [
-      "Implemented ASP.NET Core Identity with custom middleware",
-      "Orchestrated cloud infrastructure on Azure and GCP",
-      "Built C#-based Azure DevOps CI/CD pipelines reducing costs by 18%",
-      "Developed 7 cross-platform React Native mobile app screens"
+      "Implemented secure service boundaries and reusable role-based access controls",
+      "Designed PostgreSQL and SQL Server models for high-volume operational reporting",
+      "Optimised GCP and Azure delivery pipelines, reducing infrastructure costs by 18%",
+      "Led code reviews and architecture discussions around resilience, testability, and maintainability"
     ],
-    tags: ["Azure", "ASP.NET Core", "React Native", "Java", "C#", "TypeScript", "Solidity"]
+    tags: ["Java", "Spring Boot", "C#", "ASP.NET Core", "React", "PostgreSQL"]
   },
   {
     company: "The Intrepid Technologies Chevron",
     role: "Software Developer",
     period: "Jan 2022 - Dec 2022",
-    description: "Lekki, Nigeria. Web Development.",
-    fullDescription: "Built responsive frontend applications and internal tooling to support enterprise operations and streamline workflows.",
+    description: "Lekki. Enterprise applications, data performance, and automation.",
+    fullDescription: "Re-engineered Java/Spring Boot and .NET backend services across six enterprise applications, improving API latency, database throughput, batch operations, and production observability.",
     achievements: [
-      "Developed interactive dashboards using modern web technologies",
-      "Collaborated with cross-functional teams to deliver enterprise features",
-      "Improved overall frontend performance and user experience"
+      "Reduced average API response times by 200ms across enterprise services",
+      "Improved database throughput by 35% through HikariCP, Dapper/EF Core, and SQL optimisation",
+      "Built a Spring Batch purge framework removing 500,000+ expired records daily and RPA analytics reducing reporting cycles by 40%",
+      "Raised automated test coverage from 20% to 85% and strengthened Prometheus, Grafana, Splunk, and CloudWatch observability"
     ],
-    tags: ["React", "JavaScript", "Frontend", "C#", "Java", "TypeScript", "Solidity"]
+    tags: ["Java", "Spring Boot", ".NET", "Spring Batch", "Oracle", "PostgreSQL"]
+  },
+  {
+    company: "Upwork",
+    role: "Software Engineer",
+    period: "Jan 2020 - Dec 2021",
+    description: "Remote. Multi-stack client delivery and production operations.",
+    fullDescription: "Delivered Java/Spring Boot, C#/ASP.NET Core, and Node.js backend applications for international clients, owning data models, REST APIs, React integrations, and cloud deployment pipelines end to end.",
+    achievements: [
+      "Used Spring WebFlux and Kafka for non-blocking, event-driven processing",
+      "Built AWS Lambda and SNS workflows for asynchronous business operations",
+      "Managed Linux hosting, deployment, monitoring, incident resolution, and performance optimisation"
+    ],
+    tags: ["Java", "Node.js", "C#/.NET", "React", "Kafka", "AWS"]
   }
 ];
 
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["C#", "Java", "TypeScript", "JavaScript", "Solidity", "Python", "SQL"]
+    skills: ["Java", "C#", "TypeScript", "JavaScript", "Python", "SQL", "Solidity"]
   },
   {
-    title: "Frontend",
-    skills: ["React", "Next.js", "Vue.js", "Tailwind CSS", "HTML5/CSS3"]
+    title: "Frameworks",
+    skills: ["Spring Boot", "ASP.NET Core", "NestJS", "React", "Next.js", "JPA/Hibernate", "EF Core"]
   },
   {
     title: "Backend",
-    skills: [".NET Core", "Spring Boot", "Node.js", "Express.js", "PostgreSQL", "MongoDB", "GraphQL"]
+    skills: ["Node.js", "REST", "gRPC", "GraphQL", "PostgreSQL", "SQL Server", "MongoDB", "Redis"]
   },
   {
-    title: "Blockchain & AI",
-    skills: ["Solidity", "Web3.js", "OpenAI API", "LangChain", "TensorFlow"]
+    title: "Distributed Systems",
+    skills: ["Kafka", "RabbitMQ", "Azure Service Bus", "CQRS", "Idempotency", "Concurrency", "Event-Driven Architecture"]
   },
   {
     title: "DevOps & Tools",
-    skills: ["Docker", "AWS", "Azure", "CI/CD", "Git", "RabbitMQ"]
+    skills: ["Docker", "Kubernetes", "AWS", "Azure", "Terraform", "Helm", "Jenkins", "GitHub Actions"]
   }
 ];
 
@@ -117,7 +131,7 @@ export default function SkillsSection() {
           </div>
           <div className="lg:text-right">
             <p className="text-base text-muted-foreground font-body leading-relaxed max-w-md lg:ml-auto mb-6">
-              Over the past 2+ years, I've had the opportunity to work on a wide range of projects, collaborating with diverse teams and clients to bring creative visions to life.
+              Over 6+ years, I've owned backend and product systems across fintech, payments, enterprise SaaS, oil and gas, and AI automation—from architecture through production operations.
             </p>
             <a
               href="#contact"

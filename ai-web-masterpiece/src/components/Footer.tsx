@@ -74,10 +74,10 @@ export default function Footer() {
               <span className="italic">Amazing Together?</span>
             </h2>
             <p className="text-foreground/60 font-body mb-10 max-w-xl mx-auto text-lg leading-relaxed animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              Take advantage of this opportunity to discuss your project needs with an experienced Full Stack & AI Developer.
+              Discuss your product or platform with a senior engineer experienced in distributed fintech, enterprise systems, and full-stack delivery.
             </p>
             <a
-              href="tel:+918329310930"
+              href="tel:+2347087232777"
               className="group inline-flex items-center gap-3 text-sm font-medium text-foreground transition-all duration-300 animate-fade-up"
               style={{ animationDelay: '0.3s' }}
             >
@@ -106,7 +106,7 @@ export default function Footer() {
                 </svg>
               </a>
               <p className="text-primary-foreground/50 font-body text-sm leading-relaxed max-w-sm mb-10">
-                Senior Software Engineer specialising in Java &amp; C# .NET — building scalable, production-grade enterprise systems across fintech, oil &amp; gas, and AI sectors.
+                Senior Software Engineer building distributed fintech and enterprise systems with Java, C#/.NET, Node.js, React, and event-driven infrastructure.
               </p>
               
               {/* Social Links */}
@@ -153,11 +153,11 @@ export default function Footer() {
             <div className="md:col-span-4">
               <h3 className="font-display text-xs tracking-[0.15em] uppercase font-medium mb-8 text-primary-foreground/70">Get in Touch</h3>
               <a
-                href="mailto:josephukeje@gmail.com"
+                href="mailto:ukejejoseph1@gmail.com"
                 className="group block text-2xl md:text-3xl font-display font-light hover:text-primary-foreground/80 transition-colors mb-6"
               >
                 <span className="inline-block group-hover:-translate-y-0.5 transition-transform duration-300">
-                  josephukeje@gmail.com
+                  ukejejoseph1@gmail.com
                 </span>
               </a>
               <p className="text-sm text-primary-foreground/50 font-body leading-relaxed">

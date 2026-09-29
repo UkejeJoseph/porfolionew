@@ -202,7 +202,7 @@ export default function Resume() {
           <h3 className="text-2xl font-semibold mb-6">Education</h3>
           <div className="border-l-2 border-primary pl-6" data-testid="education-babcock">
             <h4 className="text-xl font-semibold">Bachelor of Science in Software Engineering</h4>
-            <p className="text-primary mb-2">Babcock University, Ogun State, Nigeria (GPA: 4.10/5.00)</p>
+            <p className="text-primary mb-2">Babcock University, Ogun State, Nigeria (GPA: 4.10)</p>
             <p className="text-muted-foreground">Relevant Coursework: Data Structures & Algorithms, Objects & Design, Computer Organization & Programming, Combinatorics, Machine Learning</p>
           </div>
         </div>

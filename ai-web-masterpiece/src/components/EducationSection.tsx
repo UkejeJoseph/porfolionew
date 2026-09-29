@@ -23,7 +23,7 @@ const educationData: Education[] = [
     institution: "Babcock University",
     period: "January 2020 - July 2024",
     location: "Ogun state, Nigeria",
-    score: "3.93/5.00",
+    score: "4.10",
     scoreLabel: "GPA",
     coursework: [
       "Data Structures & Algorithms",
@@ -60,7 +60,7 @@ const certificationsData = [
     link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=6249543B0DB4347806CEC83C635E2E1A7E83F74B9DE58F219CE7E340B93BA84F"
   },
   {
-    name: "AWS Certified Solutions Architect – Professional",
+    name: "Domain 4 Review: AWS Certified Solutions Architect – Professional (SAP-C02)",
     issuer: "AWS",
     link: "https://drive.google.com/file/d/1484ZjBkBQ6WRXPBl1-RPtCFhDdVezPji/view?usp=sharing"
   },

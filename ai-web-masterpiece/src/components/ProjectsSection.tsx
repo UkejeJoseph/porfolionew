@@ -28,12 +28,32 @@ const IMG_GETCRED = "https://res.cloudinary.com/dmhabztbf/image/upload/v17809220
 
 const projects = [
   {
+    id: "iris-payment-gateway",
+    title: "IRIS - Core Banking Payment Gateway",
+    category: "Full Stack",
+    description: "Engineered an internal ISO 20022/SWIFT payment gateway with Netty TCP connection management, gRPC contracts, digital signatures, idempotency, and production recovery for Tier-1 bank workloads.",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800",
+    tech: ["Java 21", "Spring Boot", "Netty", "gRPC", "Kafka", "Kubernetes"],
+    liveUrl: "#",
+    githubUrl: "#"
+  },
+  {
+    id: "prm-risk-engine",
+    title: "PRM - Real-Time Payment Risk Engine",
+    category: "Full Stack",
+    description: "Architected a non-intrusive payment-risk framework using Spring AOP/AspectJ, CQRS, Redis, graceful degradation, and immutable audit trails for regulated financial workflows.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    tech: ["Java 21", "Spring AOP", "Redis", "CQRS", "Docker", "Kubernetes"],
+    liveUrl: "#",
+    githubUrl: "#"
+  },
+  {
     id: "stablex",
     title: "StableX - Stablecoin Wallet & Exchange",
     category: "Full Stack",
-    description: "Engineered a comprehensive stablecoin wallet and exchange platform for transacting stablecoins. Built full-stack features integrating gRPC (.NET) blockchain RPC validation, Socket.IO customer support chat, and Solidity smart contracts.",
+    description: "Designed a multi-stack crypto wallet and exchange platform with Java/Spring Boot services, Node.js worker-thread processing, gRPC blockchain validation, Solidity smart contracts, and a React/TypeScript client.",
     image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&q=80&w=800",
-    tech: ["C#", "Java", "gRPC (.NET)", "Solidity", "React.js", "PostgreSQL", "Docker"],
+    tech: ["Java", "Spring Boot", "Node.js", "React", "TypeScript", "gRPC", "Solidity"],
     liveUrl: "https://stable-xv1.vercel.app/",
     githubUrl: "https://github.com/UkejeJoseph/StableXv1"
   },
@@ -51,9 +71,9 @@ const projects = [
     id: "nova-bills",
     title: "Nova Bills - Billing Web Application",
     category: "Full Stack",
-    description: "Engineered a comprehensive billing web application designed for streamlined invoicing and payment management.",
+    description: "Built a billing and payments application with Java/Spring Boot services, JPA-backed financial records, PostgreSQL and SQL Server persistence, and React workflows.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    tech: ["Java", "Spring Boot", "PostgreSQL", "React.js"],
+    tech: ["Java", "Spring Boot", "JPA", "PostgreSQL", "SQL Server", "React", "TypeScript"],
     liveUrl: "https://nova-bills.vercel.app/",
     githubUrl: "#"
   },
@@ -61,9 +81,9 @@ const projects = [
     id: "rivet-ai",
     title: "RivetAI",
     category: "AI Project",
-    description: "Architected an AI-powered pre-production SaaS workflow platform. Streamlined script coverage and scheduling by designing RESTful backend APIs and implementing OAuth 2.0 role-based access control.",
+    description: "Built an AI-powered film pre-production SaaS platform with Java/Spring Boot APIs, MongoDB persistence, OAuth 2.0 RBAC, and React product workflows.",
     image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&q=80&w=800",
-    tech: ["C#", "Java", ".NET Core", "MongoDB", "REST APIs", "OAuth 2.0", "React", "Flask"],
+    tech: ["Java", "Spring Boot", "React", "MongoDB", "OAuth 2.0", "AI/ML"],
     liveUrl: "https://rivetai.com/",
     githubUrl: "#"
   },

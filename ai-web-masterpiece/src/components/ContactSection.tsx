@@ -85,7 +85,7 @@ export default function ContactSection() {
             
             <div className="space-y-4">
               <a
-                href="mailto:josephukeje@gmail.com"
+                href="mailto:ukejejoseph1@gmail.com"
                 className="flex items-center gap-4 p-5 bg-card border border-border rounded-2xl hover:border-foreground/20 transition-colors group"
               >
                 <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center group-hover:bg-foreground group-hover:text-primary-foreground transition-colors">
@@ -93,7 +93,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wide">Email</p>
-                  <p className="font-body text-foreground">josephukeje@gmail.com</p>
+                  <p className="font-body text-foreground">ukejejoseph1@gmail.com</p>
                 </div>
               </a>
 
