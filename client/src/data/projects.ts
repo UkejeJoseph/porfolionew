@@ -4,8 +4,8 @@ export interface Project {
   description: string;
   image: string;
   technologies: string[];
-  githubUrl: string;
-  liveUrl: string;
+  githubUrl?: string;
+  liveUrl?: string;
   isPrivate?: boolean;
   category: 'web-design' | 'web-development' | 'mobile-development' | 'ai-ml' | 'data-science' | 'blockchain' | 'all';
 }
@@ -13,14 +13,50 @@ export interface Project {
 export const projects: Project[] = [
   // === FEATURED PROJECTS (shown on Hero page) ===
   {
+    id: "iris-payment-gateway",
+    title: "IRIS - Core Banking Payment Gateway",
+    description: "Engineered an internal ISO 20022/SWIFT payment gateway and inter-bank transfer engine with Netty TCP connection management, gRPC contracts, digital signatures, idempotency, and production recovery for Tier-1 bank workloads.",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800",
+    technologies: ["Java 21", "Spring Boot", "Netty", "gRPC", "ISO 20022", "Kafka", "Kubernetes"],
+    isPrivate: true,
+    category: "web-development"
+  },
+  {
+    id: "prm-risk-engine",
+    title: "PRM - Real-Time Payment Risk Engine",
+    description: "Architected a non-intrusive payment-risk framework using Spring AOP/AspectJ, reusable annotations, CQRS, Redis, graceful degradation, and immutable audit trails for regulated financial workflows.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    technologies: ["Java 21", "Spring AOP", "Redis", "CQRS", "Docker", "Kubernetes"],
+    isPrivate: true,
+    category: "web-development"
+  },
+  {
     id: "stablex",
     title: "StableX - Stablecoin Wallet & Exchange",
-    description: "Engineered a comprehensive stablecoin wallet and exchange platform for transacting stablecoins. Built full-stack features integrating gRPC (.NET) blockchain RPC validation, Socket.IO customer support chat, and Solidity smart contracts.",
+    description: "Designed a multi-stack crypto wallet and exchange platform with Java/Spring Boot services, Node.js worker-thread processing, gRPC blockchain validation, Solidity smart contracts, and a React/TypeScript client.",
     image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&q=80&w=800",
-    technologies: ["React.js", "Node.js", "C#", "gRPC", "Solidity", "MongoDB", "Express", "Socket.IO"],
+    technologies: ["Java", "Spring Boot", "Node.js", "React", "TypeScript", "gRPC", "Solidity", "PostgreSQL"],
     githubUrl: "https://github.com/UkejeJoseph/StableXv1",
-    liveUrl: "#",
+    liveUrl: "https://stable-xv1.vercel.app/",
     category: "blockchain"
+  },
+  {
+    id: "nova-bills",
+    title: "Nova Bills - Billing & Payments Platform",
+    description: "Built a billing and payments application with Java/Spring Boot services, JPA-backed financial records, PostgreSQL and SQL Server persistence, and React workflows for customer and operations teams.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800",
+    technologies: ["Java", "Spring Boot", "JPA", "PostgreSQL", "SQL Server", "React", "TypeScript"],
+    isPrivate: true,
+    category: "web-development"
+  },
+  {
+    id: "dotnet-messaging-study",
+    title: ".NET Distributed Messaging Architecture",
+    description: "An attributed open-source architecture study of reliable .NET messaging patterns: CQRS, inbox/outbox delivery, retries, circuit breakers, RabbitMQ, Azure Service Bus, EF Core, and OpenTelemetry diagnostics.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
+    technologies: ["C#", ".NET 10", "CQRS", "RabbitMQ", "Azure Service Bus", "EF Core", "OpenTelemetry"],
+    githubUrl: "https://github.com/UkejeJoseph/enterprise-dotnet-messaging",
+    category: "web-development"
   },
   {
     id: "crypto-legions",
@@ -47,10 +83,9 @@ export const projects: Project[] = [
   {
     id: "rivet-ai",
     title: "RivetAI",
-    description: "Architected an AI-powered pre-production SaaS workflow platform. Streamlined script coverage and scheduling by designing RESTful backend APIs and implementing OAuth 2.0 role-based access control.",
+    description: "Built an AI-powered film pre-production SaaS platform with Java/Spring Boot APIs, MongoDB persistence, OAuth 2.0 RBAC, and React product workflows for script and manuscript automation.",
     image: "/rivetai.png",
-    technologies: ["ReactJS", "C#", ".NET Core", "Flask", "MongoDB", "OAuth 2.0", "AI/ML"],
-    githubUrl: "#",
+    technologies: ["Java", "Spring Boot", "React", "MongoDB", "OAuth 2.0", "AI/ML"],
     liveUrl: "https://rivetai.com/",
     isPrivate: true,
     category: "ai-ml"

@@ -35,7 +35,7 @@ export default function Hero() {
                   className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-foreground"
                   style={{ fontFamily: "'Sora', sans-serif" }}
                 >
-                  5+
+                  6+
                 </span>
                 <p
                   className="text-xs sm:text-sm text-muted-foreground mt-1"
@@ -63,7 +63,7 @@ export default function Hero() {
                   className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-foreground"
                   style={{ fontFamily: "'Sora', sans-serif" }}
                 >
-                  4
+                  6
                 </span>
                 <p
                   className="text-xs sm:text-sm text-muted-foreground mt-1"
@@ -79,7 +79,7 @@ export default function Hero() {
               className="text-[4.5rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] font-extralight tracking-tight text-foreground leading-[0.85] mb-4 sm:mb-6 animate-fade-up-delay-1"
               style={{ fontFamily: "'Sora', sans-serif" }}
             >
-              Hello
+              Hi
             </h1>
 
             {/* Subtitle */}
@@ -87,9 +87,10 @@ export default function Hero() {
               className="text-base sm:text-lg text-muted-foreground leading-relaxed animate-fade-up-delay-2 max-w-md mb-10"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              — I'm{" "}
-              <span className="text-foreground font-medium">Joseph Ukeje</span>,
-              a Senior Software Engineer specialising in Java &amp; C# .NET
+              I'm{" "}
+              <span className="text-foreground font-medium">Joseph Ukeje</span>, a
+              Senior Software Engineer building distributed fintech and enterprise
+              systems with Java, C#/.NET, Node.js, and React.
             </p>
 
             {/* CTA Buttons */}

@@ -374,7 +374,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.5em] text-muted-foreground/50 uppercase hidden sm:block"
         style={{ animation: "fadeIn 1s ease-out 1.5s forwards", opacity: 0, fontFamily: "'Inter', sans-serif" }}
       >
-        Java &amp; C# .NET Developer
+        Java · C#/.NET · Node.js · React
       </div>
 
       {/* Inline keyframes */}

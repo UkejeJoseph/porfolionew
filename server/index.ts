@@ -5,10 +5,16 @@ import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
 
-// CORS — allow the Vercel frontend to talk to this Render backend
-const allowedOrigins = process.env.CORS_ORIGIN
-  ? process.env.CORS_ORIGIN.split(",").map((o) => o.trim())
-  : [];
+// Allow the production portfolio and local development origins by default.
+// CORS_ORIGIN can add comma-separated frontend origins for other deployments.
+const allowedOrigins = new Set([
+  "https://porfolionew-puce.vercel.app",
+  "http://localhost:4000",
+  "http://127.0.0.1:4000",
+  ...(process.env.CORS_ORIGIN
+    ? process.env.CORS_ORIGIN.split(",").map((origin) => origin.trim())
+    : []),
+]);
 
 app.use(
   cors({
@@ -16,7 +22,7 @@ app.use(
       // Allow requests with no origin (mobile apps, curl, server-to-server)
       if (!origin) return callback(null, true);
       // In development allow everything; in production check the allow-list
-      if (process.env.NODE_ENV !== "production" || allowedOrigins.includes(origin)) {
+      if (process.env.NODE_ENV !== "production" || allowedOrigins.has(origin)) {
         return callback(null, true);
       }
       callback(new Error("Not allowed by CORS"));

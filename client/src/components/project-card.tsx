@@ -26,25 +26,31 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
           {project.description}
         </p>
-        <div className="flex gap-3">
-          <a
-            href={project.githubUrl}
-            data-testid={`link-github-${project.id}`}
-            className="text-sm text-muted-foreground hover:text-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub {project.isPrivate && "(Private)"}
-          </a>
-          <a
-            href={project.liveUrl}
-            data-testid={`link-live-${project.id}`}
-            className="text-sm text-primary hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live Demo
-          </a>
+        <div className="flex flex-wrap gap-3">
+          {project.githubUrl && project.githubUrl !== "#" ? (
+            <a
+              href={project.githubUrl}
+              data-testid={`link-github-${project.id}`}
+              className="text-sm text-muted-foreground hover:text-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          ) : project.isPrivate ? (
+            <span className="text-sm text-muted-foreground">Private repository</span>
+          ) : null}
+          {project.liveUrl && project.liveUrl !== "#" && (
+            <a
+              href={project.liveUrl}
+              data-testid={`link-live-${project.id}`}
+              className="text-sm text-primary hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live Demo
+            </a>
+          )}
         </div>
       </div>
     </div>

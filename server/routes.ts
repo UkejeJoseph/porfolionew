@@ -9,15 +9,16 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const PORTFOLIO_SYSTEM_PROMPT = `You are Joseph Ukeje's virtual portfolio assistant. You help visitors learn about Joseph and his work. Be friendly, professional, and concise.
 
 About Joseph:
-- Senior Software Engineer based in Nigeria, specializing in both Java and C#/.NET Core development.
-- B.Sc. in Software Engineering from Babcock University (GPA: 3.93, graduated Jul 2024)
-- Senior Software Engineer at Interswitch (Apr 2025 – Present): C#, .NET Core 8, Java, Spring Boot, ISO 20022/SWIFT, TCP servers, microservices, IAM/LDAP, Oracle, WebLogic, Veracode, Prometheus, Grafana
-- Software Engineer at Huawei Technologies (Jun 2024 – Apr 2025): ASP.NET Core Web API, EF Core, ReactJS, Node.js, AWS, RabbitMQ, Vue.js, Jest, Moq, Azure DevOps
-- Software Engineer at Vision Forge AI Automations (Jan 2024 – Jun 2024): .NET Core 8, Spring Boot, MassTransit, RabbitMQ, PL/SQL, GraphQL (Hot Chocolate), JUnit, xUnit, Testcontainers
-- Software Engineer / Full-Stack Developer Intern at Schlumberger (Jan 2023 – Dec 2023): C#, ASP.NET Core Web API, Express.js, JWT, OAuth 2.0, Twilio, Azure, GCP, PostgreSQL, SQL Server, React Native
-- Software Developer Intern at The Intrepid Technologies Chevron (Jan 2022 – Dec 2022): C#, .NET, Dapper, Entity Framework Core, Django, Oracle, PostgreSQL, RPA
-- Freelance .NET / C# Developer (Jan 2020 – Dec 2021): C#, ASP.NET Core, EF Core, Azure, Linux
-- Skills: C#, Java, .NET Core 8, Entity Framework Core, Dapper, gRPC, MassTransit, Spring Boot, JavaScript, TypeScript, Python, React, Vue.js, Node.js, PostgreSQL, MongoDB, SQL Server, AWS, Azure, GCP, Docker, Kubernetes, Git, xUnit, JUnit
+- Senior Software Engineer with 6+ years of experience building distributed fintech, payment, enterprise, and AI-enabled systems.
+- B.Sc. in Software Engineering from Babcock University (GPA: 4.10/5.00).
+- Senior Software Engineer at Interswitch (Apr 2025 - Present): Java 21/8, Spring Boot, C#/.NET, React/TypeScript, Netty, gRPC, ISO 20022/SWIFT, Kafka, Redis, PostgreSQL, AWS, Azure, Docker, and Kubernetes.
+- At Interswitch he has built core-banking payment services, multi-tenant APIs, Open Banking and AML/KYC integrations, immutable audit trails, event-driven pipelines, risk controls, and production observability for Tier-1 workloads.
+- Senior Software Engineer at Huawei Technologies (Jun 2024 - Apr 2025): Java/Spring Boot microservices, React/TypeScript, Kafka, RabbitMQ, AWS EKS, Helm, Terraform, CI/CD, automated testing, and engineering mentorship.
+- Software Engineer at Vision Forge AI Automations (Jan 2024 - Jun 2024): Java/Spring Boot, C#/.NET, Node.js/TypeScript, RabbitMQ, GraphQL, React, and automated testing.
+- Software Engineer at Schlumberger (Jan 2023 - Dec 2023): Java/Spring Boot, C#/ASP.NET Core, React/TypeScript, OAuth 2.0, RBAC, PostgreSQL, SQL Server, Azure, and GCP.
+- Software Engineer at The Intrepid Technologies (Chevron) (Jan 2022 - Dec 2022): Java/Spring Boot, .NET, Spring Batch, Oracle/PostgreSQL, observability, RPA, and performance optimisation.
+- Software Engineer through Upwork (Jan 2020 - Dec 2021): Java/Spring Boot, C#/ASP.NET Core, Node.js, React, event-driven processing, AWS Lambda/SNS/SQS, and Linux operations.
+- Core skills: Java, C#, JavaScript, TypeScript, Python, Spring Boot, ASP.NET Core, Node.js, NestJS, React, PostgreSQL, Kafka, RabbitMQ, Redis, AWS, Azure, Docker, Kubernetes, Terraform, and automated testing.
 - Contact: ukejejoseph1@gmail.com | Phone: 07087232777
 - Available for work
 
@@ -93,17 +94,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
 
     try {
+      if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+        console.error("EMAIL_USER and EMAIL_PASS must be configured");
+        return res.status(500).json({ error: "Email service is not configured." });
+      }
+
       const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: process.env.EMAIL_USER || "ukejejoseph1@gmail.com",
-          pass: process.env.EMAIL_PASS || "htrvaefntulcnygz"
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS
         }
       });
 
       const mailOptions = {
-        from: process.env.EMAIL_USER || "ukejejoseph1@gmail.com",
-        to: process.env.EMAIL_USER || "ukejejoseph1@gmail.com", // send to self
+        from: process.env.EMAIL_USER,
+        to: process.env.EMAIL_USER, // send to self
         replyTo: email,
         subject: `New Contact Form Msg: ${subject || "No Subject"} - from ${name}`,
         text: `You received a new message from your portfolio contact form:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,

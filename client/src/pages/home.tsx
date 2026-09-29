@@ -4,19 +4,19 @@ import LiveVisitors from "@/components/ui/live-visitors";
 
 const highlights = [
   {
-    text: "Senior Software Engineer with 5+ years building scalable enterprise systems across fintech, oil & gas, and AI automation sectors.",
+    text: "Senior Software Engineer with 6+ years delivering production systems across fintech, payments, enterprise SaaS, oil and gas, and AI automation.",
   },
   {
-    text: "Currently at Interswitch Group engineering high-throughput payment infrastructure using Java Spring Boot and C# .NET Core 8 — processing millions of transactions across Tier-1 banks.",
+    text: "At Interswitch, I engineer high-throughput payment and core-banking infrastructure with Java/Spring Boot, C#/.NET, Kafka, Redis, and Kubernetes at Tier-1 bank transaction volumes.",
   },
   {
-    text: "Deep expertise in ISO 20022 payment messaging, gRPC microservices, distributed systems, and enterprise integration patterns.",
+    text: "I work across backend and product delivery: Java 21, Spring Boot, C#/.NET, Node.js/NestJS, React/TypeScript, REST/gRPC APIs, and event-driven systems.",
   },
   {
-    text: "I run a developer community on daily.dev with 2,000+ active members, and write technical blogs with over 1 million views.",
+    text: "My production work includes ISO 20022/SWIFT payment flows, Open Banking and AML/KYC integrations, multi-tenant APIs, immutable audit trails, and observable cloud deployments.",
   },
   {
-    text: "Passionate about crafting systems that are not just functional, but fault-tolerant, observable, and production-grade.",
+    text: "I own systems from requirements and architecture through testing, delivery, incident investigation, performance optimisation, and mentoring engineers.",
   },
 ];
 
@@ -49,10 +49,10 @@ export default function Home() {
         {/* Stats Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {[
-            { stat: "5+", label: "Years experience" },
+            { stat: "6+", label: "Years experience" },
             { stat: "30+", label: "Projects shipped" },
-            { stat: "4", label: "Companies" },
-            { stat: "2k+", label: "Community members" },
+            { stat: "6", label: "Companies" },
+            { stat: "10+", label: "Institutions served" },
           ].map((item, i) => (
             <div
               key={i}

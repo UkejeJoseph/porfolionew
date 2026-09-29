@@ -108,6 +108,11 @@ export const skills: Skill[] = [
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/dotnetcore/dotnetcore-original.svg",
     category: "frameworks"
   },
+  {
+    name: "NestJS",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-original.svg",
+    category: "frameworks"
+  },
 
   // Backend & Databases
   {
@@ -166,6 +171,21 @@ export const skills: Skill[] = [
     category: "backend"
   },
   {
+    name: "Apache Kafka",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/apachekafka/apachekafka-original.svg",
+    category: "backend"
+  },
+  {
+    name: "RabbitMQ",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/rabbitmq/rabbitmq-original.svg",
+    category: "backend"
+  },
+  {
+    name: "Redis",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg",
+    category: "backend"
+  },
+  {
     name: "PHP",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
     category: "backend"
@@ -220,6 +240,21 @@ export const skills: Skill[] = [
   {
     name: "Docker",
     icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",
+    category: "tools"
+  },
+  {
+    name: "Kubernetes",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg",
+    category: "tools"
+  },
+  {
+    name: "Terraform",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg",
+    category: "tools"
+  },
+  {
+    name: "Jenkins",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg",
     category: "tools"
   },
   {

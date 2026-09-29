@@ -7,12 +7,6 @@ export interface Certification {
 
 export const certifications: Certification[] = [
   {
-    id: "react-masterclass",
-    title: "React Masterclass Fundamentals",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800",
-    url: "https://github.com/UkejeJoseph"
-  },
-  {
     id: "oracle-devops",
     title: "Oracle Cloud Infrastructure DevOps Certificate",
     image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&q=80&w=800",
@@ -56,7 +50,7 @@ export const certifications: Certification[] = [
   },
   {
     id: "aws-sap",
-    title: "AWS Certified Solutions Architect -- Professional (SAP-C02)",
+    title: "Domain 4 Review: AWS Certified Solutions Architect - Professional (SAP-C02)",
     image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&q=80&w=800",
     url: "https://drive.google.com/file/d/1484ZjBkBQ6WRXPBl1-RPtCFhDdVezPji/view?usp=sharing"
   },
@@ -70,6 +64,12 @@ export const certifications: Certification[] = [
     id: "azure-container-apps",
     title: "Microsoft Applied Skills: Deploy Cloud-Native Apps Using Azure Container Apps",
     image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
+    url: "https://learn.microsoft.com/api/credentials/share/en-us/87864556/F8113CDCD50CB9F8?sharingId=5E6999516CAFD9FF"
+  },
+  {
+    id: "microsoft-agentic-cloud",
+    title: "Microsoft AI Agentic Cloud Developer Certificate",
+    image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&q=80&w=800",
     url: "https://learn.microsoft.com/api/credentials/share/en-us/87864556/F8113CDCD50CB9F8?sharingId=5E6999516CAFD9FF"
   },
   {
