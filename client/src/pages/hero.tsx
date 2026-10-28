@@ -35,7 +35,7 @@ export default function Hero() {
                   className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-foreground"
                   style={{ fontFamily: "'Sora', sans-serif" }}
                 >
-                  6+
+                  7
                 </span>
                 <p
                   className="text-xs sm:text-sm text-muted-foreground mt-1"

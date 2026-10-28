@@ -4,7 +4,7 @@ import LiveVisitors from "@/components/ui/live-visitors";
 
 const highlights = [
   {
-    text: "Senior Software Engineer with 6+ years delivering production systems across fintech, payments, enterprise SaaS, oil and gas, and AI automation.",
+    text: "Senior Software Engineer with 7 years delivering production systems across fintech, payments, enterprise SaaS, oil and gas, and AI automation.",
   },
   {
     text: "At Interswitch, I engineer high-throughput payment and core-banking infrastructure with Java/Spring Boot, C#/.NET, Kafka, Redis, and Kubernetes at Tier-1 bank transaction volumes.",
@@ -49,7 +49,7 @@ export default function Home() {
         {/* Stats Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {[
-            { stat: "6+", label: "Years experience" },
+            { stat: "7", label: "Years experience" },
             { stat: "30+", label: "Projects shipped" },
             { stat: "6", label: "Companies" },
             { stat: "10+", label: "Institutions served" },

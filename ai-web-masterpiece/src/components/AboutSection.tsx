@@ -1,11 +1,11 @@
 import { Plus, ArrowUpRight, Download } from "lucide-react";
-import cvPdf from "../assets/Joseph_Ukeje_Paga_Senior_Java_Resume_V2.pdf";
+import cvPdf from "../assets/Joseph_Ukeje_Senior_Software_Engineer_Portfolio_Resume_V1.pdf";
 
 import profilePhotoUrl from "../assets/profile.png";
 
 const highlights = [
 	{
-		text: "Senior Software Engineer with 6+ years delivering transaction-heavy systems across fintech, payments, enterprise SaaS, and AI automation.",
+		text: "Senior Software Engineer with 7 years delivering transaction-heavy systems across fintech, payments, enterprise SaaS, and AI automation.",
 	},
 	{
 		text: "At Interswitch, I engineer ISO 20022 payment and core-banking infrastructure with Java/Spring Boot, C#/.NET, Kafka, Redis, and Kubernetes at Tier-1 bank transaction volumes.",

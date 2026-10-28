@@ -1,4 +1,4 @@
-import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -8,88 +8,183 @@ import {
 
 const experiences = [
   {
-    company: "Interswitch Group",
-    role: "Senior Software Engineer (Backend)",
-    period: "Apr 2025 - Present",
-    description: "Remote. Core banking, payment infrastructure, and distributed systems.",
-    fullDescription: "Engineered ISO 20022/SWIFT payment flows across Java/Spring Boot and C#/.NET integration services, owning high-throughput systems from architecture and implementation through observability, incident investigation, and production recovery.",
-    achievements: [
-      "Built IRIS on Netty TCP with CompletableFuture and Java 21 Virtual Threads, sustaining 5,000+ concurrent connections per node",
-      "Owned secured REST and gRPC services for 10+ institutions across 30+ production endpoints",
-      "Integrated Kafka, Azure Service Bus, Redis deduplication, circuit breakers, and production observability across distributed services",
-      "Delivered payment-risk controls, Open Banking and AML/KYC integrations, immutable audit trails, and an internal LiteLLM AI gateway"
+    "id": "interswitch",
+    "company": "Interswitch Group",
+    "role": "Senior Software Engineer — Core Banking & Payments Platform",
+    "period": "Apr 2025 - Present",
+    "description": "Remote. Core banking, payments, risk and distributed infrastructure.",
+    "fullDescription": "Own payment, settlement, audit and risk services from architecture and implementation through testing, deployment and production recovery. Work with Product, QA, DevOps/SRE, Security, Compliance and Operations on service boundaries, reviews and incident runbooks.",
+    "achievements": [
+      "Architected a **centralised audit service** with **Kafka-backed asynchronous ingestion**, capturing immutable trails for **5–10 million inbound and outbound transactions daily** and user actions so Compliance and Operations could trace financial activity across distributed services.",
+      "Built **IRIS, a core-banking payment gateway and inter-bank transfer engine**, with TCP connection management and **gRPC/Protobuf** contracts. Delivered **ISO 20022/SWIFT pacs.008, pacs.002 and pacs.028** flows with canonicalisation, signatures and recovery, reducing failures by **98% in the affected payment flows**.",
+      "Implemented **ISO 8583 card-payment message processing** as a separate flow, validating message fields and mapping requests and responses into auditable transaction states with timeout handling and duplicate protection.",
+      "Built and owned **PRM, the Payment Risk Management Engine**, evaluating **20+ transaction attributes** with Redis-backed state, idempotent decisions and graceful degradation. Integrated **generative AI into reviewable fraud investigations**, contributing to roughly **35% fewer fraud-related production incidents**.",
+      "Decoupled processing across **5+ services using Kafka and Azure Service Bus**, with partition routing, consumer isolation, retries and recovery. Bounded asynchronous pipelines, cancellation and backpressure kept intake responsive at **5,000+ concurrent connections per node**.",
+      "Reduced **P99 latency by roughly 30%** through Redis caching, deduplication, distributed locks and TTL policies; tuned database access and connection pools to remove recurring bottlenecks.",
+      "Built treasury-liquidity and ledger workflows with **atomic debits and credits** and idempotent recovery; connected **NIBSS, Monnify and Open Banking**. Provider validation, retries and timeouts across **AML/KYC integrations** cut manual compliance review by roughly **40%**; settlement-reconciliation reports surfaced missing records and exceptions for Operations.",
+      "Delivered payment validation, **LDAP authentication and SMS notifications** for **10 institutions and 30+ production endpoints**. Protected interbank communication with TLS/mTLS, X.509 and signing; resolved **90% of identified high-severity Veracode findings** in reviewed services and added regression protection.",
+      "Owned **AWS ECS/EC2 deployments** and investigated stalled payments across logs, traces, messaging and persistence. Added deterministic regression tests, production-traffic replay and **Prometheus/Grafana** alerts so recurring failures became reproducible cases with corrective fixes.",
+      "Contributed to a **LiteLLM AI gateway for 50+ engineers**, with tenant limits and model routing, and an onboarding assistant that reduced onboarding time by roughly **25%**. Built a **Claude Code/Codex workflow** with reusable skills, project context, TDD and mutation testing; verified generated changes through review, security checks and runtime evidence."
     ],
-    tags: ["Java 21", "Spring Boot", "C#/.NET", "Kafka", "Redis", "React"]
+    "tags": [
+      "Java",
+      "C#/.NET",
+      "Python",
+      "Kafka",
+      "Azure Service Bus",
+      "Redis",
+      "gRPC",
+      "PostgreSQL",
+      "AWS ECS/EC2",
+      "Azure",
+      "Kubernetes",
+      "LiteLLM",
+      "Azure OpenAI",
+      "OpenTelemetry",
+      "LGTM (Loki, Grafana, Tempo, Mimir)",
+      "SonarQube",
+      "Veracode"
+    ]
   },
   {
-    company: "Huawei Technologies",
-    role: "Senior Software Engineer",
-    period: "Jun 2024 - Apr 2025",
-    description: "Enterprise B2B platform, event-driven services, and cloud delivery.",
-    fullDescription: "Designed Java/Spring Boot microservices, Spring Data JPA/Hibernate persistence, Kafka pipelines, and React/TypeScript workflows for Huawei Cloud's multi-tenant B2B platform.",
-    achievements: [
-      "Delivered a partner rewards administration platform end to end across APIs, transactional services, and product workflows",
-      "Built Azure DevOps CI/CD, Helm, Terraform, and AWS EKS delivery workflows that reduced deployment time by 25%",
-      "Architected a RabbitMQ notification service across 5+ services with failover and dead-letter retries, achieving 99% uptime",
-      "Established JUnit, Mockito, WireMock, and Testcontainers standards while mentoring junior engineers"
+    "id": "huawei",
+    "company": "Huawei Technologies",
+    "role": "Senior Software Engineer — Partner & Enterprise B2B Platform",
+    "period": "Jun 2024 - Apr 2025",
+    "description": "Remote. Multi-tenant B2B services, partner workflows and cloud delivery.",
+    "fullDescription": "Owned backend delivery for a multi-tenant enterprise platform, from service design and secure APIs through automated testing, deployment and production support. Helped engineers improve service boundaries and release readiness through design reviews, pairing and mentoring.",
+    "achievements": [
+      "Delivered a **partner rewards administration platform** from requirements through release, with transactional APIs, asynchronous provisioning, tenant isolation and auditable access controls; supported rollout across **5 African markets: Nigeria, Ghana, Kenya, Cameroon and South Africa**.",
+      "Moved **email, SMS and push delivery** off synchronous request paths through a shared **RabbitMQ notification service across 5+ services**. Idempotent consumers, failover and dead-letter retries isolated delivery failures from business operations and sustained **99% uptime**.",
+      "Led migration of **250,000+ live Redis keys** to **Amazon ElastiCache Serverless for Valkey**. Used redis-shake for live replication and synchronised outstanding changes before cutover, preserving sessions with **zero user logouts and zero downtime**.",
+      "Standardised **Azure DevOps, Helm and Terraform** delivery with automated integration checks and release quality gates, achieving **25% shorter deployments**, a **95% bug-free release rate** and **20% faster delivery**."
     ],
-    tags: ["Java", "Spring Boot", "React", "Kafka", "RabbitMQ", "AWS EKS"]
+    "tags": [
+      "Java",
+      "C#/.NET",
+      "Kafka",
+      "RabbitMQ",
+      "Redis",
+      "AWS",
+      "Azure DevOps",
+      "Kubernetes",
+      "Helm",
+      "Terraform",
+      "Testcontainers"
+    ]
   },
   {
-    company: "Vision Forge AI Automations",
-    role: "Software Engineer",
-    period: "Jan 2024 - Jun 2024",
-    description: "Remote. API modernisation, automation, and service integration.",
-    fullDescription: "Architected Java/Spring Boot and C#/.NET integration services over RabbitMQ, alongside Node.js/TypeScript automation APIs and GraphQL data services consumed by React product workflows.",
-    achievements: [
-      "Reduced QA data errors by 50% through contract validation and idempotency",
-      "Designed GraphQL APIs with DataLoader batching across heterogeneous services",
-      "Expanded automated test coverage to 85%+ using JUnit, xUnit, Mockito, Moq, Testcontainers, and WireMock"
+    "id": "vision-forge",
+    "company": "Vision Forge AI Automations",
+    "role": "Software Engineer (Contract) — AI Workflow & Integration Platforms",
+    "period": "Jan 2024 - Jun 2024",
+    "description": "Remote, Nigeria. Approval workflows, automation and service integration.",
+    "fullDescription": "Built integration services and operational workflows, translating business approval rules into explicit routing, validated service contracts and observable processing states.",
+    "achievements": [
+      "Built the **Intertrade approval workflow engine**, automating multi-step sign-off and approval routing. Connected **5 distributed services through RabbitMQ** with validation and idempotency, reducing **QA data errors by 50%**.",
+      "Moved long-running integrations into **background workers** with bounded producer/consumer pipelines, cancellation and resilient outbound calls, reducing **average response time by 15%**.",
+      "Designed **GraphQL/Apollo contracts with DataLoader batching** across heterogeneous service data sources, giving operational workflows a consistent integration surface.",
+      "Secured multi-tenant workflows with **OAuth 2.0/JWT and RBAC** and worked with QA to expand automated regression protection to **85%+ coverage** using containerised integration tests and provider mocks."
     ],
-    tags: ["Java", "C#/.NET", "Node.js", "RabbitMQ", "GraphQL", "React"]
+    "tags": [
+      "Java",
+      "C#/.NET",
+      "Node.js",
+      "RabbitMQ",
+      "GraphQL",
+      "Apollo",
+      "PostgreSQL",
+      "OAuth 2.0",
+      "Testcontainers",
+      "WireMock"
+    ]
   },
   {
-    company: "Schlumberger Oil and Gas",
-    role: "Software Engineer / Full-Stack Developer",
-    period: "Jan 2023 - Dec 2023",
-    description: "Lagos. Secure APIs, operational products, and cloud delivery.",
-    fullDescription: "Delivered Java/Spring Boot and C#/ASP.NET Core REST APIs with JWT, OAuth 2.0, Twilio 2FA, RBAC, and OWASP-aligned controls, supported by React/TypeScript operational interfaces.",
-    achievements: [
-      "Implemented secure service boundaries and reusable role-based access controls",
-      "Designed PostgreSQL and SQL Server models for high-volume operational reporting",
-      "Optimised GCP and Azure delivery pipelines, reducing infrastructure costs by 18%",
-      "Led code reviews and architecture discussions around resilience, testability, and maintainability"
+    "id": "schlumberger",
+    "company": "Schlumberger (SLB) Oil & Gas Servicing Limited",
+    "role": "Software Engineer — Enterprise Applications & Integrations",
+    "period": "Jan 2023 - Dec 2023",
+    "description": "Lagos, Nigeria. Wellsite data, operational APIs and cloud services.",
+    "fullDescription": "Delivered operational services with application users, QA, infrastructure teams and external providers, carrying changes through acceptance testing, deployment and production stabilisation.",
+    "achievements": [
+      "Built a **wellsite-data ingestion service using Kafka and PostgreSQL**, validating equipment events and handling duplicate, delayed and out-of-order messages. Retries, replay and backpressure kept downstream processing recoverable during connectivity interruptions.",
+      "Delivered **REST APIs and PostgreSQL/SQL Server models** for operational workflows, with request validation, rate limiting and resilient outbound integrations; protected sensitive operations with **OAuth/OIDC, JWT, RBAC and Twilio two-factor authentication**.",
+      "Architected **Azure/GCP delivery pipelines** and right-sized workloads, reducing **cloud costs by 18%**.",
+      "Reviewed architecture and production changes with users, QA and infrastructure teams; investigated API, persistence and provider failures, documented corrective actions and supported releases through stabilisation."
     ],
-    tags: ["Java", "Spring Boot", "C#", "ASP.NET Core", "React", "PostgreSQL"]
+    "tags": [
+      "Java",
+      "C#/.NET",
+      "Kafka",
+      "PostgreSQL",
+      "SQL Server",
+      "Azure",
+      "GCP",
+      "OAuth 2.0",
+      "Twilio"
+    ]
   },
   {
-    company: "The Intrepid Technologies Chevron",
-    role: "Software Developer",
-    period: "Jan 2022 - Dec 2022",
-    description: "Lekki. Enterprise applications, data performance, and automation.",
-    fullDescription: "Re-engineered Java/Spring Boot and .NET backend services across six enterprise applications, improving API latency, database throughput, batch operations, and production observability.",
-    achievements: [
-      "Reduced average API response times by 200ms across enterprise services",
-      "Improved database throughput by 35% through HikariCP, Dapper/EF Core, and SQL optimisation",
-      "Built a Spring Batch purge framework removing 500,000+ expired records daily and RPA analytics reducing reporting cycles by 40%",
-      "Raised automated test coverage from 20% to 85% and strengthened Prometheus, Grafana, Splunk, and CloudWatch observability"
+    "id": "intrepid",
+    "company": "The Intrepid Technologies (Chevron)",
+    "role": "Software Engineer — Enterprise Applications & Automation",
+    "period": "Jan 2022 - Dec 2022",
+    "description": "Lekki, Nigeria. Enterprise services, data performance and automation.",
+    "fullDescription": "Improved enterprise services, batch processing and operational reporting, working with Product, QA and DevOps to turn production defects into repeatable tests and preventive improvements.",
+    "achievements": [
+      "Removed API and database bottlenecks across **3 enterprise services** through query-plan analysis, indexing and connection pooling, reducing **average response time by 200ms** and increasing **database throughput by 35%**.",
+      "Reworked **L1/L2 caching, Redis pub/sub and gRPC communication**, consolidating large entities and tuning data-access paths to reduce infrastructure and database costs while preserving production performance.",
+      "Enhanced batch jobs with execution metrics and automated purging of **500,000+ expired records daily**; automated operational reporting to reduce **reporting-cycle time by 40%**.",
+      "Raised automated coverage from **20% to 85%** through TDD/BDD, containerised integration tests and regression cases. Used **Prometheus, Grafana, Splunk and CloudWatch** for incident investigation, SLA monitoring and corrective actions."
     ],
-    tags: ["Java", "Spring Boot", ".NET", "Spring Batch", "Oracle", "PostgreSQL"]
+    "tags": [
+      "Java",
+      "C#/.NET",
+      "Oracle",
+      "PostgreSQL",
+      "Redis",
+      "gRPC",
+      "AWS CloudWatch",
+      "Prometheus",
+      "Grafana",
+      "Splunk",
+      "Testcontainers"
+    ]
   },
   {
-    company: "Upwork",
-    role: "Software Engineer",
-    period: "Jan 2020 - Dec 2021",
-    description: "Remote. Multi-stack client delivery and production operations.",
-    fullDescription: "Delivered Java/Spring Boot, C#/ASP.NET Core, and Node.js backend applications for international clients, owning data models, REST APIs, React integrations, and cloud deployment pipelines end to end.",
-    achievements: [
-      "Used Spring WebFlux and Kafka for non-blocking, event-driven processing",
-      "Built AWS Lambda and SNS workflows for asynchronous business operations",
-      "Managed Linux hosting, deployment, monitoring, incident resolution, and performance optimisation"
+    "id": "upwork",
+    "company": "Upwork",
+    "role": "Software Engineer (Contract) — Backend Services & Client Integrations",
+    "period": "Jan 2020 - Dec 2021",
+    "description": "Remote. Client integrations, asynchronous services and production operations.",
+    "fullDescription": "Owned backend services for international clients from codebase discovery and requirements through implementation, testing, deployment and production handover.",
+    "achievements": [
+      "Designed **versioned REST APIs and third-party integrations** with explicit timeouts, idempotent handlers, connection pooling and structured logs; documented contracts and validated failure paths with client Product, QA and Operations teams.",
+      "Kept external work off customer-facing request paths using **asynchronous processing, AWS Lambda, Amazon SNS and SQS**. Published account-lifecycle events for retryable notifications and background work without blocking core operations.",
+      "Owned **AWS deployment pipelines and Linux application environments**, including release verification, monitoring, incident investigation and operational handover, so clients could maintain and troubleshoot the services after delivery."
     ],
-    tags: ["Java", "Node.js", "C#/.NET", "React", "Kafka", "AWS"]
+    "tags": [
+      "Java",
+      "C#/.NET",
+      "Node.js",
+      "Kafka",
+      "AWS",
+      "Lambda",
+      "SNS",
+      "SQS",
+      "Linux",
+      "REST"
+    ]
   }
 ];
+
+function AchievementText({ text }: { text: string }) {
+  return <>{text.split(/(\*\*.*?\*\*)/g).map((part, index) =>
+    part.startsWith("**") && part.endsWith("**")
+      ? <strong key={index} className="font-semibold text-foreground">{part.slice(2, -2)}</strong>
+      : part
+  )}</>;
+}
 
 const skillCategories = [
   {
@@ -131,7 +226,7 @@ export default function SkillsSection() {
           </div>
           <div className="lg:text-right">
             <p className="text-base text-muted-foreground font-body leading-relaxed max-w-md lg:ml-auto mb-6">
-              Over 6+ years, I've owned backend and product systems across fintech, payments, enterprise SaaS, oil and gas, and AI automation—from architecture through production operations.
+              Across 7 years, I've owned backend and product systems across fintech, payments, enterprise SaaS, oil and gas, and AI automation—from architecture through production operations.
             </p>
             <a
               href="#contact"
@@ -148,7 +243,7 @@ export default function SkillsSection() {
         </div>
 
         {/* Experiences List */}
-        <Accordion type="single" collapsible className="mb-20">
+        <Accordion type="single" collapsible defaultValue="exp-0" className="mb-20">
           {experiences.map((exp, index) => (
             <AccordionItem
               key={index}
@@ -168,34 +263,12 @@ export default function SkillsSection() {
                   </div>
 
                   {/* Description */}
-                  <div className="lg:col-span-5">
+                  <div className="lg:col-span-8">
                     <p className="text-sm text-muted-foreground font-body flex items-center gap-2">
                       <span>{exp.description}</span>
-                      {exp.website && (
-                        <a
-                          href={exp.website}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary-foreground text-sm hover:underline"
-                        >
-                          {new URL(exp.website).hostname.replace("www.", "")}
-                        </a>
-                      )}
                     </p>
                   </div>
 
-                  {/* Tags */}
-                  <div className="lg:col-span-3 flex flex-wrap justify-end gap-2 items-center">
-                    {exp.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="whitespace-nowrap px-3 py-1.5 text-xs font-body border border-border rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                    <ChevronDown className="chevron h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200 ml-2" />
-                  </div>
                 </div>
               </AccordionTrigger>
               <AccordionContent className="pb-8">
@@ -214,11 +287,14 @@ export default function SkillsSection() {
                       {exp.achievements.map((achievement, i) => (
                         <li key={i} className="text-sm text-muted-foreground font-body flex items-start gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
-                          {achievement}
+                          <span className="min-w-0"><AchievementText text={achievement} /></span>
                         </li>
                       ))}
                     </ul>
                   </div>
+                  <p className="border-t border-border pt-4 text-xs text-muted-foreground leading-relaxed" data-testid={`tech-stack-${exp.id}`}>
+                    <span className="font-medium text-foreground">Tech stack:</span>{" "}{exp.tags.join(" · ")}
+                  </p>
                 </div>
               </AccordionContent>
             </AccordionItem>

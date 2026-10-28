@@ -63,7 +63,7 @@ export default function HeroSection() {
             {/* Stats */}
             <div className="flex gap-8 sm:gap-12 mb-8 sm:mb-12 lg:mb-16 animate-fade-up">
               <div className="text-left">
-                <span className="text-3xl sm:text-4xl md:text-5xl font-display font-light tracking-tight text-foreground">6+</span>
+                <span className="text-3xl sm:text-4xl md:text-5xl font-display font-light tracking-tight text-foreground">7</span>
                 <p className="text-xs sm:text-sm text-muted-foreground mt-1 font-body">Years experience</p>
               </div>
               <div className="text-left">
