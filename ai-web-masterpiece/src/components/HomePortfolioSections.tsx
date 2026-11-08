@@ -4,6 +4,7 @@ import { publicProjects } from "@/data/open-source";
 import { engineeringNotes } from "@/data/engineering-notes";
 import { PaymentLab, RetrievalLab } from "@/pages/engineering-lab";
 import profilePhoto from "@/assets/profile.png";
+import AppliedAIExperience from "@/components/AppliedAIExperience";
 
 const work = [
   {
@@ -120,8 +121,11 @@ export function HomeSelectedWork() {
                 <p>{w.detail}</p>
               </details>
               <p className="home-project-stack">{w.stack}</p>
-              <Link href="/projects" className="home-text-link">
-                Read the case studies <ArrowUpRight size={16} />
+              <Link
+                href={`/projects/${["audit-service", "iris-payment-gateway", "retrieval-sql-assistant"][i]}`}
+                className="home-text-link"
+              >
+                Read the case study <ArrowUpRight size={16} />
               </Link>
             </div>
           </article>
@@ -181,6 +185,11 @@ export function HomeExperience() {
             <p>{r.role}</p>
           </div>
           <p>{r.description}</p>
+          {i === 0 && (
+            <div className="home-experience-ai">
+              <AppliedAIExperience />
+            </div>
+          )}
         </div>
       ))}
     </section>
@@ -394,5 +403,62 @@ export function HomeContact() {
         <span>© {new Date().getFullYear()}</span>
       </div>
     </footer>
+  );
+}
+
+export function HomeArchitectureDevOps() {
+  return (
+    <section className="home-shell home-section">
+      <div className="home-section-head">
+        <div>
+          <p className="home-eyebrow">ARCHITECTURE & OPERATIONS</p>
+          <h2>
+            Design the system.
+            <br />
+            <em>Own how it runs.</em>
+          </h2>
+        </div>
+      </div>
+      <div className="practice-home-cards">
+        <article className="practice-home-card">
+          <p className="home-eyebrow">01 / ARCHITECTURE</p>
+          <h3>Make the boundaries explicit.</h3>
+          <p>
+            Payments, event-driven services and applied AI. Explore how
+            operation identity, dependency boundaries and failure paths shape a
+            system.
+          </p>
+          <div className="practice-home-path">
+            <span>Contracts</span>
+            <ArrowRight size={14} />
+            <span>Services</span>
+            <ArrowRight size={14} />
+            <span>Evidence</span>
+          </div>
+          <Link href="/architecture" className="home-text-link">
+            Explore architecture <ArrowUpRight size={16} />
+          </Link>
+        </article>
+        <article className="practice-home-card">
+          <p className="home-eyebrow">02 / DEVOPS</p>
+          <h3>Ship with a way back.</h3>
+          <p>
+            Build checks, container delivery, infrastructure automation,
+            migrations and observability. Follow an interactive release
+            scenario.
+          </p>
+          <div className="practice-home-path">
+            <span>Verify</span>
+            <ArrowRight size={14} />
+            <span>Deploy</span>
+            <ArrowRight size={14} />
+            <span>Observe</span>
+          </div>
+          <Link href="/devops" className="home-text-link">
+            Explore DevOps <ArrowUpRight size={16} />
+          </Link>
+        </article>
+      </div>
+    </section>
   );
 }

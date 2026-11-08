@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import TopNav from "./components/layout/top-nav";
 import Blog, { BlogArticle } from "./pages/blog";
 import EngineeringLab from "./pages/engineering-lab";
+import { ProjectCaseStudy } from "./pages/project-studies";
+import { ArchitecturePage, DevOpsPage } from "./pages/engineering-practice";
 import {
   WorkPage,
   AboutPage,
@@ -45,6 +47,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/projects" element={<WorkPage />} />
+          <Route path="/projects/:slug" element={<ProjectCaseStudy />} />
+          <Route path="/architecture" element={<ArchitecturePage />} />
+          <Route path="/devops" element={<DevOpsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/contact" element={<ContactPage />} />

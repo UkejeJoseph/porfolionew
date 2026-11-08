@@ -8,6 +8,7 @@ import {
   HomeAbout,
   HomeWriting,
   HomeContact,
+  HomeArchitectureDevOps,
 } from "@/components/HomePortfolioSections";
 import Preloader from "@/components/Preloader";
 import "@/styles/portfolio-home.css";
@@ -27,6 +28,7 @@ const Index = () => {
           <HomeHero />
           <HomeSelectedWork />
           <HomeExperience />
+          <HomeArchitectureDevOps />
           <HomeEngineering />
           <HomeOpenSource />
           <HomeAbout />

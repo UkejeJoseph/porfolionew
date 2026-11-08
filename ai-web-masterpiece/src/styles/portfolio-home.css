@@ -61,7 +61,7 @@
   margin-top: 6px;
 }
 .home-hero h1 {
-  font-family: Sora, sans-serif;
+  font-family: Manrope, Inter, sans-serif;
   font-size: 104px;
   letter-spacing: -0.07em;
   font-weight: 300;
@@ -263,7 +263,7 @@
   margin-top: 8px;
 }
 .bench-plane-title {
-  font-family: "DM Serif Display", Georgia, serif;
+  font-family: Manrope, Inter, sans-serif;
   font-size: 18px;
   line-height: 1.25;
   margin-top: 7px;
@@ -416,7 +416,7 @@
 .home-section-head h2 em,
 .home-about h2 em,
 .home-contact h2 em {
-  font-family: "DM Serif Display", Georgia, serif;
+  font-family: Manrope, Inter, sans-serif;
   font-weight: 400;
 }
 .home-work-list {
@@ -591,7 +591,7 @@
   font-size: clamp(34px, 4vw, 54px);
 }
 .home-green-section .home-section-head h2 em {
-  font-family: "DM Serif Display", Georgia, serif;
+  font-family: Manrope, Inter, sans-serif;
   font-weight: 400;
   color: #175b44;
 }
@@ -665,7 +665,7 @@
   background: #d1f28a;
 }
 .home-note-symbol {
-  font-family: "DM Serif Display", Georgia, serif;
+  font-family: Manrope, Inter, sans-serif;
   font-size: 28px;
   letter-spacing: -0.04em;
   margin: 43px 0;
@@ -964,5 +964,33 @@
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Reference typography: Manrope headings and body, monospace technical labels. */
+.portfolio-home h1 {
+  font-family: Manrope, Inter, sans-serif;
+  font-weight: 550;
+}
+.portfolio-home .home-section-head h2 em,
+.portfolio-home .home-about h2 em,
+.portfolio-home .home-contact h2 em,
+.portfolio-home .home-green-section .home-section-head h2 em,
+.portfolio-home .experiment-story h2 em {
+  font-family: Manrope, Inter, sans-serif;
+  font-style: normal;
+  font-weight: 450;
+}
+.portfolio-home .home-workbench .bench-plane-title {
+  font-family: Manrope, Inter, sans-serif;
+}
+.home-experience-ai {
+  grid-column: 2 / -1;
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .home-experience-ai {
+    grid-column: 1 / -1;
   }
 }

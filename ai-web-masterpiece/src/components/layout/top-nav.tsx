@@ -3,8 +3,10 @@ import { Link, useLocation } from "@/lib/portfolio-router";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const items = [
-  { name: "Work", href: "/projects" },
+  { name: "Projects", href: "/projects" },
   { name: "Engineering Lab", href: "/lab" },
+  { name: "Architecture", href: "/architecture" },
+  { name: "DevOps", href: "/devops" },
   { name: "Open Source", href: "/open-source" },
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
@@ -44,7 +46,7 @@ export default function TopNav() {
           </span>{" "}
           Joseph Ukeje<span className="sr-only"> — Home</span>
         </Link>
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden xl:flex items-center gap-5">
           {items.map((item) => (
             <Link
               key={item.href}
@@ -63,13 +65,13 @@ export default function TopNav() {
         </div>
         <Link
           href="/contact"
-          className="portfolio-nav-contact hidden lg:inline-flex items-center gap-2 text-xs ml-4"
+          className="portfolio-nav-contact hidden xl:inline-flex items-center gap-2 text-xs ml-4"
         >
           Let’s talk <ArrowUpRight size={15} />
         </Link>
         <button
           type="button"
-          className="lg:hidden p-2"
+          className="xl:hidden p-2"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="mobile-navigation"
@@ -82,7 +84,7 @@ export default function TopNav() {
         <div
           id="mobile-navigation"
           data-mobile-panel
-          className="lg:hidden bg-background border-b border-border px-6 py-5 grid gap-4"
+          className="xl:hidden bg-background border-b border-border px-6 py-5 grid gap-4"
         >
           {items.map((item) => (
             <Link

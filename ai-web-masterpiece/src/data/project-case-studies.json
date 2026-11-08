@@ -1,0 +1,705 @@
+[
+  {
+    "id": "audit-service",
+    "title": "Centralised Audit Service",
+    "category": "Backend",
+    "summary": "Kafka-backed audit infrastructure for transaction investigations and financial traceability.",
+    "stack": [
+      "Kafka",
+      "Event-driven services",
+      "Python workers",
+      "Observability"
+    ],
+    "kind": "Proprietary client work",
+    "problem": "Compliance and operations teams need a dependable trail through activity spanning multiple services.",
+    "implementation": "Architected and owned audit infrastructure capturing immutable financial events and user actions. Delivery covered implementation, tests, deployment, monitoring and production support.",
+    "decisions": [
+      "Preserve stable operation identities in audit events.",
+      "Keep ingestion asynchronous and processing bounded.",
+      "Connect structured events to investigation and monitoring workflows."
+    ],
+    "flow": [
+      "Service events",
+      "Kafka ingestion",
+      "Audit processing",
+      "Investigation records"
+    ],
+    "results": [
+      "5–10 million daily transactions in the client scope."
+    ],
+    "caseStudy": true
+  },
+  {
+    "id": "iris-payment-gateway",
+    "title": "IRIS - Core Banking Payment Gateway",
+    "category": "Full Stack",
+    "summary": "Engineered an internal ISO 20022/SWIFT payment gateway with Netty TCP connection management, gRPC contracts, digital signatures, idempotency, and production recovery for Tier-1 bank workloads.",
+    "stack": [
+      "Java 21",
+      "Spring Boot",
+      "Netty",
+      "gRPC",
+      "Kafka",
+      "Kubernetes"
+    ],
+    "liveUrl": null,
+    "repoUrl": null,
+    "kind": "Proprietary client work",
+    "problem": "Inter-bank payment messages need validation, secure delivery and a recoverable state when connections or acknowledgements fail.",
+    "implementation": "Engineered the IRIS gateway and transfer engine with Netty TCP connection management, gRPC contracts, ISO 20022/SWIFT flows, canonicalisation and digital signatures.",
+    "decisions": [
+      "Separate transport delivery from business completion so a lost acknowledgement is not treated as proof of failure.",
+      "Keep stable transaction references and duplicate protection across timeout and recovery paths.",
+      "Use deterministic regression cases for malformed, delayed and failed-message scenarios."
+    ],
+    "flow": [
+      "Payment request",
+      "Validate & sign",
+      "Transport boundary",
+      "Response & recovery"
+    ],
+    "results": [
+      "98% reduction in failures in the affected payment flows."
+    ],
+    "caseStudy": true
+  },
+  {
+    "id": "prm-risk-engine",
+    "title": "PRM - Real-Time Payment Risk Engine",
+    "category": "Full Stack",
+    "summary": "Architected a non-intrusive payment-risk framework using Spring AOP/AspectJ, CQRS, Redis, graceful degradation, and immutable audit trails for regulated financial workflows.",
+    "stack": [
+      "Java 21",
+      "Spring AOP",
+      "Redis",
+      "CQRS",
+      "Docker",
+      "Kubernetes"
+    ],
+    "liveUrl": null,
+    "repoUrl": null,
+    "kind": "Proprietary client work",
+    "problem": "Payment-risk evaluation must support investigations without introducing an uncontrolled dependency into every transaction path.",
+    "implementation": "Built the PRM payment-risk framework around transaction attributes, Redis-backed state, reviewable decisions and immutable audit trails.",
+    "decisions": [
+      "Evaluate explicit transaction attributes with reproducible decision context.",
+      "Use graceful degradation and reviewable outcomes for dependency failures.",
+      "Connect fraud investigation support to audit evidence rather than making opaque, irreversible decisions."
+    ],
+    "flow": [
+      "Payment context",
+      "Risk attributes",
+      "Decision & fallback",
+      "Investigation trail"
+    ],
+    "results": [
+      "Evaluates 20+ transaction attributes.",
+      "Roughly 35% fewer fraud-related production incidents."
+    ],
+    "caseStudy": true
+  },
+  {
+    "id": "retrieval-sql-assistant",
+    "title": "Retrieval & SQL Assistant",
+    "category": "Applied AI",
+    "summary": "Natural-language database access and retrieval workflows connected to Slack and typed Python services.",
+    "stack": [
+      "Python",
+      "FastAPI",
+      "Pydantic",
+      "LangChain",
+      "LangGraph",
+      "PostgreSQL / pgvector"
+    ],
+    "kind": "Proprietary client work",
+    "problem": "Stakeholders need an accessible way to query information without bypassing the application permissions and data boundaries.",
+    "implementation": "Built a client-facing agentic RAG and text-to-SQL workflow, connecting Slack access to Python services, database context and observable execution.",
+    "decisions": [
+      "Use typed tool contracts and validation.",
+      "Keep retrieval and permitted database operations scoped.",
+      "Trace retrieval, generation and tool behaviour for evaluation and failure investigation."
+    ],
+    "flow": [
+      "Slack question",
+      "Scoped retrieval",
+      "Validated tool",
+      "Answer & evidence"
+    ],
+    "results": [
+      "Delivered natural-language access and observable retrieval workflows; client code remains private."
+    ],
+    "caseStudy": true
+  },
+  {
+    "id": "stablex",
+    "title": "StableX - Stablecoin Wallet & Exchange",
+    "category": "Full Stack",
+    "summary": "Designed a multi-stack crypto wallet and exchange platform with Java/Spring Boot services, Node.js worker-thread processing, gRPC blockchain validation, Solidity smart contracts, and a React/TypeScript client.",
+    "stack": [
+      "Java",
+      "Spring Boot",
+      "Node.js",
+      "React",
+      "TypeScript",
+      "gRPC",
+      "Solidity"
+    ],
+    "liveUrl": "https://stable-xv1.vercel.app/",
+    "repoUrl": "https://github.com/UkejeJoseph/StableXv1",
+    "kind": "Personal product",
+    "problem": "Wallet and exchange workflows must connect a usable product interface to financial operations with clear transaction states.",
+    "implementation": "Designed a multi-stack crypto wallet and exchange platform with Java/Spring Boot services, Node.js worker-thread processing, gRPC blockchain validation, Solidity smart contracts, and a React/TypeScript client.",
+    "decisions": [
+      "Make wallet state and transaction outcomes explicit in the interface.",
+      "Keep validation and recoverable integration boundaries visible in the backend design.",
+      "Distinguish the public React/TypeScript product repository from the broader backend scope described in the portfolio."
+    ],
+    "flow": [
+      "Wallet interface",
+      "Validation",
+      "Exchange workflow",
+      "Transaction status"
+    ],
+    "results": [
+      "Public product interface and source repository available."
+    ],
+    "caseStudy": true
+  },
+  {
+    "id": "mirage-launchpad",
+    "title": "Mirage Launchpad",
+    "category": "Web App",
+    "summary": "Built a Solana Raydium Token Launchpad enabling users to seamlessly create custom SPL Tokens on the Solana blockchain.",
+    "stack": [
+      "Next.js",
+      "React",
+      "Web3",
+      "Solana"
+    ],
+    "liveUrl": "https://rusty-tokenlaunchpad-demo.vercel.app/",
+    "repoUrl": null,
+    "kind": "Project overview",
+    "problem": "Make token-creation workflows accessible through a web interface while keeping transaction outcomes explicit.",
+    "implementation": "Built a Solana Raydium Token Launchpad enabling users to seamlessly create custom SPL Tokens on the Solana blockchain.",
+    "decisions": [
+      "Distinguish configuring a token from approving a blockchain transaction.",
+      "Show pending, rejected and completed outcomes rather than assuming success.",
+      "Keep the browser experience aligned with the network interaction."
+    ],
+    "flow": [
+      "Token details",
+      "Wallet interaction",
+      "Network transaction",
+      "Creation outcome"
+    ],
+    "results": []
+  },
+  {
+    "id": "nova-bills",
+    "title": "Nova Bills - Billing Web Application",
+    "category": "Full Stack",
+    "summary": "Built a billing and payments application with Java/Spring Boot services, JPA-backed financial records, PostgreSQL and SQL Server persistence, and React workflows.",
+    "stack": [
+      "Java",
+      "Spring Boot",
+      "JPA",
+      "PostgreSQL",
+      "SQL Server",
+      "React",
+      "TypeScript"
+    ],
+    "liveUrl": "https://nova-bills.vercel.app/",
+    "repoUrl": null,
+    "kind": "Portfolio-described project",
+    "problem": "Billing workflows need consistent records and a usable interface for customer and operations tasks.",
+    "implementation": "Built a billing and payments application with Java/Spring Boot services, JPA-backed financial records, PostgreSQL and SQL Server persistence, and React workflows.",
+    "decisions": [
+      "Keep billing records and payment state distinct.",
+      "Validate inputs and make exceptions visible to operations.",
+      "Separate product-facing interface concerns from service and persistence logic."
+    ],
+    "flow": [
+      "Billing request",
+      "Validation",
+      "Financial records",
+      "Operations view"
+    ],
+    "results": []
+  },
+  {
+    "id": "rivet-ai",
+    "title": "RivetAI",
+    "category": "Applied AI",
+    "summary": "Built an AI-powered film pre-production SaaS platform with Java/Spring Boot APIs, MongoDB persistence, OAuth 2.0 RBAC, and React product workflows.",
+    "stack": [
+      "Java",
+      "Spring Boot",
+      "React",
+      "MongoDB",
+      "OAuth 2.0",
+      "AI/ML"
+    ],
+    "liveUrl": "https://rivetai.com/",
+    "repoUrl": null,
+    "kind": "Portfolio-described client project",
+    "problem": "Film pre-production work needs a product interface that connects project planning and assisted workflows.",
+    "implementation": "Built an AI-powered film pre-production SaaS platform with Java/Spring Boot APIs, MongoDB persistence, OAuth 2.0 RBAC, and React product workflows.",
+    "decisions": [
+      "Separate project workflows from authentication and access-control concerns.",
+      "Keep assisted outputs reviewable within the product experience.",
+      "Link to the product website without implying the proprietary client source is public."
+    ],
+    "flow": [
+      "Project input",
+      "Assisted workflow",
+      "Review & planning",
+      "Production outputs"
+    ],
+    "results": []
+  },
+  {
+    "id": "neurafeed",
+    "title": "NeuraFeed — Customer Insights",
+    "category": "Applied AI",
+    "summary": "A React and Express application for customer-feedback and insight workflows, with typed validation and PostgreSQL data access.",
+    "stack": [
+      "React",
+      "Express",
+      "TypeScript",
+      "PostgreSQL",
+      "Drizzle",
+      "Zod"
+    ],
+    "liveUrl": null,
+    "repoUrl": "https://github.com/UkejeJoseph/Neurafeedfinal",
+    "kind": "Public project",
+    "problem": "Turn customer-feedback workflows into a usable application backed by maintainable API and data boundaries.",
+    "implementation": "The public implementation uses React, Express, TypeScript, PostgreSQL and Drizzle, with authentication and validation dependencies.",
+    "decisions": [
+      "Use typed validation at API boundaries rather than trusting incoming payloads.",
+      "Keep the React product interface separate from Express service logic.",
+      "Treat the repository as the available implementation; the previous demo deployment no longer resolves."
+    ],
+    "flow": [
+      "Feedback interface",
+      "Validated API",
+      "PostgreSQL data",
+      "Insight workflow"
+    ],
+    "results": []
+  },
+  {
+    "id": "trackcel",
+    "title": "TrackCel",
+    "category": "Web App",
+    "summary": "Engineered an AI-driven job application tracking app to efficiently schedule, track, and manage user tasks.",
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Node.js"
+    ],
+    "liveUrl": null,
+    "repoUrl": null,
+    "kind": "Portfolio-described project",
+    "problem": "Make the core workflow usable while keeping state, integrations and failures understandable.",
+    "implementation": "Engineered an AI-driven job application tracking app to efficiently schedule, track, and manage user tasks.",
+    "decisions": [
+      "Keep the main user workflow clear and accessible across screen sizes.",
+      "Separate reusable interface components from feature-specific state.",
+      "Make validation and unavailable-result states understandable."
+    ],
+    "flow": [
+      "User action",
+      "Application workflow",
+      "Service integration",
+      "Visible result"
+    ],
+    "results": []
+  },
+  {
+    "id": "weather-app",
+    "title": "Weather Dashboard — Next.js & TypeScript",
+    "category": "Full Stack",
+    "summary": "A weather application with a Next.js and TypeScript frontend, location-based information and forecast presentation.",
+    "stack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Weather API"
+    ],
+    "liveUrl": null,
+    "repoUrl": "https://github.com/UkejeJoseph/WeatherApp-NextJSxTypescript-main",
+    "kind": "Public project",
+    "problem": "Present weather information in a concise interface while handling external data and location changes.",
+    "implementation": "The public weather application uses Next.js, React, TypeScript and weather-oriented interface components.",
+    "decisions": [
+      "Keep loading, unavailable-data and successful-result states distinct.",
+      "Use TypeScript contracts to make the interface integration easier to maintain.",
+      "Make forecast information readable across screen sizes."
+    ],
+    "flow": [
+      "Location input",
+      "Weather request",
+      "Forecast data",
+      "Dashboard display"
+    ],
+    "results": []
+  },
+  {
+    "id": "oxy-ui",
+    "title": "Oxy UI",
+    "category": "Frontend",
+    "summary": "Developed a highly customizable React UI component library featuring extensive TypeScript support and modular design tokens.",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "NPM"
+    ],
+    "liveUrl": "https://oxyui.vercel.app/",
+    "repoUrl": null,
+    "kind": "Portfolio-described project",
+    "problem": "Make the core workflow usable while keeping state, integrations and failures understandable.",
+    "implementation": "Developed a highly customizable React UI component library featuring extensive TypeScript support and modular design tokens.",
+    "decisions": [
+      "Keep the main user workflow clear and accessible across screen sizes.",
+      "Separate reusable interface components from feature-specific state.",
+      "Make validation and unavailable-result states understandable."
+    ],
+    "flow": [
+      "User action",
+      "Application workflow",
+      "Service integration",
+      "Visible result"
+    ],
+    "results": []
+  },
+  {
+    "id": "blog-verse",
+    "title": "Blog Verse",
+    "category": "Full Stack",
+    "summary": "A blogging application using React, Appwrite, rich-text editing and routed content pages.",
+    "stack": [
+      "React",
+      "Redux Toolkit",
+      "Appwrite",
+      "TinyMCE",
+      "React Router"
+    ],
+    "liveUrl": "https://blog9.vercel.app/",
+    "repoUrl": "https://github.com/UkejeJoseph/appwrite-blog",
+    "kind": "Public project",
+    "problem": "Support authenticated content creation and readable article pages without mixing editor state with persistent content.",
+    "implementation": "The public implementation uses React, Appwrite, Redux Toolkit, TinyMCE and React Router.",
+    "decisions": [
+      "Separate content editing from article rendering.",
+      "Use the backend integration for authentication and persisted content.",
+      "Give create, read and navigation workflows distinct interface states."
+    ],
+    "flow": [
+      "Authenticate",
+      "Create & edit",
+      "Persist content",
+      "Read article"
+    ],
+    "results": []
+  },
+  {
+    "id": "free-tools-app",
+    "title": "Free Tools App",
+    "category": "Web App",
+    "summary": "Created a comprehensive collection of free development tools and utilities to assist developers and designers in everyday tasks.",
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "liveUrl": "https://freetool.vercel.app/tools",
+    "repoUrl": null,
+    "kind": "Portfolio-described project",
+    "problem": "Make the core workflow usable while keeping state, integrations and failures understandable.",
+    "implementation": "Created a comprehensive collection of free development tools and utilities to assist developers and designers in everyday tasks.",
+    "decisions": [
+      "Keep the main user workflow clear and accessible across screen sizes.",
+      "Separate reusable interface components from feature-specific state.",
+      "Make validation and unavailable-result states understandable."
+    ],
+    "flow": [
+      "User action",
+      "Application workflow",
+      "Service integration",
+      "Visible result"
+    ],
+    "results": []
+  },
+  {
+    "id": "trello-clone",
+    "title": "Trello Clone",
+    "category": "Web App",
+    "summary": "Architected a task management application inspired by Trello, featuring interactive drag-and-drop boards and real-time collaboration.",
+    "stack": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Drag & Drop"
+    ],
+    "liveUrl": "https://trello-tau-rosy.vercel.app/",
+    "repoUrl": null,
+    "kind": "Portfolio-described project",
+    "problem": "Make the core workflow usable while keeping state, integrations and failures understandable.",
+    "implementation": "Architected a task management application inspired by Trello, featuring interactive drag-and-drop boards and real-time collaboration.",
+    "decisions": [
+      "Keep the main user workflow clear and accessible across screen sizes.",
+      "Separate reusable interface components from feature-specific state.",
+      "Make validation and unavailable-result states understandable."
+    ],
+    "flow": [
+      "User action",
+      "Application workflow",
+      "Service integration",
+      "Visible result"
+    ],
+    "results": []
+  },
+  {
+    "id": "crypto-dashboard",
+    "title": "Crypto Dashboard",
+    "category": "Frontend",
+    "summary": "A React and Chakra UI dashboard for portfolio, price, transaction and support screens.",
+    "stack": [
+      "React",
+      "Chakra UI",
+      "React Router",
+      "Framer Motion"
+    ],
+    "liveUrl": null,
+    "repoUrl": "https://github.com/UkejeJoseph/Crypto-Dashboard",
+    "kind": "Public project",
+    "problem": "Organise crypto account information into clear dashboard and support workflows.",
+    "implementation": "The public repository contains a React dashboard layout, portfolio and pricing components, transaction views and support pages.",
+    "decisions": [
+      "Separate the dashboard shell from portfolio, price and transaction components.",
+      "Use routed screens for dashboard and support interactions.",
+      "Present this repository as a dashboard; the StableX wallet is a separate project."
+    ],
+    "flow": [
+      "Dashboard shell",
+      "Portfolio view",
+      "Transaction view",
+      "Support workflow"
+    ],
+    "results": []
+  },
+  {
+    "id": "nextai-chat",
+    "title": "NextAI — AI Chat Interface",
+    "category": "Applied AI",
+    "summary": "An authenticated AI application built with Next.js, typed forms and AI-service integrations.",
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "OpenAI",
+      "Clerk",
+      "Prisma",
+      "Pinecone"
+    ],
+    "liveUrl": null,
+    "repoUrl": "https://github.com/UkejeJoseph/NextAI-Chatbot",
+    "kind": "Project overview",
+    "problem": "Connect an authenticated web interface to AI services with understandable request and response states.",
+    "implementation": "The public implementation uses Next.js, OpenAI, Clerk, Prisma, Pinecone and Zod.",
+    "decisions": [
+      "Validate form and request inputs at the service boundary.",
+      "Keep authentication distinct from model integration.",
+      "Treat model and data-provider failures as application states that need handling."
+    ],
+    "flow": [
+      "User interface",
+      "Authentication",
+      "AI request",
+      "Rendered response"
+    ],
+    "results": []
+  },
+  {
+    "id": "ecommerce-platform",
+    "title": "E-commerce — Next.js, Sanity & Stripe",
+    "category": "Full Stack",
+    "summary": "An e-commerce application with content-managed products, shopping-cart state and Stripe integration.",
+    "stack": [
+      "Next.js",
+      "React",
+      "Sanity",
+      "Stripe",
+      "Tailwind CSS"
+    ],
+    "liveUrl": null,
+    "repoUrl": "https://github.com/UkejeJoseph/ECommerce-NextJS-Sanity-Stripe",
+    "kind": "Public project",
+    "problem": "Connect product discovery and cart state to an understandable checkout flow.",
+    "implementation": "The public e-commerce application uses Next.js, Sanity, Stripe and use-shopping-cart.",
+    "decisions": [
+      "Separate product content from shopping-cart interaction state.",
+      "Use a defined payment-provider boundary for checkout.",
+      "Keep product browsing and payment-result states clear in the interface."
+    ],
+    "flow": [
+      "Product catalogue",
+      "Shopping cart",
+      "Stripe boundary",
+      "Order outcome"
+    ],
+    "results": []
+  },
+  {
+    "id": "task-management",
+    "title": "Team Task Management System",
+    "category": "Web App",
+    "summary": "Developed a collaborative project management tool equipped with real-time updates, file sharing capabilities, and team coordination features.",
+    "stack": [
+      "Vue.js",
+      "Node.js",
+      "Socket.io",
+      "MongoDB",
+      "Firebase"
+    ],
+    "liveUrl": "https://task-management-system.vercel.app",
+    "repoUrl": null,
+    "kind": "Portfolio-described project",
+    "problem": "Make the core workflow usable while keeping state, integrations and failures understandable.",
+    "implementation": "Developed a collaborative project management tool equipped with real-time updates, file sharing capabilities, and team coordination features.",
+    "decisions": [
+      "Keep the main user workflow clear and accessible across screen sizes.",
+      "Separate reusable interface components from feature-specific state.",
+      "Make validation and unavailable-result states understandable."
+    ],
+    "flow": [
+      "User action",
+      "Application workflow",
+      "Service integration",
+      "Visible result"
+    ],
+    "results": []
+  },
+  {
+    "id": "expense-tracker",
+    "title": "Expense Tracker",
+    "category": "Web App",
+    "summary": "A web expense-tracking application with Firebase integrations and chart-based reporting.",
+    "stack": [
+      "React",
+      "Firebase",
+      "Chart.js",
+      "React Router"
+    ],
+    "liveUrl": null,
+    "repoUrl": "https://github.com/UkejeJoseph/Expense-Tracker",
+    "kind": "Public project",
+    "problem": "Make personal expense records and spending summaries understandable in a small web application.",
+    "implementation": "The public implementation uses React, Firebase and Chart.js. This public implementation is a web application.",
+    "decisions": [
+      "Separate transaction entry from summary visualisation.",
+      "Keep data integration behind the application workflows.",
+      "Use readable chart and navigation components for spending review."
+    ],
+    "flow": [
+      "Expense entry",
+      "Data integration",
+      "Spending totals",
+      "Charts & review"
+    ],
+    "results": []
+  },
+  {
+    "id": "myntra-clone",
+    "title": "Myntra Clone",
+    "category": "Full Stack",
+    "summary": "Built a highly responsive e-commerce platform clone modeling core functionalities, complete with a dynamic product catalog and shopping cart.",
+    "stack": [
+      "React",
+      "Express",
+      "Product catalogue",
+      "Shopping bag"
+    ],
+    "liveUrl": null,
+    "repoUrl": "https://github.com/UkejeJoseph/Myntra-Clone",
+    "kind": "Project overview",
+    "problem": "Recreate the core catalogue and shopping-bag interactions of an e-commerce interface.",
+    "implementation": "The public repository contains a React storefront with product, bag and summary components, alongside Express backend examples.",
+    "decisions": [
+      "Split product tiles, shopping-bag rows and totals into separate components.",
+      "Keep catalogue retrieval separate from the visual layout.",
+      "Use the verified source repository while the old demo deployment is unavailable."
+    ],
+    "flow": [
+      "Product catalogue",
+      "Item selection",
+      "Shopping bag",
+      "Order summary"
+    ],
+    "results": []
+  },
+  {
+    "id": "sqldeps",
+    "title": "SQLDeps — Maintained Copy",
+    "category": "Applied AI",
+    "summary": "An attributed SQL dependency-analysis package with focused export fixes and regression coverage.",
+    "stack": [
+      "Python",
+      "LLM integration",
+      "pandas",
+      "pytest"
+    ],
+    "kind": "Customised upstream copy",
+    "repoUrl": "https://github.com/UkejeJoseph/sqldeps",
+    "upstream": "https://github.com/glue-lab/sqldeps",
+    "problem": "Qualified table identifiers and empty dependency results must export consistently rather than crash or lose column headers.",
+    "implementation": "Updated dataframe export to preserve multi-part namespaces and emit stable empty CSV headers. Original authors and MIT licence are retained.",
+    "decisions": [
+      "Split a qualified identifier at its final separator.",
+      "Keep empty exports schema-stable.",
+      "Cover identifier depth and empty-result behaviour with focused tests."
+    ],
+    "flow": [
+      "SQL profile",
+      "Dependency model",
+      "Dataframe export",
+      "CSV output"
+    ],
+    "results": [
+      "Regression coverage for qualified names and empty CSV headers."
+    ]
+  },
+  {
+    "id": "lablens",
+    "title": "LabLens — Maintained Copy",
+    "category": "Applied AI",
+    "summary": "An attributed retrieval and SQL assistant with atomic document-cache refresh fixes.",
+    "stack": [
+      "Python",
+      "RAG",
+      "SQLite",
+      "pytest"
+    ],
+    "kind": "Customised upstream copy",
+    "repoUrl": "https://github.com/UkejeJoseph/lablens",
+    "upstream": "https://github.com/cmcouto-silva/lablens",
+    "problem": "Cache metadata must update coherently when a source changes identity or a document is renamed.",
+    "implementation": "Added conflict-aware SQLite updates and atomic rollback behaviour for ambiguous identity collisions. Original authors and CC BY-NC 4.0 terms are retained.",
+    "decisions": [
+      "Handle document identity and source identity explicitly.",
+      "Reject ambiguous collisions atomically.",
+      "Verify persistence and unrelated-record preservation using temporary SQLite databases."
+    ],
+    "flow": [
+      "Document source",
+      "Identity check",
+      "Atomic metadata update",
+      "Stored cache record"
+    ],
+    "results": [
+      "Focused regression coverage for updates, renames, persistence and conflicts."
+    ]
+  }
+]

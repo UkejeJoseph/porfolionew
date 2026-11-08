@@ -2,6 +2,7 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { Link } from "@/lib/portfolio-router";
 import HomeWorkbench from "./HomeWorkbench";
 import profilePhoto from "@/assets/profile.png";
+import generalResume from "@/assets/Joseph_Ukeje_Senior_Software_Engineer_Portfolio_Resume_V1.pdf";
 
 export default function HomeHero() {
   return (
@@ -40,9 +41,9 @@ export default function HomeHero() {
           <Link href="/projects" className="home-primary-button">
             Explore my work <ArrowUpRight size={17} />
           </Link>
-          <Link href="/resume" className="home-text-link">
-            My résumé <ArrowUpRight size={17} />
-          </Link>
+          <a href={generalResume} download className="home-text-link">
+            General résumé PDF <ArrowUpRight size={17} />
+          </a>
         </div>
         <a className="home-scroll-link" href="#selected-work">
           Scroll to the work <ArrowDown size={15} />
