@@ -40,15 +40,12 @@ export default function ResumePage() {
               Senior Software Engineer.<span>Distributed systems. Payments. Applied AI.</span>
             </h1>
             <p className="cv-intro">
-              I architect event-driven platforms and distributed systems for
-              payments, core banking and enterprise applications. My work spans
-              inter-bank transfers, card processing, asynchronous messaging and
-              audit infrastructure capturing 5–10 million transaction records
-              daily. I own services from system design through production:
-              defining service boundaries, handling concurrency and partial
-              failures, protecting data integrity and building the observability
-              needed to diagnose and recover them. I also build production AI
-              workflows for retrieval, automation and decision support.
+              I’m a Senior Software Engineer architecting high-performance fintech
+              platforms, distributed payment systems and applied AI systems. I
+              build event-driven services that stay correct under concurrency,
+              recover from partial failures and remain observable in
+              production—from inter-bank transfers and card processing to
+              retrieval and agentic automation.
             </p>
             <div className="cv-facts">
               <div>

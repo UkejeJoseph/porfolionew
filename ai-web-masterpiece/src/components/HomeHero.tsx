@@ -18,9 +18,11 @@ export default function HomeHero() {
         <h1>Hi</h1>
         <p className="home-hero-role">Senior Software Engineer.</p>
         <p className="home-hero-summary">
-          I build distributed fintech and enterprise systems with Java, C#/.NET,
-          Node.js and React. From service architecture to production recovery, I
-          take responsibility for what ships.
+          I’m a Senior Software Engineer architecting high-performance fintech
+          platforms, distributed payment systems and applied AI systems. I build
+          event-driven services that stay correct under concurrency, recover from
+          partial failures and remain observable in production—from inter-bank
+          transfers and card processing to retrieval and agentic automation.
         </p>
         <div className="home-hero-stats">
           <div>
