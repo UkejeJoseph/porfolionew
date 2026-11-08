@@ -10,7 +10,7 @@ import {
 import { publicProjects } from "@/data/open-source";
 import "@/styles/engineering.css";
 
-function PaymentLab() {
+export function PaymentLab() {
   const [dedupe, setDedupe] = useState(true);
   const [attempts, setAttempts] = useState(0);
   const [operations, setOperations] = useState(0);
@@ -128,7 +128,7 @@ function PaymentLab() {
   );
 }
 
-function RetrievalLab() {
+export function RetrievalLab() {
   const [tenant, setTenant] = useState("Retail");
   const [query, setQuery] = useState("What happens when a payment is pending?");
   const [result, setResult] = useState<{

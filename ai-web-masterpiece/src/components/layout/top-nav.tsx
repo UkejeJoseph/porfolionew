@@ -32,13 +32,16 @@ export default function TopNav() {
   return (
     <nav
       aria-label="Main navigation"
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors ${themed ? "engineering-nav" : scrolled ? "bg-background/95 backdrop-blur-sm border-b border-border/40" : "bg-background/90"}`}
+      className={`portfolio-nav fixed top-0 left-0 right-0 z-50 transition-colors ${themed ? "engineering-nav" : scrolled ? "bg-background/95 backdrop-blur-sm border-b border-border/40" : "bg-background/90"}`}
     >
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 h-20 flex items-center gap-6">
         <Link
           href="/"
           className="mr-auto shrink-0 tracking-[.12em] text-xs uppercase font-medium"
         >
+          <span className="portfolio-nav-mark" aria-hidden="true">
+            ju.
+          </span>{" "}
           Joseph Ukeje<span className="sr-only"> — Home</span>
         </Link>
         <div className="hidden lg:flex items-center gap-6">
@@ -60,7 +63,7 @@ export default function TopNav() {
         </div>
         <Link
           href="/contact"
-          className="hidden lg:inline-flex items-center gap-2 text-xs ml-4"
+          className="portfolio-nav-contact hidden lg:inline-flex items-center gap-2 text-xs ml-4"
         >
           Let’s talk <ArrowUpRight size={15} />
         </Link>
@@ -91,9 +94,6 @@ export default function TopNav() {
               {item.name}
             </Link>
           ))}
-          <Link href="/certifications" className="text-sm py-1">
-            Certifications
-          </Link>
           <Link href="/contact" className="text-sm py-1">
             Contact
           </Link>

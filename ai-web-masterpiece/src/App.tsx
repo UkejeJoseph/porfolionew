@@ -16,8 +16,6 @@ import {
 } from "./pages/portfolio-pages";
 import NotFound from "./pages/NotFound";
 import CustomCursor from "./components/CustomCursor";
-import StarBackground from "./components/StarBackground";
-import FlyingRobots from "./components/FlyingRobots";
 
 const queryClient = new QueryClient();
 
@@ -32,8 +30,6 @@ function HomeEffects() {
   return pathname === "/" ? (
     <>
       <CustomCursor />
-      <StarBackground />
-      <FlyingRobots />
     </>
   ) : null;
 }

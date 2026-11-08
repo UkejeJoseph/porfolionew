@@ -1,14 +1,16 @@
 import { useState } from "react";
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import SkillsSection from "@/components/SkillsSection";
-import PromoSection from "@/components/PromoSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import EducationSection from "@/components/EducationSection";
-import CollaborateSection from "@/components/CollaborateSection";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
+import HomeHero from "@/components/HomeHero";
+import {
+  HomeSelectedWork,
+  HomeExperience,
+  HomeEngineering,
+  HomeOpenSource,
+  HomeAbout,
+  HomeWriting,
+  HomeContact,
+} from "@/components/HomePortfolioSections";
 import Preloader from "@/components/Preloader";
+import "@/styles/portfolio-home.css";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,21 +19,20 @@ const Index = () => {
     <>
       {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
       <div
-        className={`min-h-screen bg-background transition-opacity duration-500 ${
+        className={`portfolio-home min-h-screen bg-background transition-opacity duration-500 ${
           isLoading ? "opacity-0" : "opacity-100"
         }`}
       >
         <main>
-          <HeroSection />
-          <AboutSection />
-          <SkillsSection />
-          <PromoSection />
-          <ProjectsSection />
-          <EducationSection />
-          <CollaborateSection />
-          <ContactSection />
+          <HomeHero />
+          <HomeSelectedWork />
+          <HomeExperience />
+          <HomeEngineering />
+          <HomeOpenSource />
+          <HomeAbout />
+          <HomeWriting />
         </main>
-        <Footer />
+        <HomeContact />
       </div>
     </>
   );
