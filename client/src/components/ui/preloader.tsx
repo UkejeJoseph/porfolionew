@@ -60,6 +60,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
 
   return (
     <div
+      data-testid="site-preloader"
       className={`fixed inset-0 z-[9999] flex items-center justify-center bg-background transition-all duration-1000 ${
         isExiting ? "opacity-0" : "opacity-100"
       }`}

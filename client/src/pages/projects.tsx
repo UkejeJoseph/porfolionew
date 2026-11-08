@@ -3,6 +3,7 @@ import { projects, Project } from "@/data/projects";
 import ProjectCard from "@/components/project-card";
 import { cn } from "@/lib/utils";
 import LiveVisitors from "@/components/ui/live-visitors";
+import WorkCaseStudies from "@/components/work-case-studies";
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState<'all' | 'web-development' | 'ai-ml' | 'blockchain'>('all');
@@ -19,15 +20,17 @@ export default function Projects() {
   ];
 
   return (
-    <div className="p-8">
+    <div className="px-6 pt-32 pb-12 md:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-3xl font-bold">Projects</h2>
           <LiveVisitors />
         </div>
 
+        <WorkCaseStudies />
+        <h3 className="text-xl mb-5">Project catalogue</h3>
         {/* Filter Tabs */}
-        <div className="flex gap-4 mb-8">
+        <div className="flex flex-wrap gap-4 mb-8">
           {filters.map((filter) => (
             <button
               key={filter.id}

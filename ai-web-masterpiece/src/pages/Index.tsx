@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
@@ -22,7 +21,6 @@ const Index = () => {
           isLoading ? "opacity-0" : "opacity-100"
         }`}
       >
-        <Navigation />
         <main>
           <HeroSection />
           <AboutSection />
