@@ -11,6 +11,8 @@ import {
   HomeArchitectureDevOps,
 } from "@/components/HomePortfolioSections";
 import Preloader from "@/components/Preloader";
+import StarBackground from "@/components/StarBackground";
+import FlyingRobots from "@/components/FlyingRobots";
 import "@/styles/portfolio-home.css";
 
 const Index = () => {
@@ -24,6 +26,8 @@ const Index = () => {
           isLoading ? "opacity-0" : "opacity-100"
         }`}
       >
+        {!isLoading && <StarBackground />}
+        {!isLoading && <FlyingRobots />}
         <main>
           <HomeHero />
           <HomeSelectedWork />

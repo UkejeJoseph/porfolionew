@@ -4,7 +4,7 @@ export default function FlyingRobots() {
   return (
     <>
       {/* Robot 1 - Flies across the whole page */}
-      <div className="fixed z-[9999] pointer-events-none" style={{ animation: "robot-fly-1 12s ease-in-out infinite" }}>
+      <div aria-hidden="true" data-home-bot="1" className="home-flying-bot fixed z-[9999] pointer-events-none" style={{ animation: "robot-fly-1 12s ease-in-out infinite" }}>
         <div className="relative">
           <div className="bg-foreground text-background text-[10px] font-bold px-2 py-1 rounded-t-lg rounded-br-lg shadow-lg mb-1 whitespace-nowrap">
             Welcome! 👋
@@ -14,7 +14,7 @@ export default function FlyingRobots() {
       </div>
 
       {/* Robot 2 - Flies a different path */}
-      <div className="fixed z-[9999] pointer-events-none" style={{ animation: "robot-fly-2 15s ease-in-out infinite 2s" }}>
+      <div aria-hidden="true" data-home-bot="2" className="home-flying-bot fixed z-[9999] pointer-events-none" style={{ animation: "robot-fly-2 15s ease-in-out infinite 2s backwards" }}>
         <div className="relative">
           <div className="bg-foreground text-background text-[10px] font-bold px-2 py-1 rounded-t-lg rounded-br-lg shadow-lg mb-1 whitespace-nowrap">
             Check this out! 🚀
@@ -24,6 +24,9 @@ export default function FlyingRobots() {
       </div>
 
       <style>{`
+        @media (prefers-reduced-motion: reduce) {
+          .home-flying-bot { display: none; }
+        }
         @keyframes robot-fly-1 {
           0% {
             top: 15%;

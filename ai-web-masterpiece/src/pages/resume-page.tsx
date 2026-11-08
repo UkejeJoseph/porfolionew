@@ -37,17 +37,18 @@ export default function ResumePage() {
           <div>
             <p className="cv-label">06 / CURRICULUM VITAE</p>
             <h1>
-              Senior Software Engineer.<span>Fintech. Payments. Production.</span>
+              Senior Software Engineer.<span>Distributed systems. Payments. Applied AI.</span>
             </h1>
             <p className="cv-intro">
-              Senior Software Engineer with 7 years of experience building
-              fintech platforms, core banking integrations and distributed
-              payment systems. At Interswitch, I architect and own inter-bank
-              transfer services, ISO 8583 card-processing flows and audit
-              infrastructure capturing 5–10 million transaction records daily.
-              I lead technical design and hands-on delivery across Java, .NET,
-              Go and Python, from concurrency and data integrity to production
-              reliability, recovery and applied AI.
+              I architect event-driven platforms and distributed systems for
+              payments, core banking and enterprise applications. My work spans
+              inter-bank transfers, card processing, asynchronous messaging and
+              audit infrastructure capturing 5–10 million transaction records
+              daily. I own services from system design through production:
+              defining service boundaries, handling concurrency and partial
+              failures, protecting data integrity and building the observability
+              needed to diagnose and recover them. I also build production AI
+              workflows for retrieval, automation and decision support.
             </p>
             <div className="cv-facts">
               <div>

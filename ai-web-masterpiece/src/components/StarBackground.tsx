@@ -45,13 +45,13 @@ export default function StarBackground() {
         geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
         const material = new THREE.PointsMaterial({
-            color: 0xa0a0a0,
+            color: 0x555555,
             size: 0.003,
             sizeAttenuation: true,
             transparent: true,
-            opacity: 0.85,
+            opacity: 0.3,
             depthWrite: false,
-            blending: THREE.AdditiveBlending
+            blending: THREE.NormalBlending
         });
 
         const points = new THREE.Points(geometry, material);
@@ -79,8 +79,9 @@ export default function StarBackground() {
         // Animation loop
         let animationFrameId: number;
         let time = 0;
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const animate = () => {
-            animationFrameId = requestAnimationFrame(animate);
+            if (!reducedMotion) animationFrameId = requestAnimationFrame(animate);
             time += 0.005;
 
             // Continuous auto-rotation (fast, like the reference site)
@@ -111,6 +112,8 @@ export default function StarBackground() {
     return (
         <div
             ref={containerRef}
+            data-home-stars="true"
+            aria-hidden="true"
             className="fixed inset-0 z-[0] pointer-events-none overflow-hidden"
         >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(160,160,160,0.08)_0%,transparent_100%)] pointer-events-none"></div>

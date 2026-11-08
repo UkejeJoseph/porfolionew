@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;550;600;650;700;750&display=swap");
 
 .portfolio-home {
+  position: relative;
+  isolation: isolate;
   background: #fafafa;
   color: #171717;
   font-family: Manrope, Inter, sans-serif;
+}
+.portfolio-home > main,
+.portfolio-home > footer {
+  position: relative;
+  z-index: 1;
 }
 .home-shell {
   max-width: 1320px;
