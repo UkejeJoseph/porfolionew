@@ -1007,3 +1007,56 @@
     grid-column: 1 / -1;
   }
 }
+
+.home-experience-row > div {
+  min-width: 0;
+}
+.home-role-contributions {
+  grid-column: 2 / -1;
+}
+.home-role-contributions > ul,
+.home-role-contributions details > ul {
+  list-style: disc;
+  padding-left: 18px;
+}
+.home-role-contributions > ul li,
+.home-role-contributions details li {
+  font-size: 13px;
+  line-height: 1.95;
+  color: #666;
+  margin-bottom: 14px;
+}
+.home-role-contributions strong {
+  font-weight: 600;
+  color: #171717;
+}
+.home-role-contributions details {
+  margin-top: 18px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+.home-role-contributions summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  font-size: 11px;
+}
+.home-role-contributions details > ul {
+  margin-top: 20px;
+}
+.home-experience-row .home-role-contributions > .home-role-stack {
+  font:
+    10px/1.9 ui-monospace,
+    monospace;
+  margin-top: 20px;
+  color: #777;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .home-role-contributions {
+    grid-column: 1 / -1;
+  }
+}

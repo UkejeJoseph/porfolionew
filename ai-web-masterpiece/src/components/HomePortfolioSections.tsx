@@ -4,7 +4,10 @@ import { publicProjects } from "@/data/open-source";
 import { engineeringNotes } from "@/data/engineering-notes";
 import { PaymentLab, RetrievalLab } from "@/pages/engineering-lab";
 import profilePhoto from "@/assets/profile.png";
-import AppliedAIExperience from "@/components/AppliedAIExperience";
+import AppliedAIExperience, {
+  isAppliedAIAchievement,
+} from "@/components/AppliedAIExperience";
+import { professionalExperience } from "@/data/professional-experience";
 import { ProjectPreview, projectStudies } from "@/pages/project-studies";
 
 const work = [
@@ -142,63 +145,92 @@ export function HomeSelectedWork() {
   );
 }
 
+function ExperienceAchievement({ text }: { text: string }) {
+  return (
+    <>
+      {text
+        .split(/(\*\*.*?\*\*)/g)
+        .map((part, i) =>
+          part.startsWith("**") && part.endsWith("**") ? (
+            <strong key={i}>{part.slice(2, -2)}</strong>
+          ) : (
+            part
+          ),
+        )}
+    </>
+  );
+}
+
 export function HomeExperience() {
   return (
-    <section className="home-shell home-section home-experience">
+    <section
+      id="experience"
+      className="home-shell home-section home-experience"
+    >
       <div className="home-section-head">
         <div>
-          <p className="home-eyebrow">02 / EXPERIENCE & OWNERSHIP</p>
+          <p className="home-eyebrow">02 / PROFESSIONAL EXPERIENCE</p>
           <h2>
-            Built on real
+            Professional
             <br />
-            <em>responsibility.</em>
+            <em>Experience.</em>
           </h2>
         </div>
         <Link href="/resume" className="home-text-link">
-          The full résumé <ArrowUpRight size={17} />
+          View the full résumé <ArrowUpRight size={17} />
         </Link>
       </div>
-      {[
-        {
-          company: "Interswitch Group",
-          date: "Apr 2025 — Present",
-          role: "Senior Software Engineer · Core Banking & Payments",
-          description:
-            "Payment integration, audit infrastructure, risk workflows and production AI client engagements.",
-        },
-        {
-          company: "Huawei Technologies",
-          date: "Jun 2024 — Apr 2025",
-          role: "Senior Software Engineer · Partner & Enterprise Platforms",
-          description:
-            "Multi-tenant partner workflows, cloud delivery, distributed services and a live Redis migration.",
-        },
-        {
-          company: "Vision Forge AI Automations",
-          date: "Jan 2024 — Jun 2024",
-          role: "Software Engineer · AI Workflow & Integration Platforms",
-          description:
-            "Backend integrations, asynchronous processing, workflow automation and service reliability.",
-        },
-      ].map((r, i) => (
-        <div className="home-experience-row" key={r.company}>
-          <span className="home-eyebrow">
-            0{i + 1}
-            <br />
-            {r.date}
-          </span>
-          <div>
-            <h3>{r.company}</h3>
-            <p>{r.role}</p>
-          </div>
-          <p>{r.description}</p>
-          {i === 0 && (
-            <div className="home-experience-ai">
-              <AppliedAIExperience />
+      {professionalExperience.map((role, i) => {
+        const achievements =
+          role.id === "interswitch"
+            ? role.achievements.filter((text) => !isAppliedAIAchievement(text))
+            : role.achievements;
+        const visibleCount = role.id === "interswitch" ? achievements.length : 2;
+        return (
+          <article
+            className="home-experience-row"
+            key={role.id}
+            data-experience-role={role.id}
+          >
+            <span className="home-eyebrow">
+              0{i + 1}
+              <br />
+              {role.period}
+            </span>
+            <div>
+              <h3>{role.company}</h3>
+              <p>{role.role}</p>
             </div>
-          )}
-        </div>
-      ))}
+            <p>{role.fullDescription}</p>
+            <div className="home-role-contributions">
+              <ul>
+                {achievements.slice(0, visibleCount).map((text) => (
+                  <li key={text}>
+                    <ExperienceAchievement text={text} />
+                  </li>
+                ))}
+              </ul>
+              {achievements.length > visibleCount && (
+                <details>
+                  <summary>
+                    Show {achievements.length - visibleCount} more engineering
+                    contributions <span>+</span>
+                  </summary>
+                  <ul>
+                    {achievements.slice(visibleCount).map((text) => (
+                      <li key={text}>
+                        <ExperienceAchievement text={text} />
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+              <p className="home-role-stack">{role.tags.join(" / ")}</p>
+              {role.id === "interswitch" && <AppliedAIExperience />}
+            </div>
+          </article>
+        );
+      })}
     </section>
   );
 }
