@@ -80,7 +80,7 @@ export function PaymentLab() {
         <div className="payment-receipt">
           <span>TRANSFER TO / DEMO MERCHANT</span>
           <strong>
-            ₦25,000<span>.00</span>
+            $5,000<span>.00</span>
           </strong>
           <code>idempotency-key: demo-payment-001</code>
         </div>
