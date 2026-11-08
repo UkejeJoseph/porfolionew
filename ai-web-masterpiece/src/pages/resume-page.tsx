@@ -37,12 +37,17 @@ export default function ResumePage() {
           <div>
             <p className="cv-label">06 / CURRICULUM VITAE</p>
             <h1>
-              Senior software engineering.<span>A record of ownership.</span>
+              Senior Software Engineer.<span>Fintech. Payments. Production.</span>
             </h1>
             <p className="cv-intro">
-              Joseph Ukeje — Senior Software Engineer. Backend platforms,
-              payments, distributed systems and applied AI. Ownership from
-              technical design through production delivery and recovery.
+              Senior Software Engineer with 7 years of experience building
+              fintech platforms, core banking integrations and distributed
+              payment systems. At Interswitch, I architect and own inter-bank
+              transfer services, ISO 8583 card-processing flows and audit
+              infrastructure capturing 5–10 million transaction records daily.
+              I lead technical design and hands-on delivery across Java, .NET,
+              Go and Python, from concurrency and data integrity to production
+              reliability, recovery and applied AI.
             </p>
             <div className="cv-facts">
               <div>
@@ -55,7 +60,7 @@ export default function ResumePage() {
               </div>
               <div>
                 <span>Focus</span>
-                <strong>Backend & applied AI</strong>
+                <strong>Fintech & payment systems</strong>
               </div>
             </div>
             <div className="cv-actions">
