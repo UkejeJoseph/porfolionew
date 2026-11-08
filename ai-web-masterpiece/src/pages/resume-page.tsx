@@ -40,12 +40,11 @@ export default function ResumePage() {
               Senior Software Engineer.<span>Distributed systems. Payments. Applied AI.</span>
             </h1>
             <p className="cv-intro">
-              I’m a Senior Software Engineer architecting high-performance fintech
-              platforms, distributed payment systems and applied AI systems. I
-              build event-driven services that stay correct under concurrency,
-              recover from partial failures and remain observable in
-              production—from inter-bank transfers and card processing to
-              retrieval and agentic automation.
+              Hi, I’m Joseph, a Senior Software Engineer. High-performance fintech
+              platforms, distributed payment systems and applied AI. From
+              inter-bank transfers and card processing to retrieval and agentic
+              automation—with concurrency, financial correctness and recovery
+              designed into the architecture.
             </p>
             <div className="cv-facts">
               <div>

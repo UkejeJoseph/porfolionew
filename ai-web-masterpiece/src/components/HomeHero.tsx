@@ -18,11 +18,10 @@ export default function HomeHero() {
         <h1>Hi</h1>
         <p className="home-hero-role">Senior Software Engineer.</p>
         <p className="home-hero-summary">
-          I’m a Senior Software Engineer architecting high-performance fintech
-          platforms, distributed payment systems and applied AI systems. I build
-          event-driven services that stay correct under concurrency, recover from
-          partial failures and remain observable in production—from inter-bank
-          transfers and card processing to retrieval and agentic automation.
+          High-performance fintech platforms, distributed payment systems and
+          applied AI. From inter-bank transfers and card processing to retrieval
+          and agentic automation—with concurrency, financial correctness and
+          recovery designed into the architecture.
         </p>
         <div className="home-hero-stats">
           <div>
