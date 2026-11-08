@@ -28,8 +28,35 @@ export interface ProjectStudy {
   liveUrl?: string | null;
   upstream?: string;
   caseStudy?: boolean;
+  image?: string;
 }
 export const projectStudies: ProjectStudy[] = catalogue;
+
+export function ProjectPreview({
+  project,
+  index = 0,
+}: {
+  project: ProjectStudy;
+  index?: number;
+}) {
+  return (
+    <div className={`study-preview ${project.image ? "has-cover" : ""}`}>
+      {project.image && (
+        <figure className="study-cover">
+          <img
+            src={project.image}
+            alt={`${project.title} project cover`}
+            loading="lazy"
+            width={800}
+            height={600}
+          />
+          <figcaption>PROJECT COVER</figcaption>
+        </figure>
+      )}
+      <ProjectFlow project={project} index={index} />
+    </div>
+  );
+}
 
 export function ProjectFlow({
   project,
@@ -57,13 +84,20 @@ export function ProjectFlow({
   );
 }
 
-export default function ProjectsPage() {
-  const [category, setCategory] = useState("All"),
+export default function ProjectsPage({
+  initialCategory = "All",
+}: {
+  initialCategory?: string;
+}) {
+  const blockchain = initialCategory === "Blockchain";
+  const [category, setCategory] = useState(initialCategory),
     [query, setQuery] = useState(""),
     [limit, setLimit] = useState(9);
   useEffect(() => {
-    document.title = "Projects — Joseph Ukeje";
-  }, []);
+    document.title = `${blockchain ? "Blockchain" : "Projects"} — Joseph Ukeje`;
+    setCategory(initialCategory);
+    setLimit(9);
+  }, [initialCategory, blockchain]);
   const categories = [
     "All",
     ...Array.from(new Set(projectStudies.map((p) => p.category))),
@@ -85,7 +119,12 @@ export default function ProjectsPage() {
         <header className="studies-intro">
           <p className="study-label">01 / PROJECTS & CASE STUDIES</p>
           <h1>
-            Projects.<span>The work behind the interface.</span>
+            {blockchain ? "Blockchain." : "Projects."}
+            <span>
+              {blockchain
+                ? "Wallets, exchanges and on-chain systems."
+                : "The work behind the interface."}
+            </span>
           </h1>
           <p>
             Payments, enterprise systems, applied AI and product interfaces.
@@ -100,6 +139,26 @@ export default function ProjectsPage() {
               DevOps & delivery <ArrowUpRight size={16} />
             </Link>
           </div>
+          {blockchain && (
+            <aside className="blockchain-source-note">
+              <p className="study-label">
+                ORDER-BOOK ENGINEERING / UPSTREAM CODE STUDY
+              </p>
+              <h2>dYdX order book & matching engine</h2>
+              <p>
+                Explore the open-source Go implementation of a central limit
+                order book, order matching and execution within dYdX Chain. This
+                is an upstream code study alongside my blockchain projects.
+              </p>
+              <a
+                href="https://github.com/dydxprotocol/v4-chain/tree/main/protocol/x/clob"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Inspect dYdX source <ArrowUpRight size={16} />
+              </a>
+            </aside>
+          )}
         </header>
         <section aria-label="Project catalogue">
           <div className="study-controls">
@@ -141,7 +200,7 @@ export default function ProjectsPage() {
                   href={`/projects/${project.id}`}
                   aria-label={`View ${project.title} case study`}
                 >
-                  <ProjectFlow project={project} index={i} />
+                  <ProjectPreview project={project} index={i} />
                 </Link>
                 <div className="study-card-copy">
                   <p className="study-label">{project.kind}</p>
@@ -273,7 +332,7 @@ export function ProjectCaseStudy() {
             )}
           </div>
         </header>
-        <ProjectFlow project={project} />
+        <ProjectPreview project={project} />
         <div className="study-detail-grid">
           <aside>
             <p className="study-label">IN THIS CASE STUDY</p>

@@ -1,0 +1,17 @@
+flowchart LR
+db[("PostgreSQL transaction<br/>Business changes + outbox row")] -.-> relay["Outbox publisher worker<br/>Poll committed rows / checkpoint"]
+relay -.->|payment_id partition key| topic["Kafka topic<br/>payment-events"]
+topic -.->|CG: callback-v1| callback["Merchant callback workers<br/>Idempotent / bounded retries"]
+topic -.->|CG: audit-v1| audit["Audit consumer<br/>Inbox + immutable audit records"]
+audit -.-> s3[("Amazon S3 object storage<br/>Versioned audit / reconciliation files")]
+topic -.->|CG: reporting-v1| report["Reporting projection<br/>Replayable / freshness visible"]
+callback -.->|exhausted retries| dlq["Kafka topic<br/>payment-callback-dlq"]
+dlq -.-> repair["Inspection + controlled replay<br/>Preserve original operation identity"]
+recon["Reconciliation worker<br/>Status queries / signed statements"] --> bank["External bank / processor"]
+bank -->|evidence| recon
+recon -->|guarded resolution| db
+relay -.-> obs["OpenTelemetry collector<br/>Prometheus / Grafana / Loki / Tempo"]
+audit -.-> obs
+recon -.-> obs
+classDef default fill:white,stroke:black,color:black,stroke-width:1.3px;
+linkStyle default stroke:black,color:black;

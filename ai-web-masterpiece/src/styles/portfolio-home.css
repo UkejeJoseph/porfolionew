@@ -428,11 +428,14 @@
 }
 .home-work-list {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
 }
 .home-work-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  min-width: 0;
   border: 1px solid #ddd;
   border-radius: 22px;
   overflow: hidden;
@@ -825,6 +828,9 @@
   }
 }
 @media (max-width: 760px) {
+  .home-work-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
   .portfolio-nav {
     top: 10px !important;
     width: calc(100% - 28px);

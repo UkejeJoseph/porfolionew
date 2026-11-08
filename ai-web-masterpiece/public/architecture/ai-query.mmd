@@ -1,0 +1,18 @@
+flowchart LR
+client["Slack / web client<br/>Tenant + user identity"] --> nginx["NGINX / load balancer<br/>Admission limits / deadlines"]
+nginx --> api["FastAPI replicas + Pydantic<br/>Auth / permitted source scope"]
+api --> cache["Redis LangCache<br/>Semantic answer cache<br/>Tenant + ACL + corpus + model version"]
+cache -->|safe hit + current access check| answer["Answer response<br/>Citations / source versions"]
+cache -->|miss| agent["LangGraph orchestration<br/>Bounded tools / step budget"]
+agent --> embed["Embedding service<br/>Pinned model + dimensions"]
+embed --> vector[("PostgreSQL + pgvector<br/>Vector similarity + tenant metadata")]
+vector --> rank["Hybrid retrieval + reranker<br/>ACL filter / source provenance"]
+rank --> prompt["Prompt builder<br/>Context budget / citations / tool schema"]
+prompt --> router["LiteLLM gateway<br/>Provider quotas / model routing"]
+router --> model["LLM provider OR self-hosted model<br/>Prefix prompt cache / serving KV cache"]
+model --> validate["Typed result + tool validation<br/>Read-only SQL / timeout / row limits"]
+validate --> answer
+validate -.->|eligible answer only| cache
+agent -.-> trace["Langfuse + OpenTelemetry<br/>Retrieval / tool / generation spans"]
+classDef default fill:white,stroke:black,color:black,stroke-width:1.3px;
+linkStyle default stroke:black,color:black;

@@ -1,0 +1,12 @@
+flowchart LR
+data[("Curated S3 training dataset<br/>Approved / versioned / de-identified")] --> train["Offline LoRA / QLoRA fine-tuning<br/>PyTorch + Hugging Face PEFT"]
+train --> registry["MLflow experiment + model registry<br/>Dataset / base model / adapter versions"]
+registry --> eval["Offline evaluation gate<br/>Task quality / safety / latency / cost"]
+eval -->|approved version| serve["Model serving pool<br/>GPU inference / continuous batching"]
+serve --> kv["Inference KV / prefix cache<br/>Token-state reuse / memory budget"]
+serve --> router["LiteLLM routing<br/>Canary / rollback / provider fallback"]
+router --> observe["Langfuse + Prometheus + Grafana<br/>Token latency / queue age / quality"]
+prompt["Stable system + tool prefix"] --> pc["Provider prompt cache<br/>Exact eligible prefix reuse"]
+pc --> router
+classDef default fill:white,stroke:black,color:black,stroke-width:1.3px;
+linkStyle default stroke:black,color:black;

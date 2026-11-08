@@ -1,0 +1,15 @@
+flowchart LR
+upload["Document upload / connector<br/>Identity / content hash / permissions"] --> s3[("Amazon S3<br/>Versioned raw documents")]
+upload --> catalog[("Document catalogue + outbox<br/>Tenant / ACL / source version")]
+catalog -.-> publisher["Outbox publisher<br/>Committed indexing intents"]
+publisher -.-> topic["Kafka topic<br/>document-index-jobs"]
+topic -.->|CG: indexer-v1| parse["Bounded ingestion workers<br/>Parse / OCR / PII handling / chunk"]
+s3 -->|versioned bytes| parse
+parse --> embeddings["Batch embedding workers<br/>Pinned embedding model"]
+embeddings --> vectors[("PostgreSQL + pgvector<br/>Chunk IDs / ACLs / embedding version")]
+vectors --> publish["Publish index generation<br/>Only after complete validation"]
+publish -.-> invalidate["Cache invalidation + tombstones<br/>Updates / ACL changes / deletions"]
+parse -.->|failed documents| dlq["Kafka topic<br/>document-index-dlq"]
+dlq -.-> review["Inspect / correct / replay<br/>Idempotent document version key"]
+classDef default fill:white,stroke:black,color:black,stroke-width:1.3px;
+linkStyle default stroke:black,color:black;

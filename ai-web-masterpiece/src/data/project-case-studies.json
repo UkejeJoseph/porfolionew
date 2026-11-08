@@ -27,7 +27,8 @@
     "results": [
       "5–10 million daily transactions in the client scope."
     ],
-    "caseStudy": true
+    "caseStudy": true,
+    "image": "/project-images/audit-service.jpg"
   },
   {
     "id": "iris-payment-gateway",
@@ -61,7 +62,8 @@
     "results": [
       "98% reduction in failures in the affected payment flows."
     ],
-    "caseStudy": true
+    "caseStudy": true,
+    "image": "/project-images/iris-payment-gateway.jpg"
   },
   {
     "id": "prm-risk-engine",
@@ -96,7 +98,8 @@
       "Evaluates 20+ transaction attributes.",
       "Roughly 35% fewer fraud-related production incidents."
     ],
-    "caseStudy": true
+    "caseStudy": true,
+    "image": "/project-images/prm-risk-engine.jpg"
   },
   {
     "id": "retrieval-sql-assistant",
@@ -128,12 +131,13 @@
     "results": [
       "Delivered natural-language access and observable retrieval workflows; client code remains private."
     ],
-    "caseStudy": true
+    "caseStudy": true,
+    "image": "/project-images/retrieval-sql-assistant.jpg"
   },
   {
     "id": "stablex",
     "title": "StableX - Stablecoin Wallet & Exchange",
-    "category": "Full Stack",
+    "category": "Blockchain",
     "summary": "Designed a multi-stack crypto wallet and exchange platform with Java/Spring Boot services, Node.js worker-thread processing, gRPC blockchain validation, Solidity smart contracts, and a React/TypeScript client.",
     "stack": [
       "Java",
@@ -163,12 +167,13 @@
     "results": [
       "Public product interface and source repository available."
     ],
-    "caseStudy": true
+    "caseStudy": true,
+    "image": "/project-images/stablex.jpg"
   },
   {
     "id": "mirage-launchpad",
     "title": "Mirage Launchpad",
-    "category": "Web App",
+    "category": "Blockchain",
     "summary": "Built a Solana Raydium Token Launchpad enabling users to seamlessly create custom SPL Tokens on the Solana blockchain.",
     "stack": [
       "Next.js",
@@ -192,7 +197,8 @@
       "Network transaction",
       "Creation outcome"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/mirage-launchpad.jpg"
   },
   {
     "id": "nova-bills",
@@ -224,7 +230,8 @@
       "Financial records",
       "Operations view"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/nova-bills.jpg"
   },
   {
     "id": "rivet-ai",
@@ -255,7 +262,8 @@
       "Review & planning",
       "Production outputs"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/rivet-ai.jpg"
   },
   {
     "id": "neurafeed",
@@ -286,7 +294,8 @@
       "PostgreSQL data",
       "Insight workflow"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/neurafeed.jpg"
   },
   {
     "id": "trackcel",
@@ -315,7 +324,8 @@
       "Service integration",
       "Visible result"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/trackcel.jpg"
   },
   {
     "id": "weather-app",
@@ -344,7 +354,8 @@
       "Forecast data",
       "Dashboard display"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/weather-app.jpg"
   },
   {
     "id": "oxy-ui",
@@ -373,7 +384,8 @@
       "Service integration",
       "Visible result"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/oxy-ui.jpg"
   },
   {
     "id": "blog-verse",
@@ -403,7 +415,8 @@
       "Persist content",
       "Read article"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/blog-verse.jpg"
   },
   {
     "id": "free-tools-app",
@@ -431,7 +444,8 @@
       "Service integration",
       "Visible result"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/free-tools-app.jpg"
   },
   {
     "id": "trello-clone",
@@ -460,12 +474,13 @@
       "Service integration",
       "Visible result"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/trello-clone.jpg"
   },
   {
     "id": "crypto-dashboard",
     "title": "Crypto Dashboard",
-    "category": "Frontend",
+    "category": "Blockchain",
     "summary": "A React and Chakra UI dashboard for portfolio, price, transaction and support screens.",
     "stack": [
       "React",
@@ -489,7 +504,8 @@
       "Transaction view",
       "Support workflow"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/crypto-dashboard.jpg"
   },
   {
     "id": "nextai-chat",
@@ -520,7 +536,8 @@
       "AI request",
       "Rendered response"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/nextai-chat.jpg"
   },
   {
     "id": "ecommerce-platform",
@@ -550,7 +567,8 @@
       "Stripe boundary",
       "Order outcome"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/ecommerce-platform.jpg"
   },
   {
     "id": "task-management",
@@ -580,7 +598,8 @@
       "Service integration",
       "Visible result"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/task-management.jpg"
   },
   {
     "id": "expense-tracker",
@@ -638,7 +657,8 @@
       "Shopping bag",
       "Order summary"
     ],
-    "results": []
+    "results": [],
+    "image": "/project-images/myntra-clone.jpg"
   },
   {
     "id": "sqldeps",

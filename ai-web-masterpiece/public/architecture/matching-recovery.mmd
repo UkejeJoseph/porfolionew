@@ -1,0 +1,14 @@
+flowchart LR
+trades["Kafka topic<br/>trade-executions"] -.->|CG: settlement-v1| workflow["Durable settlement workflow<br/>Trade identity / progress / retries"]
+workflow --> ledger[("Ledger database transaction<br/>Balanced entries + inbox + outbox")]
+ledger -.-> relay["Outbox relay worker"]
+relay -.-> settled["Kafka topic<br/>settlement-events"]
+workflow -.->|unresolved / external ambiguity| recon["Reconciliation / exception queue<br/>Controlled repair / same trade identity"]
+snapshot[("S3 snapshot<br/>Last included sequence")] --> recover["Fenced standby recovery<br/>Load snapshot + replay later journal"]
+journal[("Durable command journal<br/>Gap-free committed sequence")] --> recover
+recover --> verify["State verification<br/>Sequence / book checksum / reservations"]
+verify -->|fence old writer first| leader["Promoted matching shard<br/>Single active owner per market"]
+workflow -.-> obs["OpenTelemetry / Prometheus / Grafana<br/>Match latency / lag / imbalance / recovery"]
+leader -.-> obs
+classDef default fill:white,stroke:black,color:black,stroke-width:1.3px;
+linkStyle default stroke:black,color:black;

@@ -5,10 +5,12 @@ import { engineeringNotes } from "@/data/engineering-notes";
 import { PaymentLab, RetrievalLab } from "@/pages/engineering-lab";
 import profilePhoto from "@/assets/profile.png";
 import AppliedAIExperience from "@/components/AppliedAIExperience";
+import { ProjectPreview, projectStudies } from "@/pages/project-studies";
 
 const work = [
   {
     number: "01",
+    id: "audit-service",
     category: "CORE BANKING / AUDIT INFRASTRUCTURE",
     title: "Centralised Audit Service",
     headline: "A clear trail through complex transactions.",
@@ -28,6 +30,7 @@ const work = [
   },
   {
     number: "02",
+    id: "iris-payment-gateway",
     category: "PAYMENTS / INTER-BANK INTEGRATION",
     title: "IRIS Payment Gateway",
     headline: "Keep the payment recoverable.",
@@ -47,6 +50,7 @@ const work = [
   },
   {
     number: "03",
+    id: "retrieval-sql-assistant",
     category: "APPLIED AI / CLIENT DELIVERY",
     title: "Retrieval & SQL Assistant",
     headline: "Questions become useful, traceable answers.",
@@ -63,6 +67,21 @@ const work = [
     ],
     detail:
       "Separate orchestration from permitted operations, validate schemas and trace retrieval and generation. LabLens and SQLDeps are separately attributed public adaptations; client code remains private.",
+  },
+  {
+    number: "04",
+    id: "stablex",
+    category: "BLOCKCHAIN / WALLET & EXCHANGE",
+    title: "StableX",
+    headline: "From wallet interactions to exchange services.",
+    description:
+      "A stablecoin wallet and exchange platform connecting a React interface with backend services, blockchain validation and smart contracts.",
+    metric: "Multi-stack",
+    metricLabel: "wallet, exchange and blockchain integration",
+    stack: "Java · Spring Boot · Node.js · React · gRPC · Solidity",
+    flow: [],
+    detail:
+      "Separate wallet interactions from transaction validation and background processing. Connect service contracts, blockchain operations and the client interface through explicit boundaries.",
   },
 ];
 
@@ -85,24 +104,15 @@ export function HomeSelectedWork() {
       <div className="home-work-list">
         {work.map((w, i) => (
           <article className="home-work-card" key={w.number}>
-            <div
-              className={`home-project-visual project-visual-${i}`}
-              aria-label={`${w.title} illustrative workflow`}
+            <Link
+              href={`/projects/${w.id}`}
+              aria-label={`View ${w.title} case study`}
             >
-              <span className="home-eyebrow">JU / {w.title}</span>
-              <div className="project-flow">
-                {w.flow.map((step, j) => (
-                  <div key={step}>
-                    <span>0{j + 1}</span>
-                    <strong>{step}</strong>
-                    {j < 3 && <ArrowRight size={16} />}
-                  </div>
-                ))}
-              </div>
-              <small>
-                ILLUSTRATIVE WORKFLOW / CLIENT IMPLEMENTATION PRIVATE
-              </small>
-            </div>
+              <ProjectPreview
+                project={projectStudies.find((project) => project.id === w.id)!}
+                index={i}
+              />
+            </Link>
             <div className="home-project-story">
               <p className="home-eyebrow">
                 {w.number} / {w.category}
@@ -121,10 +131,7 @@ export function HomeSelectedWork() {
                 <p>{w.detail}</p>
               </details>
               <p className="home-project-stack">{w.stack}</p>
-              <Link
-                href={`/projects/${["audit-service", "iris-payment-gateway", "retrieval-sql-assistant"][i]}`}
-                className="home-text-link"
-              >
+              <Link href={`/projects/${w.id}`} className="home-text-link">
                 Read the case study <ArrowUpRight size={16} />
               </Link>
             </div>

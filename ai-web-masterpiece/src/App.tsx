@@ -47,6 +47,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/projects" element={<WorkPage />} />
+          <Route
+            path="/blockchain"
+            element={<WorkPage initialCategory="Blockchain" />}
+          />
           <Route path="/projects/:slug" element={<ProjectCaseStudy />} />
           <Route path="/architecture" element={<ArchitecturePage />} />
           <Route path="/devops" element={<DevOpsPage />} />

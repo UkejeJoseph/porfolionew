@@ -7,6 +7,7 @@ const items = [
   { name: "Engineering Lab", href: "/lab" },
   { name: "Architecture", href: "/architecture" },
   { name: "DevOps", href: "/devops" },
+  { name: "Blockchain", href: "/blockchain" },
   { name: "Open Source", href: "/open-source" },
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },

@@ -1,0 +1,15 @@
+flowchart LR
+client["Merchant / application<br/>Stable idempotency key"] -->|HTTPS| proxy["NGINX reverse proxy<br/>TLS / rate limits / load balancing"]
+proxy --> api["Payment API replicas<br/>Auth / request hash / validation"]
+api --> orchestrator["Payment orchestrator<br/>Intent / attempt / state machine"]
+orchestrator -->|1. persist attempt| db[("PostgreSQL authority<br/>Intent / attempt / idempotency<br/>Balanced journal + outbox")]
+orchestrator -->|2. stable provider identity| adapter["Bank / network adapter<br/>Timeout / circuit breaker / bulkhead"]
+adapter --> bank["External bank / processor<br/>ISO 20022 / ISO 8583 adapter"]
+bank -.->|signed callback| inbox["Webhook receiver + durable inbox<br/>Verify signature / dedupe event"]
+inbox -.-> transition["State transition worker<br/>Match reference / amount / currency"]
+transition -->|guarded version update| db
+api -->|non-authoritative config| redis[("Redis<br/>Routing cache / rate budgets")]
+api --> status["Status endpoint<br/>Pending / unknown / final"]
+status -->|authoritative read| db
+classDef default fill:white,stroke:black,color:black,stroke-width:1.3px;
+linkStyle default stroke:black,color:black;

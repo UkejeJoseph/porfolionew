@@ -1,0 +1,15 @@
+flowchart LR
+client["Trading client<br/>Place / cancel / amend order"] --> nginx["NGINX / edge gateway<br/>TLS / session / rate limits"]
+nginx --> risk["Order admission + risk<br/>Signature / integer price + quantity<br/>Reserve funds / client order identity"]
+risk --> seq["Per-market sequencer<br/>Bounded command queue / sequence IDs"]
+seq --> journal[("Durable command journal<br/>Replicated / acknowledged commit")]
+journal --> match["Single-owner matching shard<br/>Price-time priority / deterministic state"]
+match --> result["Execution reports<br/>Partial fill / reject / cancel / complete"]
+result --> ack["Client acknowledgement<br/>Sequence + durable order state"]
+result -.-> trades["Kafka topic<br/>trade-executions / key: market_id"]
+trades -.-> websocket["Market-data projection + WebSocket<br/>Sequence gaps / snapshot + resync"]
+risk --> balances[("Authoritative reservations<br/>Risk limits / available funds")]
+match -.-> snapshots[("S3 snapshots<br/>Book state + journal offset")]
+redis[("Redis read projection<br/>Quotes / API cache only")] --> websocket
+classDef default fill:white,stroke:black,color:black,stroke-width:1.3px;
+linkStyle default stroke:black,color:black;
